@@ -35,7 +35,7 @@ const Home = ({ intl }) => (
       />
     </Helmet>
 
-    <Hero />s
+    <Hero />
     <About>
       <Heading heavy as="h2" fontSize={[5, 6]} color="black" mb={[4, 6]}>
         <FormattedMessage id="home.about.heading" />
