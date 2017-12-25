@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- '8'
+script:
+- yarn build
+deploy:
+- provider: gcs
+  access_key_id: GOOG3UJZKTUH2MM2KWGJ
+  secret_access_key:
+    secure: IfZZUDktGixo8Wdu6rBWsSMGx3qGipB8DIQz+LU/egcgOebs5qT956TwVbrdzY+rlfLZ7kvEGODyeE1GniqfMzKIjuwoYnL6lH0xgMozJGRR1LO1/t9ntZWF0EC8FBcWNnppfk9RExPaRYD20yiCRZqKx/Ep2PEvh1hOi3hc9DZqRlv1SHuw3adtwW/rM7MlWncGQn4pfGWc+K2hLBEqedI9DSD/sVctOrtUS8l4USd6FSKODjwVXuK1Si8TcWTz3y/WHtebdP48csbu/1D0Z2d8iHzYxYJ94R/xlEHOm/9jkIfWxwM5Ln9bRhd3dDPCrdQ/LFULLFdv0oLzBgwnYXb4mj6/+CQE7skn+TnVPHWjd/NLe1/Ftzn8GxI1PhI5AsKZxk+SVuW1e2g81U69FD5JZCYrFoVkJhcBk5I9AraJ+mwCx6/OdhvMowYOpPKHdwqHE0C1fh7X3GSKOB5U7J07v3aOGpx4eldhPDqO4/VpR+E5uo9TmVjS4X7Ji9fH0F55z/kKIwXj0x5z+ZkWol+sR8/Q/rdc7lVyE2yMq/d1CBdPT88hqYAzVQBecFpdLCpUqjOg0/LsIOkApRwEHtXan3lVf6fsY5pAznz2cXyAmeHyqcVVnD75iJoLnRYN9wHRI5MmipxZ7FWA9eJAAg6bA1Zd51gL9FVhpC1pmdU=
+  bucket: staging.kittycash.io
+  skip_cleanup: true
+  acl: public-read
+  local-dir: build
+  on:
+    repo: kittycash/kittycash.io
+- provider: gcs
+  access_key_id: GOOG3UJZKTUH2MM2KWGJ
+  secret_access_key:
+    secure: IfZZUDktGixo8Wdu6rBWsSMGx3qGipB8DIQz+LU/egcgOebs5qT956TwVbrdzY+rlfLZ7kvEGODyeE1GniqfMzKIjuwoYnL6lH0xgMozJGRR1LO1/t9ntZWF0EC8FBcWNnppfk9RExPaRYD20yiCRZqKx/Ep2PEvh1hOi3hc9DZqRlv1SHuw3adtwW/rM7MlWncGQn4pfGWc+K2hLBEqedI9DSD/sVctOrtUS8l4USd6FSKODjwVXuK1Si8TcWTz3y/WHtebdP48csbu/1D0Z2d8iHzYxYJ94R/xlEHOm/9jkIfWxwM5Ln9bRhd3dDPCrdQ/LFULLFdv0oLzBgwnYXb4mj6/+CQE7skn+TnVPHWjd/NLe1/Ftzn8GxI1PhI5AsKZxk+SVuW1e2g81U69FD5JZCYrFoVkJhcBk5I9AraJ+mwCx6/OdhvMowYOpPKHdwqHE0C1fh7X3GSKOB5U7J07v3aOGpx4eldhPDqO4/VpR+E5uo9TmVjS4X7Ji9fH0F55z/kKIwXj0x5z+ZkWol+sR8/Q/rdc7lVyE2yMq/d1CBdPT88hqYAzVQBecFpdLCpUqjOg0/LsIOkApRwEHtXan3lVf6fsY5pAznz2cXyAmeHyqcVVnD75iJoLnRYN9wHRI5MmipxZ7FWA9eJAAg6bA1Zd51gL9FVhpC1pmdU=
+  bucket: kittycash.io
+  skip_cleanup: true
+  acl: public-read
+  local-dir: build
+  on:
+    tags: true
+    repo: kittycash/kittycash.io
