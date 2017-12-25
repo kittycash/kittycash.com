@@ -4,7 +4,6 @@ node_js:
 script:
 - yarn build
 deploy:
-  matrix:
   - provider: gcs
     access_key_id: GOOG3UJZKTUH2MM2KWGJ
     secret_access_key:
