@@ -2,13 +2,13 @@ export default [{
   heading: 'footer.getStarted',
   links: [{
     label: 'footer.wallet',
-    to: 'soon',
+    href: 'https://github.com/kittycash/kittycash',
   }],
 }, {
   heading: 'footer.explore',
   links: [{
     label: 'footer.blog',
-    to: 'blog',
+    href: 'https://blog.kittycash.io',
   }, {
     label: 'footer.whitekitties',
     to: 'whitekitties',
@@ -16,7 +16,7 @@ export default [{
 }, {
   heading: 'footer.community',
   links: [{label: 'footer.bbs',
-    href: 'soon',
+    href: 'https://bbs.kittycash.io/',
   }, {
     label: 'footer.github',
     href: 'https://github.com/kittycash',

@@ -4,18 +4,18 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 
 import Link from 'components/Link';
-import logoWhite from './kittycash_white.png';
-import logoBlack from './kittycash_black.png';
+import logoWhite from './KittyCash_dollars_W.svg';
+import logoBlack from './KittyCash_dollars.svg';
 
 const StyledLink = styled(Link)`
   display: block;
 `;
 
 const Img = styled.img.attrs({
-  alt: 'Skycoin',
+  alt: 'Kitty Cash',
 })`
   display: block;
-  height: ${rem(40)};
+  height: ${rem(90)};
   max-width: 100%;
 `;
 
