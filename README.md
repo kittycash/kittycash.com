@@ -51,7 +51,7 @@ $ yarn test -- --coverage
 
 Commits on the master branch will be automatically deployed to https://staging.kittycash.io.
 
-To deploy in production:
+To deploy in production (https://kittycash.io):
 
 1. Bump version number in `package.json`:
 
