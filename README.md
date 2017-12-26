@@ -24,6 +24,12 @@
   $ yarn
   ```
 
+## Build
+
+```shell
+$ yarn build
+```
+
 ## Development
 
 Start the development server:
@@ -40,3 +46,25 @@ $ yarn test
 # Generate coverage report
 $ yarn test -- --coverage
 ```
+
+## Releasing to production
+
+Commits on the master branch will be automatically deployed to https://staging.kittycash.io.
+
+To deploy in production:
+
+1. Bump version number in `package.json`:
+
+    ```diff
+       "name": "kittycash.io",
+    -  "version": "0.0.0",
+    +  "version": "0.0.1",
+       "private": true,
+    ```
+2. Commit, create a tag, and push:
+
+    ```shell
+    $ git commit -am "chore: bump version number"
+    $ git tag v0.0.1
+    $ git push origin master --tags
+    ```
