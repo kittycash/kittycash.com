@@ -22,6 +22,6 @@ export default [{
     href: 'https://github.com/kittycash',
   }, {
     label: 'footer.telegram',
-    href: 'https://t.me/joinchat/kittycash',
+    href: 'https://t.me/kittycash',
   }],
 }];
