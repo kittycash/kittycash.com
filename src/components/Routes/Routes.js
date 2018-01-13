@@ -15,9 +15,6 @@ const Routes = ({ match }) => {
       <Route path={`${prefix}`} exact component={Home} />
       <Route path={`${prefix}explorekitties`} exact component={Soon} />
       <Route path={`${prefix}whitekitties`} exact component={WhitekittiesPage} />
-      <Route path={`${prefix}blog`} exact component={Soon} />
-      <Route path={`${prefix}wallet`} exact component={Soon} />
-      <Route path={`${prefix}BBS`} exact component={Soon} />
       <Route path={`${prefix}soon`} exact component={Soon} />
       <Redirect from={`${prefix}whitekitties.html`} to={`${prefix}whitekitties`} />
       <Redirect from={`${prefix}downloads.html`} to={`${prefix}downloads`} />
