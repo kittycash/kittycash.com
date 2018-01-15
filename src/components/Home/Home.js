@@ -2,28 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { injectIntl, FormattedMessage } from 'react-intl';
-import styled from 'styled-components';
-import { rem } from 'polished';
+import { Box } from 'grid-styled';
 
-import { FONT_SIZES } from 'config';
 import Heading from 'components/Heading';
-import Label from 'components/Label';
-import Link from 'components/Link';
 import Text from 'components/Text';
 import Footer from 'components/Footer';
 import Hero from './components/Hero';
 import About from './components/About';
 import Logos from './components/Logos';
+import Button from 'components/Button';
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #fff;
-  font-size: ${rem(FONT_SIZES[5])};
-
-  &:hover {
-    text-decoration: none;
-  }
-`;
 
 const Home = ({ intl }) => (
   <div>
@@ -41,14 +29,21 @@ const Home = ({ intl }) => (
         <FormattedMessage id="home.about.heading" />
       </Heading>
 
-      <Text fontSize={[3, 3, 4]} color="black" heavy>
+      <Text fontSize={[4, 4, 5]} color="black" heavy>
         <FormattedMessage id="home.about.lead" />
       </Text>
-      <StyledLink to="whitekitties" target="_blank">
-        <Label>
+      <Box width={[1 / 2, 1, 1 / 3]} pl={[1, 0, 4]}>
+        <Button
+          to="whitekitties"
+          color="#fcb132"
+          bg="white"
+          big
+          width={[1, 1 / 2, 1]}
+          fontSize={[3, 5]}
+        >
           <FormattedMessage id="home.about.label" />
-        </Label>
-      </StyledLink>
+        </Button>
+      </Box>
     </About>
     <Logos />
     <Footer />
