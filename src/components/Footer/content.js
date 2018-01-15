@@ -23,5 +23,14 @@ export default [{
   }, {
     label: 'footer.telegram',
     href: 'https://t.me/kittycash',
+  }, {
+    label: 'footer.facebook',
+    href: 'https://www.facebook.com/kittycash.official/'
+  }, {
+    label: 'footer.twitter',
+    href: 'https://twitter.com/kcashskycoin',
+  }, {
+    label: 'footer.instagram',
+    href: 'https://www.instagram.com/kittycash.official/',
   }],
 }];

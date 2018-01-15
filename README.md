@@ -1,4 +1,4 @@
-![kittycash.io logo](https://raw.githubusercontent.com/kittycash/kittycash.io/f973385ec901394d0f1d885f769c47fe0e729ac5/public/KittyCash_dollars.png)
+![kittycash.io logo](https://raw.githubusercontent.com/kittycash/kittycash.io/22b80498116b631000a541b6682a140e135686fe/KittyCash.png)
 
 # kittycash.io
 
