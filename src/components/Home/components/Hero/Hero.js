@@ -11,9 +11,9 @@ import Introduction from './components/Introduction';
 import Announcement from './components/Announcement';
 
 const Wrapper = styled.div`
-  background-image: linear-gradient(-110deg, #99c7ff, #99c7ff);
+  background-image: linear-gradient(-110deg, #fcb132, #99c7ff);
   position: relative;
-  min-height: 50rem;
+  min-height: 35rem;
   height: auto;
 
   ${media.sm.css`

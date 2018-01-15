@@ -35,23 +35,23 @@ export default {
   },
   home: {
     title: 'Kitty Cash - Second generation cryptokitties',
-    description: 'Kitty Cash is designed to implement Satoshi\'s original vision on CryptoKitties and fixes breading problems in other incarnations.',
+    description: 'Kitty Cash is designed to implement Satoshi\'s original vision on CryptoKitties and fixes breeding problems in other incarnations.',
     hero: {
       heading: 'Kitty Cash is the rebirth of CryptoKitties.',
       soon: 'Coming soon on ',
       skyledger: 'SkyLedger',
       collectable: 'Collectible.',
       breedable: 'Breedable.',
-      adorable: 'Adorable.',
+      killable: 'Killable!',
       scalable: 'Scalable!',
-      platform: 'Collect and bread digital cats on a working platform',
+      platform: 'Collect and breed digital cats on a working platform',
       blog: 'Blog',
       whitekitties: 'Whitekitties',
       proudofsky: 'With proud use of Skycoin technologies',
     },
     about: {
       heading: 'What is Kitty Cash?',
-      lead: 'Kitty Cash is designed to implement Satoshi\'s original vision on CryptoKitties and fixes breading problems in other incarnations.',
+      lead: 'Kitty Cash is designed to implement Satoshi\'s original vision on CryptoKitties and fixes breeding problems in other incarnations.',
       label: 'Read more',
     },
     logos: {

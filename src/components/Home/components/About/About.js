@@ -11,7 +11,7 @@ import background from './background.png';
 
 // TODO: update background image to use global colors
 const Wrap = styled.div`
-  background: url(${background}) repeat-x top center / ${rem(48)} #f7f7f7;
+  background: url(${background}) repeat-x top center / ${rem(550)} #f7f7f7;
   border-bottom: 2px solid ${COLORS.gray[1]};
 `;
 
@@ -30,4 +30,3 @@ export default About;
 About.propTypes = {
   children: PropTypes.node.isRequired,
 };
-

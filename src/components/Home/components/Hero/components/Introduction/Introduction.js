@@ -7,19 +7,19 @@ import { Flex, Box } from 'grid-styled';
 
 const Introduction = () => (
   <div>
-    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
+    <Heading heavy as="h1" color="white" font-weight="bold" fontSize={[6, 7, 8]} mb={0}>
       <FormattedMessage id="home.hero.scalable"/>
     </Heading>
-    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
+    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={0}>
       <FormattedMessage id="home.hero.collectable"/>
     </Heading>
-    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
+    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={0}>
       <FormattedMessage id="home.hero.breedable"/>
     </Heading>
     <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
-      <FormattedMessage id="home.hero.adorable"/>
+      <FormattedMessage id="home.hero.killable"/>
     </Heading>
-    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
+    <Heading heavy as="h1" color="white" fontSize={[4, 5, 6]} mb={5}>
       <FormattedMessage id="home.hero.platform"/>
     </Heading>
     <Flex wrap mb={[6, 0]}>
@@ -30,7 +30,7 @@ const Introduction = () => (
           big
           outlined
           width={[1, 1 / 2, 1]}
-          fontSize={[1, 3]}
+          fontSize={[3, 5]}
         >
           <FormattedMessage id="home.hero.blog" />
         </Button>
@@ -38,11 +38,11 @@ const Introduction = () => (
       <Box width={[1 / 2, 1, 1 / 2]} pl={[1, 0, 4]}>
         <Button
           to="whitekitties"
-          color="blue.5"
+          color="#fcb132"
           bg="white"
           big
           width={[1, 1 / 2, 1]}
-          fontSize={[1, 3]}
+          fontSize={[3, 5]}
         >
           <FormattedMessage id="home.hero.whitekitties" />
         </Button>
