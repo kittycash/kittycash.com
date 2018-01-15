@@ -7,13 +7,10 @@ import { Flex, Box } from 'grid-styled';
 
 const Introduction = () => (
   <div>
-    <Heading heavy as="h1" color="white" font-weight="bold" fontSize={[6, 7, 8]} mb={0}>
+    <Heading heavy as="h1" color="white" font-weight="bold" fontSize={[6, 7, 8]} mb={2}>
       <FormattedMessage id="home.hero.scalable"/>
     </Heading>
-    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={0}>
-      <FormattedMessage id="home.hero.collectable"/>
-    </Heading>
-    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={0}>
+    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={2}>
       <FormattedMessage id="home.hero.breedable"/>
     </Heading>
     <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
