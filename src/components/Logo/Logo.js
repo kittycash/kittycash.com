@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 
 import Link from 'components/Link';
-import logoWhite from './KittyCash_dollars_W.svg';
-import logoBlack from './KittyCash_dollars.svg';
+import logo from './logo.svg';
 
 const StyledLink = styled(Link)`
   display: block;
@@ -21,7 +20,7 @@ const Img = styled.img.attrs({
 
 const Logo = props => (
   <StyledLink to="/">
-    <Img {...props} src={props.white ? logoWhite : logoBlack} />
+    <Img {...props} src={logo} />
   </StyledLink>
 );
 
