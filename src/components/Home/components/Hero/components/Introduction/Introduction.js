@@ -7,14 +7,14 @@ import { Flex, Box } from 'grid-styled';
 
 const Introduction = () => (
   <div>
-    <Heading heavy as="h1" color="white" font-weight="bold" fontSize={[6, 7, 8]} mb={2}>
-      <FormattedMessage id="home.hero.scalable"/>
+    <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={2}>
+      <FormattedMessage id="home.hero.lovable"/>
     </Heading>
     <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={2}>
-      <FormattedMessage id="home.hero.breedable"/>
+      <FormattedMessage id="home.hero.playable"/>
     </Heading>
     <Heading heavy as="h1" color="white" fontSize={[6, 7, 8]} mb={5}>
-      <FormattedMessage id="home.hero.killable"/>
+      <FormattedMessage id="home.hero.scalable"/>
     </Heading>
     <Heading heavy as="h1" color="white" fontSize={[4, 5, 6]} mb={5}>
       <FormattedMessage id="home.hero.platform"/>
@@ -26,7 +26,7 @@ const Introduction = () => (
           color="white"
           big
           outlined
-          width={[1, 1 / 2, 1]}
+          width={[1, 1, 1]}
           fontSize={[3, 5]}
         >
           <FormattedMessage id="home.hero.blog" />
@@ -38,7 +38,7 @@ const Introduction = () => (
           color="#fcb132"
           bg="white"
           big
-          width={[1, 1 / 2, 1]}
+          width={[1, 1, 1]}
           fontSize={[3, 5]}
         >
           <FormattedMessage id="home.hero.whitekitties" />
