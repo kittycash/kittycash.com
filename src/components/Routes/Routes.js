@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Home from '../Home';
-import WhitekittiesPage from '../WhitekittiesPage';
+// import WhitekittiesPage from '../WhitekittiesPage';
+import RoadmapPage from '../RoadmapPage';
 import NotFound from '../NotFound';
 import Soon from '../Soon';
 
@@ -14,7 +15,8 @@ const Routes = ({ match }) => {
     <Switch>
       <Route path={`${prefix}`} exact component={Home} />
       <Route path={`${prefix}explorekitties`} exact component={Soon} />
-      <Route path={`${prefix}whitekitties`} exact component={WhitekittiesPage} />
+      <Route path={`${prefix}whitekitties`} exact component={Soon} />
+      <Route path={`${prefix}roadmap`} exact component={RoadmapPage} />
       <Route path={`${prefix}soon`} exact component={Soon} />
       <Redirect from={`${prefix}whitekitties.html`} to={`${prefix}whitekitties`} />
       <Redirect from={`${prefix}downloads.html`} to={`${prefix}downloads`} />

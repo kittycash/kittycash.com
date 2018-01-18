@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "year": 2017,
+            "quarter": 4,
+            "weight": 2,
+            "body": "Kittycash.io goes online"
+        },
+        {
+            "year": 2017,
+            "quarter": 4,
+            "weight": 1,
+            "title": "Kitty Cash development starts"
+        },
+        {
+            "year": 2012,
+            "quarter": 4,
+            "weight": 1,
+            "title": "Skyledger development starts"
+        }
+    ]
+}

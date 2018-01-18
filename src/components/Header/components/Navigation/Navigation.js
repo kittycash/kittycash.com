@@ -59,6 +59,10 @@ const Navigation = ({ white }) => (
       <FormattedMessage id="header.navigation.blog" />
     </StyledLink>
 
+    <StyledLink white={white} to="roadmap">
+      <FormattedMessage id="header.navigation.roadmap" />
+    </StyledLink>
+
   </Wrapper>
 );
 

@@ -35,13 +35,25 @@ const Introduction = () => (
       <Box width={[1 / 2, 1, 1 / 2]} pl={[1, 0, 4]}>
         <Button
           to="whitekitties"
+          color="white"
+          big
+          outlined
+          width={[1, 1, 1]}
+          fontSize={[3, 5]}
+        >
+          <FormattedMessage id="home.hero.whitekitties" />
+        </Button>
+      </Box>
+      <Box width={[1, 1, 1]} pt={[1, 0, 4]} >
+        <Button
+          to="roadmap"
           color="#fcb132"
           bg="white"
           big
           width={[1, 1, 1]}
           fontSize={[3, 5]}
         >
-          <FormattedMessage id="home.hero.whitekitties" />
+          <FormattedMessage id="home.hero.roadmap" />
         </Button>
       </Box>
     </Flex>
