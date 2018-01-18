@@ -32,7 +32,7 @@ const Introduction = () => (
           <FormattedMessage id="home.hero.blog" />
         </Button>
       </Box>
-      <Box width={[1 / 2, 1, 1 / 2]} pl={[1, 0, 4]}>
+      <Box width={[1 / 2, 1, 1 / 2]} pl={[1, 0, 4]} mb={[0, 4, 0]}>
         <Button
           to="whitekitties"
           color="white"
@@ -44,7 +44,7 @@ const Introduction = () => (
           <FormattedMessage id="home.hero.whitekitties" />
         </Button>
       </Box>
-      <Box width={[1, 1, 1]} pt={[1, 0, 4]} >
+      <Box width={[1, 1, 1]} pt={[2, 0, 2]} >
         <Button
           to="roadmap"
           color="#fcb132"
