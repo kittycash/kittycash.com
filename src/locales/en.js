@@ -4,6 +4,7 @@ export default {
       whitekitties: 'Whitekitties',
       explorekitties: 'Explore Kitties',
       blog: 'Blog',
+      roadmap: 'Roadmap',
     },
   },
   footer: {
@@ -34,10 +35,10 @@ export default {
       home: 'Kitty Cash homepage',
   },
   home: {
-    title: 'Kitty Cash - Second generation cryptokitties',
-    description: 'Kitty Cash is designed to implement Satoshi\'s original vision on CryptoKitties and fixes breeding problems in other incarnations.',
+    title: 'Kitty Cash - Second generation blockchain collectables',
+    description: 'Kitty Cash is designed to implement Satoshi\'s original vision on blockchain collectables and fixes breeding problems in other incarnations.',
     hero: {
-      heading: 'Kitty Cash is the rebirth of CryptoKitties.',
+      heading: 'Kitty Cash is the rebirth of blockchain collectables.',
       soon: 'Coming soon on ',
       skyledger: 'SkyLedger',
       lovable: 'Lovable.',
@@ -47,11 +48,11 @@ export default {
       platform: 'Kitty Cash, second generation of blockchain collectables',
       blog: 'Blog',
       whitekitties: 'Whitekitties',
-      proudofsky: 'With proud use of Skycoin technologies',
+      roadmap: 'Roadmap',
     },
     about: {
       heading: 'What is Kitty Cash?',
-      lead: 'Kitty Cash is designed to implement Satoshi\'s original vision on CryptoKitties and fixes breeding problems in other incarnations.',
+      lead: 'Kitty Cash is designed to implement Satoshi\'s original vision on blockchain collectables and fixes breeding problems in other incarnations.',
       label: 'Read more',
     },
     logos: {
@@ -81,5 +82,8 @@ export default {
       heading: 'Download Kitty Cash Whitekitties',
       download: 'Download',
     },
+  },
+  roadmapPage: {
+    heading: 'Development roadmap',
   },
 };
