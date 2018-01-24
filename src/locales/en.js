@@ -12,6 +12,7 @@ export default {
     getStarted: 'Get Started',
     explore: 'Explore',
     wallet: 'Get Wallet',
+    downloads: 'Downloads',
     buy: 'Buy Kitty Cash',
     blog: 'Blog',
     whitekitties: 'Whitekitties',
@@ -64,8 +65,8 @@ export default {
     description: 'Download whitekitties.',
   },
   downloads: {
-    title: 'Downloads',
-    description: 'Download Kitty Cash wallet.',
+    title: 'Kitty Cash Downloads',
+    description: 'Kitty Cash Download Page.',
     wallet: {
       heading: 'Download Kitty Cash Wallet',
       lead: 'For simple petting, download the Kitty Cash wallet. For advanced use, or slow connections, the CLI wallet provides a UI that runs directly in your browser.',
@@ -78,10 +79,11 @@ export default {
       download: 'Download',
       torrent: 'Torrent',
     },
-    whitekitties: {
-      heading: 'Download Kitty Cash Whitekitties',
+    branding: {
+      heading: 'Branding',
       download: 'Download',
     },
+    download: 'Download',
   },
   roadmapPage: {
     heading: 'Development roadmap',

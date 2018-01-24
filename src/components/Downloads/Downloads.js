@@ -5,29 +5,29 @@ import { injectIntl } from 'react-intl';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import Whitekitties from './components/Whitekitties';
+import Branding from './components/Branding';
 
-const WhitekittiesPage = ({ intl }) => (
+const Downloads = ({ intl }) => (
   <div>
     <Helmet>
-      <title>{intl.formatMessage({ id: 'whitekitties.title' })}</title>
+      <title>{intl.formatMessage({ id: 'downloads.title' })}</title>
       <meta
         name="description"
-        content={intl.formatMessage({ id: 'whitekitties.description' })}
+        content={intl.formatMessage({ id: 'downloads.description' })}
       />
     </Helmet>
     <Header border />
 
-    <Whitekitties />
+    <Branding />
 
     <Footer />
   </div>
 );
 
-WhitekittiesPage.propTypes = {
+Downloads.propTypes = {
   intl: PropTypes.shape({
     formatMessage: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-export default injectIntl(WhitekittiesPage);
+export default injectIntl(Downloads);

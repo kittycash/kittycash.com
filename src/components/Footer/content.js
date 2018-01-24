@@ -3,6 +3,9 @@ export default [{
   links: [{
     label: 'footer.wallet',
     href: 'https://github.com/kittycash/kittycash',
+  }, {
+    label: 'footer.downloads',
+    to: 'downloads',
   }],
 }, {
   heading: 'footer.explore',
