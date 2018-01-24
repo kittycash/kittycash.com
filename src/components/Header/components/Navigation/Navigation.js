@@ -55,7 +55,7 @@ const Navigation = ({ white }) => (
       <FormattedMessage id="header.navigation.explorekitties" />
     </StyledLink>
 
-    <StyledLink white={white} href="https://blog.kittycash.io">
+    <StyledLink white={white} href="https://www.kittycash.com/blog">
       <FormattedMessage id="header.navigation.blog" />
     </StyledLink>
 

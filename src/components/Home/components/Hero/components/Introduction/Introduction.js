@@ -22,7 +22,7 @@ const Introduction = () => (
     <Flex wrap mb={[6, 0]}>
       <Box width={[1 / 2, 1, 1 / 2]} pr={[1, 0, 4]} mb={[0, 4, 0]}>
         <Button
-          href="https://blog.kittycash.io"
+          href="https://www.kittycash.com/blog"
           color="white"
           big
           outlined

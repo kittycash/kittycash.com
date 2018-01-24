@@ -8,7 +8,7 @@ export default [{
   heading: 'footer.explore',
   links: [{
     label: 'footer.blog',
-    href: 'https://blog.kittycash.io',
+    href: 'https://www.kittycash.com/blog',
   }, {
     label: 'footer.whitekitties',
     to: 'whitekitties',
@@ -16,7 +16,7 @@ export default [{
 }, {
   heading: 'footer.community',
   links: [{label: 'footer.bbs',
-    href: 'https://bbs.kittycash.io/',
+    href: 'https://bbs.kittycash.com/',
   }, {
     label: 'footer.github',
     href: 'https://github.com/kittycash',

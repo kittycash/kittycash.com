@@ -1,6 +1,6 @@
 export default [{
   name: 'Whitekitties: read more about the creation of Kitty Cash',
-  download: 'http://kittycash.io/soon',
+  download: 'http://www.kittycash.com/soon',
   filetype: '.pdf',
   filesize: 'xxxkb',
 }];
