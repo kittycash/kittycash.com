@@ -57,8 +57,8 @@ To deploy in production (https://www.kittycash.com):
 
     ```diff
        "name": "www.kittycash.com",
-    -  "version": "0.0.4",
-    +  "version": "0.0.5",
+    -  "version": "0.0.5",
+    +  "version": "0.0.6",
        "private": true,
     ```
 2. Commit, create a tag, and push:
