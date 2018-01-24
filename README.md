@@ -1,6 +1,6 @@
-![kittycash.io logo](https://raw.githubusercontent.com/kittycash/kittycash.io/22b80498116b631000a541b6682a140e135686fe/KittyCash.png)
+![kittycash.com logo](https://raw.githubusercontent.com/kittycash/kittycash.com/master/KittyCash.png)
 
-# kittycash.io
+# kittycash.com
 
 ## Setup
 
@@ -49,14 +49,14 @@ $ yarn test -- --coverage
 
 ## Releasing to production
 
-Commits on the master branch will be automatically deployed to https://staging.kittycash.io.
+Commits on the master branch will be automatically deployed to https://staging.kittycash.com.
 
-To deploy in production (https://kittycash.io):
+To deploy in production (https://www.kittycash.com):
 
 1. Bump version number in `package.json`:
 
     ```diff
-       "name": "kittycash.io",
+       "name": "kittycash.com",
     -  "version": "0.0.0",
     +  "version": "0.0.1",
        "private": true,
