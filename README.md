@@ -65,6 +65,6 @@ To deploy in production (https://www.kittycash.com):
 
     ```shell
     $ git commit -am "chore: bump version number"
-    $ git tag v0.0.5
+    $ git tag v0.0.6
     $ git push origin master --tags
     ```
