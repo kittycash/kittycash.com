@@ -57,7 +57,7 @@ const DownladsTable = ({ title, list, id }) => (
 
                 <td>
                   <Link target="_blank" href={download}>
-                    <FormattedMessage id="downloads.whitekitties.download" />
+                    <FormattedMessage id="downloads.download" />
                     &nbsp;
                     ({filetype})
                   </Link>
