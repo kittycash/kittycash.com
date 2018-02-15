@@ -14,42 +14,23 @@
         },
         {
             "year": 2018,
-            "quarter": 2,
-            "weight": 3,
-            "title": "Games",
-            "body": "Minigames launch on Kitty Cash"
-        },
-        {
-            "year": 2018,
-            "quarter": 2,
-            "weight": 2,
-            "body": "First Kitty Cash beauty contest"
-        },
-        {
-            "year": 2018,
-            "quarter": 2,
+            "quarter": 3,
             "weight": 1,
             "title": "Blockchain",
             "body": "Kitty Cash launches on Skyledger blockchain with full functionality"
         },
         {
             "year": 2018,
-            "quarter": 1,
-            "weight": 4,
-            "title": "ICO - Initial Cat Offering",
-            "body": "Distribution of 1st Gen Kitties"
-        },
-        {
-            "year": 2018,
-            "quarter": 1,
+            "quarter": 2,
             "weight": 3,
             "body": "Kitty Cash beta launches"
         },
         {
             "year": 2018,
             "quarter": 1,
-            "weight": 2,
-            "body": "Kittycash.com goes online"
+            "weight": 4,
+            "title": "IKO - Initial Kitty Offering",
+            "body": "Distribution of 1st Gen Kitties"
         },
         {
             "year": 2018,

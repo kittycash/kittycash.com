@@ -51,7 +51,7 @@ export default class RoadmapPage extends PureComponent {
 
   render() {
     const pastList = this.markAsComplete(this.state.past);
-    const list = [...pastList, ...this.state.future];
+    const list = [...this.state.future, ...pastList];
     const years = values(this.mergeByYear(list));
 
     return (

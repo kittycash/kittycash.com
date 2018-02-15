@@ -17,6 +17,12 @@
             "quarter": 4,
             "weight": 1,
             "title": "Skyledger development starts"
+        },
+        {
+            "year": 2018,
+            "quarter": 1,
+            "weight": 2,
+            "body": "Kittycash.com goes online"
         }
     ]
 }
