@@ -11,7 +11,7 @@ import Custom from './components/Custom';
 const ExplorerPage = ({ intl }) => (
   <div>
     <Helmet>
-      <title>{intl.formatMessage({ id: 'downloads.title' })}</title>
+      <title>{intl.formatMessage({ id: 'explorerPage.title' })}</title>
       <meta
         name="description"
         content={intl.formatMessage({ id: 'downloads.description' })}
