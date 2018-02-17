@@ -50,6 +50,7 @@ export default {
       blog: 'Blog',
       whitekitties: 'Whitekitties',
       roadmap: 'Roadmap',
+      legendary: 'Legendary Cats',
     },
     about: {
       heading: 'What is Kitty Cash?',

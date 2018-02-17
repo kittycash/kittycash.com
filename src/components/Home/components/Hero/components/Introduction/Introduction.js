@@ -34,26 +34,26 @@ const Introduction = () => (
       </Box>
       <Box width={[1 / 2, 1, 1 / 2]} pl={[1, 0, 4]} mb={[0, 4, 0]}>
         <Button
-          to="whitekitties"
+          to="roadmap"
           color="white"
           big
           outlined
           width={[1, 1, 1]}
           fontSize={[3, 5]}
         >
-          <FormattedMessage id="home.hero.whitekitties" />
+          <FormattedMessage id="home.hero.roadmap" />
         </Button>
       </Box>
       <Box width={[1, 1, 1]} pt={[2, 0, 2]} >
         <Button
-          to="roadmap"
+          to="explorekitties"
           color="#fcb132"
           bg="white"
           big
           width={[1, 1, 1]}
           fontSize={[3, 5]}
         >
-          <FormattedMessage id="home.hero.roadmap" />
+          <FormattedMessage id="home.hero.legendary" />
         </Button>
       </Box>
     </Flex>
