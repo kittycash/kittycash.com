@@ -10,6 +10,9 @@ export default [{
 }, {
   heading: 'footer.explore',
   links: [{
+    label: 'footer.legendary',
+    to: 'explorekitties',
+  }, {
     label: 'footer.blog',
     href: 'https://www.kittycash.com/blog',
   }, {

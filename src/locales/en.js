@@ -14,6 +14,7 @@ export default {
     wallet: 'Get Wallet',
     downloads: 'Downloads',
     buy: 'Buy Kitty Cash',
+    legendary: 'Legendary Cats',
     blog: 'Blog',
     whitekitties: 'Whitekitties',
     blockchain: 'Kitty Explorer',
