@@ -88,4 +88,17 @@ export default {
   roadmapPage: {
     heading: 'Development roadmap',
   },
+  explorerPage: {
+    title: "Kitty Exploror",
+    heading: 'Kitty Explorer',
+    description: "Special limited kitties",
+    legendary: {
+      heading: "Ledgendary Cats",
+      description: "We sell twelve legendary cats that will feature crypto-legends, superheroes and other famous characters. The funds raised will go towards the development of Kitty Cash. If you are interested, contact us on Telegram.",
+    },
+    custom: {
+      heading: "Custom Ledgendary Cats",
+      description: "Do you want something truly unique? We offer twelve completely custom made kitties that can be tailored to your desires. Make sure to get exactly the cat you want and desing a kitty in cooperation with our artists.",
+    },
+  },
 };

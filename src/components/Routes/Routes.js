@@ -5,6 +5,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Home from '../Home';
 import Downloads from '../Downloads';
 import RoadmapPage from '../RoadmapPage';
+import ExplorerPage from '../ExplorerPage';
 import NotFound from '../NotFound';
 import Soon from '../Soon';
 
@@ -14,7 +15,7 @@ const Routes = ({ match }) => {
   return (
     <Switch>
       <Route path={`${prefix}`} exact component={Home} />
-      <Route path={`${prefix}explorekitties`} exact component={Soon} />
+      <Route path={`${prefix}explorekitties`} exact component={ExplorerPage} />
       <Route path={`${prefix}whitekitties`} exact component={Soon} />
       <Route path={`${prefix}roadmap`} exact component={RoadmapPage} />
       <Route path={`${prefix}downloads`} exact component={Downloads} />
