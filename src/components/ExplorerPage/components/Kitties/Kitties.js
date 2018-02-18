@@ -95,13 +95,13 @@ const Kitty = ({ title, list, id}) => (
     <Wrap>
       <Container>
         <List>
-          {list.map(({ name, priceBTC, priceSKY, description, img }, i) => (
+          {list.map(({ name, priceBTC, priceSKY, description, img, sold }, i) => (
             <ListItemWrap>
               <ListItem>
                 <Img src={img} />
                 <Name><FormattedMessage id={name} /></Name>
                 <Price>
-                  <FormattedMessage id={priceBTC + " BTC | " + priceSKY + " SKY"} />
+                  <FormattedMessage id={sold ? "Owner: " + sold : priceBTC + " BTC | " + priceSKY + " SKY"} />
                 </Price>
                 <Text color="black"><FormattedMessage id={description} /></Text>
               </ListItem>

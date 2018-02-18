@@ -7,6 +7,7 @@ export default [{
   priceSKY: '480',
   description: 'Always wanted to know how Satoshi looked in reality? Well, here he is!',
   img: Satoshi,
+  sold: 'nEbCGNS58vchzQU1CqD1\neDWBX1amEccZ9s'
 }, {
   name: '???',
   priceBTC: '?',
