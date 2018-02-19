@@ -23,10 +23,10 @@ export default [{
   description: 'This special kitty will be revealed soon!',
   img: genie,
 }, {
-  name: 'Potter',
+  name: 'Magician',
   priceBTC: '1',
   priceSKY: '480',
-  description: 'Greetings, Muggle! If you take care of me, I might show you a trick or two.',
+  description: 'Abracadabra! If you take care of me, I might show you a trick or two.',
   img: Potter,
   sold: '2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt'
 }, {
