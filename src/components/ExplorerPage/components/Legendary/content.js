@@ -1,4 +1,5 @@
-import Satoshi from './imgs/Satoshi.jpg';
+import Satoshi from './imgs/Satoshi_sold-01.png';
+import Potter from './imgs/Harry_sold-01.png';
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -21,11 +22,12 @@ export default [{
   description: 'This special kitty will be revealed soon!',
   img: genie,
 }, {
-  name: '???',
-  priceBTC: '?',
-  priceSKY: '?',
-  description: 'This special kitty will be revealed soon!',
-  img: genie,
+  name: 'Potter',
+  priceBTC: '1',
+  priceSKY: '480',
+  description: 'Greetings, Muggle! If you take care of me, I might show you a trick or two.',
+  img: Potter,
+  sold: '2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt'
 }, {
   name: '???',
   priceBTC: '?',

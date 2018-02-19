@@ -101,7 +101,9 @@ const Kitty = ({ title, list, id}) => (
                 <Img src={img} />
                 <Name><FormattedMessage id={name} /></Name>
                 <Price>
-                  <FormattedMessage id={sold ? "Owner: " + sold : priceBTC + " BTC | " + priceSKY + " SKY"} />
+                  <FormattedMessage id={priceBTC + " BTC | " + priceSKY + " SKY"} />
+                  <br/>
+                  <FormattedMessage id={sold ? "Owner: " + sold : " "} />
                 </Price>
                 <Text color="black"><FormattedMessage id={description} /></Text>
               </ListItem>
