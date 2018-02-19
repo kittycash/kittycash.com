@@ -1,5 +1,6 @@
 import Satoshi from './imgs/Satoshi_sold-01.png';
 import Potter from './imgs/Harry_sold-01.png';
+import Synth from './imgs/Synth-01.png';
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -10,11 +11,11 @@ export default [{
   img: Satoshi,
   sold: 'nEbCGNS58vchzQU1CqD1\neDWBX1amEccZ9s'
 }, {
-  name: '???',
+  name: 'Synth',
   priceBTC: '?',
   priceSKY: '?',
-  description: 'This special kitty will be revealed soon!',
-  img: genie,
+  description: 'You see that split? That\'s how Skycoin prevents chain splits.',
+  img: Synth,
 }, {
   name: '???',
   priceBTC: '?',
