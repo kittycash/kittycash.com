@@ -14,14 +14,14 @@ export default [{
   priceSKY: '480',
   description: 'What could he possibly be up to?',
   img: genieSold,
-  sold: '2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt'
+  sold: '2fxTzgV2zgNpDPmAXU8Vn\nwYLcNojptrtARv'
 }, {
   name: '???',
   priceBTC: '1',
   priceSKY: '480',
   description: 'What could he possibly be up to?',
   img: genieSold,
-  sold: '2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt'
+  sold: '3U4LDCpjMnDFwMjS7S5MtQ\nyuRio6edgqex'
 }, {
   name: '???',
   priceBTC: '1',
