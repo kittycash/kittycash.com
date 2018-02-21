@@ -10,6 +10,9 @@ import Footer from 'components/Footer';
 import Hero from './components/Hero';
 import About from './components/About';
 import Logos from './components/Logos';
+import Blog from './components/Blog';
+import Kitties from '../ExplorerPage/components/Kitties';
+import content from './content';
 import Button from 'components/Button';
 
 
@@ -45,6 +48,8 @@ const Home = ({ intl }) => (
         </Button>
       </Box>
     </About>
+    <Kitties list={content} id="legendary" />
+    <Blog />
     <Logos />
     <Footer />
   </div>

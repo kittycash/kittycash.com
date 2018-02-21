@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   position: relative;
   min-height: 35rem;
   height: auto;
-
+  overflow: hidden;
   ${media.sm.css`
     height: 40rem;
   `}
@@ -29,14 +29,13 @@ const StyledFlex = styled(Flex)`
 const Hero = () => (
   <Wrapper>
     <Map />
-
     <StyledFlex column justify="space-between">
       <Box>
         <Header white />
       </Box>
       <Box>
         <Container>
-          <Flex row wrap align="center">
+          <Flex wrap align="center">
             <Box width={[1 / 1, 1 / 2]}>
               <Introduction />
             </Box>

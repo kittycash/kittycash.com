@@ -28,7 +28,7 @@ const theme = {
 const Root = ({ locale, ...props }) => (
   <IntlProvider locale={locale} messages={flatten(locales[locale])}>
     <div>
-      <Helmet titleTemplate="%s &middot; Skycoin">
+      <Helmet titleTemplate="%s &middot; Kitty Cash">
         <html lang={locale} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />

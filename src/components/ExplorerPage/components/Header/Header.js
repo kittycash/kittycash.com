@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { SPACE } from 'config';
 import { rem } from 'polished';
@@ -27,6 +27,6 @@ const ExplorerHeader = ({ children }) => (
 
 export default ExplorerHeader;
 
-ExplorerHeader.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// ExplorerHeader.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
