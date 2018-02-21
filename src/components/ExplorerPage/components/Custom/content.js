@@ -27,7 +27,8 @@ export default [{
   priceBTC: '1',
   priceSKY: '480',
   description: 'This custom cat is waiting for an owner to design him.',
-  img: genie,
+  img: genieSold,
+  sold: '-'
 }, {
   name: '???',
   priceBTC: '1',
