@@ -1,6 +1,7 @@
 import Satoshi from './imgs/Satoshi_sold-01.png';
 import Potter from './imgs/Harry_sold-01.png';
 import Synth from './imgs/Synth_sold-01.png';
+import Thor from './imgs/Thor_v2-01.png';
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -43,11 +44,11 @@ export default [{
   description: 'This special kitty will be revealed soon!',
   img: genie,
 }, {
-  name: '???',
+  name: 'Thor',
   priceBTC: '?',
   priceSKY: '?',
-  description: 'This special kitty will be revealed soon!',
-  img: genie,
+  description: 'To fight with, or to fight against? That\'s the question.',
+  img: Thor,
 }, {
   name: '???',
   priceBTC: '?',
