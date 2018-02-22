@@ -29,7 +29,7 @@ export default {
   notFound: {
     title: 'Page not found',
     heading: 'Page not found',
-    home: 'Skycoin homepage',
+    home: 'Kitty Cash homepage',
   },
   soon: {
       title: 'Will come soon',
