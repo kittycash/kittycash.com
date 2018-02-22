@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
-
+import { Box } from 'grid-styled';
 import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACE } from 'config';
 import Container from 'components/Container';
 import Button from 'components/Button';
+import background from '../About/background.png';
 
 class Blog extends Component {
 
@@ -82,7 +83,6 @@ class Blog extends Component {
     const BlogPost = styled.div`
       text-align: left;
       background-color: ${COLORS.gray[0]};
-      border-top: 2px solid ${COLORS.gray[1]};
       padding-bottom: 10px;
     `;
 
@@ -103,6 +103,11 @@ class Blog extends Component {
       text-align: center;
     `;
 
+    const Wrapper = styled.div`
+      background: url(${background}) repeat top center / ${rem(550)} #f7f7f7;
+      border-bottom: 2px solid ${COLORS.gray[1]};
+    `;
+
     const BlogError = styled.div`
     `;
 
@@ -120,30 +125,36 @@ class Blog extends Component {
       else
       {
         return (
-         <div>
-           <BlogTitle>From the Blog</BlogTitle>
-             {posts.map(post => (
-                <BlogPost key={post.guid}>
-                  <Container>
-                  <BlogPostTitle>
-                    {post.title}
-                  </BlogPostTitle>
-                    <p>{post.description}</p>
-                    <Button
-                      href={post.link}
-                      color="#fcb132"
-                      bg="white"
-                      big
-                      width={[1, 1 / 2, 1]}
-                      fontSize={[3, 5]}
-                      children={false}
-                    >
-                      <span>Read More</span>
-                    </Button>
-                  </Container>
-                </BlogPost>
-             ))}
-          </div>
+          <Wrapper>
+            <Container>
+              <Box py={[7, 8]}>
+                <BlogTitle>From the Blog</BlogTitle>
+                   {posts.map(post => (
+                      <BlogPost key={post.guid}>
+                        <Container>
+                        <BlogPostTitle>
+                          {post.title}
+                        </BlogPostTitle>
+                          <p>{post.description}</p>
+                          <Button
+                            href={post.link}
+                            color="#fcb132"
+                            bg="white"
+                            big
+                            width={[1, 1 / 2, 1]}
+                            fontSize={[3, 5]}
+                            children={false}
+                          >
+                            <span>Read More</span>
+                          </Button>
+                        </Container>
+                      </BlogPost>
+                   ))}
+              </Box>
+            </Container>
+          </Wrapper>
+
+         
         );
       }  
     }

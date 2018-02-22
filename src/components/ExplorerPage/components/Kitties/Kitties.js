@@ -89,7 +89,7 @@ const Price = styled.div`
 `;
 
 
-const Kitty = ({ title, list, id}) => (
+const Kitty = ({ title, list, id, hide_address}) => (
   <div>
     <Wrap>
       <Container>
@@ -102,7 +102,7 @@ const Kitty = ({ title, list, id}) => (
                 <Price>
                   {priceBTC + " BTC | " + priceSKY + " SKY"}
                   <br/>
-                  {sold ? "Owner: " + sold : " "}
+                  {sold && !hide_address ? "Owner: " + sold : " "}
                 </Price>
                 <Text color="black">{description}</Text>
               </ListItem>

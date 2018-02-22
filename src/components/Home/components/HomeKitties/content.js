@@ -1,6 +1,6 @@
-import Satoshi from '../ExplorerPage/components/Legendary/imgs/Satoshi_sold-01.png';
-import Potter from '../ExplorerPage/components/Legendary/imgs/Harry_sold-01.png';
-import Synth from '../ExplorerPage/components/Legendary/imgs/Synth_sold-01.png';
+import Satoshi from '../../../ExplorerPage/components/Legendary/imgs/Satoshi_sold-01.png';
+import Potter from '../../../ExplorerPage/components/Legendary/imgs/Harry_sold-01.png';
+import Synth from '../../../ExplorerPage/components/Legendary/imgs/Synth_sold-01.png';
 
 export default [{
   name: 'Satoshi',
