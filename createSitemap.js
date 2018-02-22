@@ -12,6 +12,7 @@ require.extensions['.png'] = () => {};
 require('babel-core/register');
 require('babel-polyfill');
 
+const fs = require('fs');
 const hostname = 'https://www.kittycash.com';
 
 //Load in the React Routes Config to create the main page sitemap
@@ -41,13 +42,13 @@ const parser = new Parser();
   });
 
   writeSitemap(hostname, urls);
+  writeRobots(hostname);
  
 })();
 
 function writeSitemap(hostname, urls)
 {
 	const sm = require('sitemap');
-	const fs = require('fs');
 
 	const sitemap = sm.createSitemap ({
 	      hostname: hostname,
@@ -56,4 +57,22 @@ function writeSitemap(hostname, urls)
 	    });
 
 	fs.writeFileSync("./public/sitemap.xml", sitemap.toString());
+}
+
+function writeRobots(hostname)
+{
+	const robotstxt = require("generate-robotstxt").default;
+
+	robotstxt({
+	  policy: [
+	    {
+	      userAgent: "*",
+	      allow: "/"
+	    }
+	  ],
+	  sitemap: hostname + "/sitemap.xml",
+	  host: hostname
+	}).then(content => {
+	  fs.writeFileSync("./public/robots.txt", content);
+	});
 }

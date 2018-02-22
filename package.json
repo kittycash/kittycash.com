@@ -12,6 +12,7 @@
     "feedparser": "^2.2.9",
     "flag": "^2.0.2",
     "flat": "^2.0.1",
+    "generate-robotstxt": "^5.0.4",
     "glamor": "^2.20.25",
     "grid-styled": "^2.0.0-4",
     "hidden-styled": "^1.0.0-0",
