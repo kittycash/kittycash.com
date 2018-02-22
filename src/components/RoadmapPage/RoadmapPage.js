@@ -1,9 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent } from 'react';
 import { values } from 'ramda';
 import { rem } from 'polished';
 import { SPACE } from 'config';
 import styled from 'styled-components';
 import Footer from 'components/Footer';
+import { Helmet } from 'react-helmet';
+import { injectIntl } from 'react-intl';
 import Roadmap from './components/Roadmap/Roadmap';
 import RoadmapHeader from './components/Header/Header';
 
@@ -14,7 +16,7 @@ const RoadmapWrap = styled.div`
   margin-top: ${rem(SPACE[8])};
 `;
 
-export default class RoadmapPage extends PureComponent {
+class RoadmapPage extends PureComponent {
   constructor() {
     super();
 
@@ -26,7 +28,6 @@ export default class RoadmapPage extends PureComponent {
     this.mergeByYear = this.mergeByYear.bind(this);
     this.markAsComplete = this.markAsComplete.bind(this);
   }
-
 
   mergeByYear(list) {
     return list.reduce((acc, item) => {
@@ -53,10 +54,16 @@ export default class RoadmapPage extends PureComponent {
     const pastList = this.markAsComplete(this.state.past);
     const list = [...this.state.future, ...pastList];
     const years = values(this.mergeByYear(list));
-
     return (
       <div>
-        <RoadmapHeader />
+        <Helmet>
+          <title>{this.props.intl.formatMessage({ id: 'roadmapPage.title' })}</title>
+          <meta
+            name="description"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.description' })}
+          />
+        </Helmet>
+        <RoadmapHeader><span></span></RoadmapHeader>
         <RoadmapWrap>
           <Roadmap years={years} />
         </RoadmapWrap>
@@ -65,3 +72,5 @@ export default class RoadmapPage extends PureComponent {
     );
   }
 }
+
+export default injectIntl(RoadmapPage);

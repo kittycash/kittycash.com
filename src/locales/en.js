@@ -88,6 +88,8 @@ export default {
     download: 'Download',
   },
   roadmapPage: {
+    title: 'Kitty Cash Roadmap',
+    description: 'Kitty Cash Roadmap Page.',
     heading: 'Development roadmap',
   },
   explorerPage: {
