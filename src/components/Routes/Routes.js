@@ -1,29 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
-import Home from '../Home';
-import Downloads from '../Downloads';
-import RoadmapPage from '../RoadmapPage';
-import ExplorerPage from '../ExplorerPage';
 import NotFound from '../NotFound';
-import Soon from '../Soon';
+import RouteConfig from './Config.js';
 
 const Routes = ({ match }) => {
   const prefix = match.path === '/' ? '/' : '/:locale/';
-
+  
   return (
     <Switch>
-      <Route path={`${prefix}`} exact component={Home} />
-      <Route path={`${prefix}explorekitties`} exact component={ExplorerPage} />
-      <Route path={`${prefix}whitekitties`} exact component={Soon} />
-      <Route path={`${prefix}roadmap`} exact component={RoadmapPage} />
-      <Route path={`${prefix}downloads`} exact component={Downloads} />
-      <Route path={`${prefix}soon`} exact component={Soon} />
-      <Redirect from={`${prefix}whitekitties.html`} to={`${prefix}whitekitties`} />
-      <Redirect from={`${prefix}downloads.html`} to={`${prefix}downloads`} />
-      <Redirect from={`${prefix}faq.html`} to={`${prefix}`} />
-      <Redirect from={`${prefix}index.html`} to={`${prefix}`} />
+     {RouteConfig.routes.map(route => (
+       <Route key={route.component} path={`${prefix}${route.path}`} exact component={route.component}/>
+      ))
+     }
+     {RouteConfig.redirects.map(route => (
+       <Redirect key={route.from} from={`${prefix}${route.from}`} to={`${prefix}{route.to}`} /> 
+      ))
+      }
       <Route path={`${prefix}*`} component={NotFound} />
     </Switch>
   );
