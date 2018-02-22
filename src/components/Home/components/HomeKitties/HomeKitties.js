@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { rem } from 'polished';
-import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACE } from 'config';
-import { Flex, Box } from 'grid-styled';
+import { FONT_SIZES, FONT_FAMILIES, SPACE } from 'config';
+import { Box } from 'grid-styled';
 import Container from 'components/Container';
 import Button from 'components/Button';
 import content from './content';
