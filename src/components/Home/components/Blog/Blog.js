@@ -1,0 +1,165 @@
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import { rem } from 'polished';
+import { Box } from 'grid-styled';
+import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACE } from 'config';
+import Text from 'components/Text';
+import Container from 'components/Container';
+import Button from 'components/Button';
+import background from '../About/background.png';
+
+class Blog extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      posts: []
+    };
+  }
+
+  componentDidMount() {
+    fetch("/blog/index.xml")
+      .then((res) => {
+        //Check if the response is valid.  If not, issue an error
+        if (res.status >= 200 && res.status < 300) {
+          return Promise.resolve(res.text())
+        } else {
+          var error = new Error(res.statusText || res.status)
+          error.response = res.text()
+          return Promise.reject(error)
+        }
+      })
+      .then(
+        (result) => {
+
+          const parseString = require('react-native-xml2js').parseString;
+          const striptags = require('striptags');
+          const Entities = require('html-entities').AllHtmlEntities;
+          const entities = new Entities();
+
+          const _this = this;
+
+          //Ensure there are no html tags and decode all the HTML entities from the blog
+          const cleanValues = function(value)
+          {
+              return entities.decode(striptags(value));
+          }
+
+          parseString(result, {trim: true, explicitArray: false, valueProcessors: [cleanValues]}, function (err, data) {
+            if (data && data.rss && data.rss.channel && data.rss.channel.item)
+            {
+               _this.setState({
+                isLoaded: true,
+                posts: data.rss.channel.item.slice(0, 3)
+              });
+            }
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
+  }
+
+  render() {
+    const { error, isLoaded, posts } = this.state;
+
+    const BlogTitle = styled.h1`
+      margin-top: ${rem(SPACE[5])};
+      font-family: ${FONT_FAMILIES.mono};
+      font-size: ${rem(FONT_SIZES[15])};
+      color: #394049;
+      text-decoration: none;
+      text-align: center;
+    `;
+
+    const BlogPost = styled.div`
+      text-align: left;
+      background-color: ${COLORS.gray[0]};
+      padding-bottom: 10px;
+    `;
+
+    const BlogPostTitle = styled.h1`
+      margin-top: ${rem(SPACE[5])};
+      font-family: ${FONT_FAMILIES.mono};
+      font-size: ${rem(FONT_SIZES[15])};
+      color: #394049;
+      text-decoration: none;
+    `;
+
+    const BlogLoading = styled.h1`
+      margin-top: ${rem(SPACE[5])};
+      font-family: ${FONT_FAMILIES.mono};
+      font-size: ${rem(FONT_SIZES[15])};
+      color: #394049;
+      text-decoration: none;
+      text-align: center;
+    `;
+
+    const Wrapper = styled.div`
+      background: url(${background}) repeat top center / ${rem(550)} #f7f7f7;
+      border-bottom: 2px solid ${COLORS.gray[1]};
+    `;
+
+    const BlogError = styled.div`
+    `;
+
+    function Blog() {
+
+      if (error)
+      {
+        //Return an empty div if there is an error fetching the recent blog posts
+        return (<BlogError></BlogError>)
+      }
+      else if (!isLoaded)
+      {
+        return (<BlogLoading>Loading...</BlogLoading>)
+      }
+      else
+      {
+        return (
+          <Wrapper>
+            <Container>
+              <Box py={[7, 8]}>
+                <BlogTitle>From the Blog</BlogTitle>
+                   {posts.map(post => (
+                      <BlogPost key={post.guid}>
+                        <Container>
+                        <BlogPostTitle>
+                          {post.title}
+                        </BlogPostTitle>
+                          <Text>{post.description}</Text>
+                          <Button
+                            href={post.link}
+                            color="#fcb132"
+                            bg="white"
+                            big
+                            width={[1, 1 / 2, 1]}
+                            fontSize={[3, 5]}
+                            children={false}
+                          >
+                            <span>Read More</span>
+                          </Button>
+                        </Container>
+                      </BlogPost>
+                   ))}
+              </Box>
+            </Container>
+          </Wrapper>
+
+         
+        );
+      }  
+    }
+    return <Blog></Blog>;
+  }
+}
+export default Blog
