@@ -29,7 +29,7 @@ const ButtonContainer = styled.div`
 const HomeKitties = () => (
   <Wrapper>
     <Container>
-    <KittyTitle>Explore our legendary kitties</KittyTitle>
+    <KittyTitle>Explore Our Legendary Cats</KittyTitle>
     <Kitties list={content} id="legendary" hide_address="true"/>
     <ButtonContainer>
       <Box width={[1, 1, 1]} pt={[2, 0, 2]} >
