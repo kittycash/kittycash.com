@@ -12,7 +12,7 @@ const KittyTitle = styled.h1`
       margin-top: ${rem(SPACE[5])};
       font-family: ${FONT_FAMILIES.mono};
       font-size: ${rem(FONT_SIZES[15])};
-      color: #000000;
+      color: #394049;
       text-decoration: none;
       text-align: center;
     `;

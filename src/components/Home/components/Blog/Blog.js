@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import { Box } from 'grid-styled';
 import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACE } from 'config';
+import Text from 'components/Text';
 import Container from 'components/Container';
 import Button from 'components/Button';
 import background from '../About/background.png';
@@ -75,7 +76,7 @@ class Blog extends Component {
       margin-top: ${rem(SPACE[5])};
       font-family: ${FONT_FAMILIES.mono};
       font-size: ${rem(FONT_SIZES[15])};
-      color: #000000;
+      color: #394049;
       text-decoration: none;
       text-align: center;
     `;
@@ -90,7 +91,7 @@ class Blog extends Component {
       margin-top: ${rem(SPACE[5])};
       font-family: ${FONT_FAMILIES.mono};
       font-size: ${rem(FONT_SIZES[15])};
-      color: #000000;
+      color: #394049;
       text-decoration: none;
     `;
 
@@ -98,7 +99,7 @@ class Blog extends Component {
       margin-top: ${rem(SPACE[5])};
       font-family: ${FONT_FAMILIES.mono};
       font-size: ${rem(FONT_SIZES[15])};
-      color: #000000;
+      color: #394049;
       text-decoration: none;
       text-align: center;
     `;
@@ -135,7 +136,7 @@ class Blog extends Component {
                         <BlogPostTitle>
                           {post.title}
                         </BlogPostTitle>
-                          <p>{post.description}</p>
+                          <Text>{post.description}</Text>
                           <Button
                             href={post.link}
                             color="#fcb132"
