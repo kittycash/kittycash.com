@@ -1,7 +1,8 @@
 import Satoshi from './imgs/Satoshi_sold-01.png';
 import Potter from './imgs/Harry_sold-01.png';
 import Synth from './imgs/Synth_sold-01.png';
-import Thor from './imgs/Thor_v2-01.png';
+import Thor from './imgs/Thor_sold-01.png';
+import AlCapone from './imgs/AlCapone-01.png';
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -45,16 +46,17 @@ export default [{
   img: genie,
 }, {
   name: 'Thor',
-  priceBTC: '?',
-  priceSKY: '?',
+  priceBTC: '0.95',
+  priceSKY: '456',
   description: 'To fight with, or to fight against? That\'s the question.',
   img: Thor,
+  sold: 'HewGgmvfhNA1Ui2CZH\nyWeqzHciADcDaZUe'
 }, {
-  name: '???',
+  name: 'Al Capone',
   priceBTC: '?',
   priceSKY: '?',
-  description: 'This special kitty will be revealed soon!',
-  img: genie,
+  description: 'Come on son! All these other kitties got nothing on me.',
+  img: AlCapone,
 }, {
   name: '???',
   priceBTC: '?',
