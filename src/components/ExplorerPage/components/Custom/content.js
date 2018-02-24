@@ -14,7 +14,7 @@ export default [{
   priceSKY: '480',
   description: 'What could he possibly be up to?',
   img: genieSold,
-  sold: '2fxTzgV2zgNpDPmAXU8Vn\nwYLcNojptrtARv'
+  sold: '2LH6TDrrvjneQwUMGQR\n1AnjeXKEWJtuUXY6'
 }, {
   name: '???',
   priceBTC: '1',
