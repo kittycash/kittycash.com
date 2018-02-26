@@ -2,7 +2,7 @@ import Satoshi from './imgs/Satoshi_sold-01.png';
 import Potter from './imgs/Harry_sold-01.png';
 import Synth from './imgs/Synth_sold-01.png';
 import Thor from './imgs/Thor_sold-01.png';
-import AlCapone from './imgs/AlCapone-01.png';
+import AlCapone from './imgs/AlCapone_sold-01.png';
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -53,10 +53,11 @@ export default [{
   sold: 'HewGgmvfhNA1Ui2CZH\nyWeqzHciADcDaZUe'
 }, {
   name: 'Al Capone',
-  priceBTC: '?',
-  priceSKY: '?',
+  priceBTC: '0.936',
+  priceSKY: '585',
   description: 'Come on son! All these other kitties got nothing on me.',
   img: AlCapone,
+  sold: '-'
 }, {
   name: '???',
   priceBTC: '?',
