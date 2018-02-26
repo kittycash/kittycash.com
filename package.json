@@ -1,6 +1,6 @@
 {
   "name": "www.kittycash.com",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
