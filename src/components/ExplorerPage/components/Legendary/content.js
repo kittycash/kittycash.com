@@ -57,7 +57,7 @@ export default [{
   priceSKY: '585',
   description: 'Come on son! All these other kitties got nothing on me.',
   img: AlCapone,
-  sold: '-'
+  sold: 'TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr'
 }, {
   name: '???',
   priceBTC: '?',
