@@ -8,7 +8,7 @@ export default [{
   priceSKY: '480',
   description: 'Custom Legend No. 1 is revealed! How will his friends look like?',
   img: skyWhiskerSold,
-  sold: '-'
+  sold: '2HtVE12kDg57pfemo\n3ZG2S7QGCXmaPP1qiP'
 }, {
   name: '???',
   priceBTC: '1',
