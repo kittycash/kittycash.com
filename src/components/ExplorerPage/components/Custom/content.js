@@ -1,12 +1,13 @@
 import genie from './imgs/Genie.png';
 import genieSold from './imgs/GenieSold.png';
+import skyWhiskerSold from './imgs/Skywhisker_sold-01.png';
 
 export default [{
-  name: '???',
+  name: 'SkyWhisker',
   priceBTC: '1',
   priceSKY: '480',
-  description: 'What could he possibly be up to?',
-  img: genieSold,
+  description: 'Custom Legend No. 1 is revealed! How will his friends look like?',
+  img: skyWhiskerSold,
   sold: '-'
 }, {
   name: '???',
