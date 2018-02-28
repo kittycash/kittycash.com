@@ -24,12 +24,12 @@ export default [{
   img: genieSold,
   sold: '3U4LDCpjMnDFwMjS7S5MtQ\nyuRio6edgqex'
 }, {
-  name: '???',
+  name: 'SkyKitty Huixin',
   priceBTC: '1',
   priceSKY: '480',
   description: 'What could he possibly be up to?',
   img: genieSold,
-  sold: '-'
+  sold: 'uq4nDqpnJKyEQUmLco\nF8sMUjNuGhDpwqE'
 }, {
   name: '???',
   priceBTC: '1',
