@@ -3,6 +3,7 @@ import Potter from './imgs/Harry_sold-01.png';
 import Synth from './imgs/Synth_sold-01.png';
 import Thor from './imgs/Thor_sold-01.png';
 import AlCapone from './imgs/AlCapone_sold-01.png';
+import Illuminati from './imgs/Illuminati-01.png';
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -33,11 +34,11 @@ export default [{
   img: Potter,
   sold: '2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt'
 }, {
-  name: '???',
+  name: 'Illuminati',
   priceBTC: '?',
   priceSKY: '?',
-  description: 'This special kitty will be revealed soon!',
-  img: genie,
+  description: '9/11 was an inside job. Trust me.',
+  img: Illuminati,
 }, {
   name: '???',
   priceBTC: '?',
