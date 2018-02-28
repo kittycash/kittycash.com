@@ -62,6 +62,38 @@ class RoadmapPage extends PureComponent {
             name="description"
             content={this.props.intl.formatMessage({ id: 'roadmapPage.description' })}
           />
+          <meta
+            name="twitter:title"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.twitter.title' })}
+          />
+          <meta
+            name="twitter:description"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.twitter.description' })}
+          />
+          <meta
+            name="twitter:image"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.twitter.image' })}
+          />
+          <meta
+            name="twitter:card"
+            content="summary_large_image"
+          />
+          <meta
+            property="og:title"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.facebook.title' })}
+          />
+          <meta
+            property="og:description"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.facebook.description' })}
+          />
+          <meta
+            property="og:image"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.facebook.image' })}
+          />
+          <meta
+            property="og:url"
+            content={this.props.intl.formatMessage({ id: 'roadmapPage.facebook.url' })}
+          />
         </Helmet>
         <RoadmapHeader><span></span></RoadmapHeader>
         <RoadmapWrap>

@@ -60,6 +60,17 @@ export default {
     },
     logos: {
       proudofsky: 'Proudly made possible with Skycoin technologies',
+    },
+    twitter: {
+      title: 'Kitty Cash - Second generation blockchain collectables',
+      description: 'Kitty Cash is designed to implement Satoshi\'s original vision on blockchain collectables and fixes breeding problems in other incarnations.',
+      image: 'https://www.kittycash.com/tw-image.png'
+    },
+    facebook: {
+      title: 'Kitty Cash - Second generation blockchain collectables',
+      description: 'Kitty Cash is designed to implement Satoshi\'s original vision on blockchain collectables and fixes breeding problems in other incarnations.',
+      image: 'https://www.kittycash.com/fb-image.png',
+      url: 'https://www.kittycash.com/'
     }
   },
   whitekitties: {
@@ -86,11 +97,33 @@ export default {
       download: 'Download',
     },
     download: 'Download',
+    twitter: {
+      title: 'Kitty Cash - Downloads',
+      description: 'Kitty Cash Download Page',
+      image: 'https://www.kittycash.com/tw-image.png'
+    },
+    facebook: {
+      title: 'Kitty Cash - Downloads',
+      description: 'Kitty Cash Download Page',
+      image: 'https://www.kittycash.com/fb-image.png',
+      url: 'https://www.kittycash.com/downloads/'
+    }
   },
   roadmapPage: {
     title: 'Kitty Cash Roadmap',
     description: 'Kitty Cash Roadmap Page.',
     heading: 'Development roadmap',
+    twitter: {
+      title: 'Kitty Cash - Development Roadmap',
+      description: 'Kitty Cash Development Roadmap',
+      image: 'https://www.kittycash.com/tw-image.png'
+    },
+    facebook: {
+      title: 'Kitty Cash - Development Roadmap',
+      description: 'Kitty Cash Development Roadmap',
+      image: 'https://www.kittycash.com/fb-image.png',
+      url: 'https://www.kittycash.com/roadmap/'
+    }
   },
   explorerPage: {
     title: "Kitty Cash - Legendary Cats",
@@ -104,5 +137,16 @@ export default {
       heading: "Custom Legendary Cats",
       description: "Do you want something truly unique? We offer twelve completely custom made kitties that can be tailored to your desires. Make sure to get exactly the cat you want and design a kitty in cooperation with our artists.",
     },
+    twitter: {
+      title: 'Kitty Cash - Legendary Cats',
+      description: 'Special limited kitties',
+      image: 'https://www.kittycash.com/tw-image.png'
+    },
+    facebook: {
+      title: 'Kitty Cash - Legendary Cats',
+      description: 'Special limited kitties',
+      image: 'https://www.kittycash.com/fb-image.png',
+      url: 'https://www.kittycash.com/explorekitties/'
+    }
   },
 };

@@ -16,6 +16,11 @@ import * as locales from 'locales';
 import Routes from '../Routes';
 import ScrollToTop from '../ScrollToTop';
 
+import {
+  JSONLD,
+  Generic
+} from 'react-structured-data';
+
 addLocaleData([...zh, ...ru, ...ko]);
 
 const theme = {
@@ -28,6 +33,10 @@ const theme = {
 const Root = ({ locale, ...props }) => (
   <IntlProvider locale={locale} messages={flatten(locales[locale])}>
     <div>
+      <JSONLD>
+        <Generic type="organization" jsonldtype="Organization" schema={{url: "https://www.kittycash.com/", name: "KittyCash"}}>
+        </Generic>
+      </JSONLD>
       <Helmet titleTemplate="%s &middot; Kitty Cash">
         <html lang={locale} />
         <meta charSet="utf-8" />
@@ -37,8 +46,8 @@ const Root = ({ locale, ...props }) => (
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8481eb" />
-        <meta name="apple-mobile-web-app-title" content="Skycoin" />
-        <meta name="application-name" content="Skycoin" />
+        <meta name="apple-mobile-web-app-title" content="Kitty Cash" />
+        <meta name="application-name" content="Kitty Cash" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
 

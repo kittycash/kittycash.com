@@ -61,9 +61,7 @@ const ListItem = styled.div`
  }
 `;
 
-const Img = styled.img.attrs({
-  alt: "Limited",
-})`
+const Img = styled.img`
 display: block;
 width: 100%;
 height: auto;
@@ -97,7 +95,7 @@ const Kitty = ({ title, list, id}) => (
           {list.map(({ name, priceBTC, priceSKY, description, img, sold }, i) => (
             <ListItemWrap key={i}>
               <ListItem>
-                <Img src={img} />
+                <Img src={img} alt={name} />
                 <Name>{name}</Name>
                 <Price>
                   {priceBTC + " BTC | " + priceSKY + " SKY"}

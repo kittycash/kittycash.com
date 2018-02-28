@@ -14,7 +14,39 @@ const ExplorerPage = ({ intl }) => (
       <title>{intl.formatMessage({ id: 'explorerPage.title' })}</title>
       <meta
         name="description"
-        content={intl.formatMessage({ id: 'downloads.description' })}
+        content={intl.formatMessage({ id: 'explorerPage.description' })}
+      />
+      <meta
+        name="twitter:title"
+        content={intl.formatMessage({ id: 'explorerPage.twitter.title' })}
+      />
+      <meta
+        name="twitter:description"
+        content={intl.formatMessage({ id: 'explorerPage.twitter.description' })}
+      />
+      <meta
+        name="twitter:image"
+        content={intl.formatMessage({ id: 'explorerPage.twitter.image' })}
+      />
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+      />
+      <meta
+        property="og:title"
+        content={intl.formatMessage({ id: 'explorerPage.facebook.title' })}
+      />
+      <meta
+        property="og:description"
+        content={intl.formatMessage({ id: 'explorerPage.facebook.description' })}
+      />
+      <meta
+        property="og:image"
+        content={intl.formatMessage({ id: 'explorerPage.facebook.image' })}
+      />
+      <meta
+        property="og:url"
+        content={intl.formatMessage({ id: 'explorerPage.facebook.url' })}
       />
     </Helmet>
     <Header border />
