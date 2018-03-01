@@ -1,6 +1,7 @@
 import genie from './imgs/Genie.png';
 import genieSold from './imgs/GenieSold.png';
 import skyWhiskerSold from './imgs/Skywhisker_sold-01.png';
+import jj from './imgs/JJ_sold-01.png';
 
 export default [{
   name: 'SkyWhisker',
@@ -34,8 +35,8 @@ export default [{
   name: '???',
   priceBTC: '1',
   priceSKY: '480',
-  description: 'What could he possibly be up to?',
-  img: genieSold,
+  description: 'J.J. Jenkins SkyKitty MILLIONAIRE',
+  img: jj,
   sold: '2Rudkvk3d3j3s7GcXU\nJ5TDyiCiupR2NZaXc'
 }, {
   name: '???',
