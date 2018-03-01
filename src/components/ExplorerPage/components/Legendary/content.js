@@ -35,10 +35,11 @@ export default [{
   sold: '2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt'
 }, {
   name: 'Illuminati',
-  priceBTC: '?',
-  priceSKY: '?',
+  priceBTC: '1.2',
+  priceSKY: '750',
   description: '9/11 was an inside job. Trust me.',
   img: Illuminati,
+  sold: '2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv'
 }, {
   name: '???',
   priceBTC: '?',
