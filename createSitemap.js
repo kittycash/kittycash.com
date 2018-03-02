@@ -1,10 +1,3 @@
-/**
- * Author:    Brad K
- * Created:   21.02.2018
- * 
- * Generate a sitemap from React Routes
- **/
-
 //Make babel-register ignore .svg and .png files
 require.extensions['.svg'] = () => {};
 require.extensions['.png'] = () => {};
