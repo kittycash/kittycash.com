@@ -1,6 +1,7 @@
 import genie from './imgs/Genie.png';
 import genieSold from './imgs/GenieSold.png';
 import skyWhiskerSold from './imgs/Skywhisker_sold-01.png';
+import audrey from './imgs/Audrey_done_sold.png';
 import jj from './imgs/JJ_sold-01.png';
 
 export default [{
@@ -46,11 +47,11 @@ export default [{
   img: genieSold,
   sold: '2Tu8XmMhZonVaz76\nyJvpY86ihHb7XYeWnYr'
 }, {
-  name: '???',
+  name: 'Audrey',
   priceBTC: '1',
   priceSKY: '625',
-  description: 'What could he possibly be up to?',
-  img: genieSold,
+  description: 'A girl can\'t go on blockchain without her lipstick',
+  img: audrey,
   sold: '2ctGrJzexYf6eo3Q\n6TCbcF4aX3WNPbStTi9'
 }, {
   name: '???',
