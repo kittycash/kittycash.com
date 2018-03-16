@@ -11,7 +11,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Img = styled.img.attrs({
-  alt: 'Kitty Cash',
+  alt: 'KittyCash',
 })`
   display: block;
   height: ${rem(90)};
