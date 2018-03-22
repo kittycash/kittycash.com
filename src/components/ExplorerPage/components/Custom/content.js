@@ -1,8 +1,11 @@
 import genie from './imgs/Genie.png';
 import genieSold from './imgs/GenieSold.png';
 import skyWhiskerSold from './imgs/Skywhisker_sold-01.png';
-import audrey from './imgs/Audrey_done_sold.png';
+import audrey from './imgs/Audrey_sold-03.png';
 import jj from './imgs/JJ_sold-01.png';
+import jackson from './imgs/Jackson_sold-01.png';
+import smurfette from './imgs/Smurf_sold-01.png';
+import skyKitty from './imgs/SkyKitty-sold.png';
 
 export default [{
   name: 'SkyWhisker',
@@ -12,11 +15,11 @@ export default [{
   img: skyWhiskerSold,
   sold: '2HtVE12kDg57pfemo\n3ZG2S7QGCXmaPP1qiP'
 }, {
-  name: '???',
+  name: 'Jackson',
   priceBTC: '1',
   priceSKY: '480',
-  description: 'What could he possibly be up to?',
-  img: genieSold,
+  description: 'I can thrill you all night, baby.',
+  img: jackson,
   sold: '2LH6TDrrvjneQwUMGQR\n1AnjeXKEWJtuUXY6'
 }, {
   name: '???',
@@ -29,11 +32,11 @@ export default [{
   name: 'SkyKitty Huixin',
   priceBTC: '1',
   priceSKY: '480',
-  description: 'What could he possibly be up to?',
-  img: genieSold,
+  description: 'First KittyCash astronaut in the universe. Floating my way to milk',
+  img: skyKitty,
   sold: 'uq4nDqpnJKyEQUmLco\nF8sMUjNuGhDpwqE'
 }, {
-  name: '???',
+  name: 'J.J. Jenkins',
   priceBTC: '1',
   priceSKY: '480',
   description: 'J.J. Jenkins SkyKitty MILLIONAIRE',
@@ -54,11 +57,11 @@ export default [{
   img: audrey,
   sold: '2ctGrJzexYf6eo3Q\n6TCbcF4aX3WNPbStTi9'
 }, {
-  name: '???',
+  name: 'Smurfette',
   priceBTC: '1',
   priceSKY: '625',
-  description: 'What could he possibly be up to?',
-  img: genieSold,
+  description: 'Hey there. What are you looking at?',
+  img: smurfette,
   sold: '2RD6yCerPLc8VeBvB\nRHVZUP3W84uXJyWMU5'
 }, {
   name: '???',
