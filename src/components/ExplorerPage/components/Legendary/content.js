@@ -4,6 +4,7 @@ import Synth from './imgs/Synth_sold-01.png';
 import Thor from './imgs/Thor_sold-01.png';
 import AlCapone from './imgs/AlCapone_sold-01.png';
 import Illuminati from './imgs/Illuminati_sold-01.png';
+import Trump from './imgs/Trump-01.png'
 import genie from './imgs/Genie.png';
 
 export default [{
@@ -41,11 +42,11 @@ export default [{
   img: Illuminati,
   sold: '2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv'
 }, {
-  name: '???',
+  name: 'Donald The Cat',
   priceBTC: '?',
   priceSKY: '?',
-  description: 'This special kitty will be revealed soon!',
-  img: genie,
+  description: 'We\'re making collactables great again while puppers are ruining this country! AUCTION IS OPEN: https://t.me/KittyCashAuction',
+  img: Trump,
 }, {
   name: 'Thor',
   priceBTC: '0.95',
