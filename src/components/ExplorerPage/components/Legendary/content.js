@@ -45,7 +45,7 @@ export default [{
   name: 'Donald The Cat',
   priceBTC: '?',
   priceSKY: '?',
-  description: 'We\'re making collactables great again while puppers are ruining this country! AUCTION IS OPEN: https://t.me/KittyCashAuction',
+  description: 'We\'re making collectables great again while puppers are ruining this country! AUCTION IS OPEN: https://t.me/KittyCashAuction',
   img: Trump,
 }, {
   name: 'Thor',
