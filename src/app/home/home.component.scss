@@ -1,0 +1,91 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "src/theme/theme-variables";
+.logo {
+  width: 100px;
+}
+
+q {
+  font-style: italic;
+  font-size: 1.2rem;
+  quotes: "« " " »";
+}
+
+.next-generation {
+	font-size: 60px;
+}
+
+.legendary {
+	position: relative;
+}
+
+
+.px-sm-1 {
+	@include media-breakpoint-down(sm) { 
+       margin-left: 15px !important;
+       margin-right: 15px !important; 
+    }
+}
+.sm-bg {
+	@include media-breakpoint-down(sm) { 
+      background-image: url(assets/l-fill.png) !important;
+      background-size: 100% !important;
+   	  background-repeat: repeat !important
+    }
+}
+
+.cat-box {
+	color: white;
+}
+
+.cat-box h2 {
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-size: 20px;
+}
+
+.cat-box h3 {
+	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-size: 14px;
+}
+
+.cat-box h4 {
+	font-size: 14px;
+}
+
+.kitty-img-container {
+  width: 350px;
+  height: 350px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 4px 0 rgba(223, 223, 223, 0.5);
+}
+
+.blog-box h1{
+	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-size: 28px;
+}
+
+.social span {
+	margin-left: 20px;
+	font-size: 30px;
+	@include media-breakpoint-down(sm) { 
+       font-size: 14px;
+    }
+}
+
+
+.get-in-touch {
+	background-repeat: no-repeat;
+ 	background-image: url(/assets/get_in_touch_bg.svg);
+ 	background-size: 60%;
+ 	@include media-breakpoint-down(sm) { 
+        background-image: none;
+    }
+}
+
+.contact p {
+	font-size: 24px;
+}
+
+.contact a {
+	font-size: 24px;
+	color: white;
+}

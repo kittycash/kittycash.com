@@ -1,0 +1,20 @@
+@import "src/theme/theme-variables";
+
+.logo {
+  width: 134px;
+  height: 134px;
+}
+
+
+.navbar {
+  margin-bottom: $spacer;
+}
+
+.navbar .navbar-nav {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.nav-link.dropdown-toggle {
+  cursor: pointer;
+}

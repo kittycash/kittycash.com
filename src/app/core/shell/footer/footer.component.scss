@@ -1,0 +1,24 @@
+@import "src/theme/theme-variables";
+
+footer { 
+	background: rgb(243, 243, 243);
+}
+
+.logo {
+  width: 134px;
+  height: 134px;
+}
+
+footer ul {
+  list-style-type: none;
+  color: gray;
+}
+
+footer ul a {
+	color: gray;
+}
+
+footer li:first-child {
+	font-weight: 600;
+	padding-bottom: 20px;
+}

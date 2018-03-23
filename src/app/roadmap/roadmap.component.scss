@@ -1,0 +1,128 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+.roadmap-title {
+	background-image: url(assets/roadmap_blob.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 300px;
+}
+
+.roadmap-title h1 {
+	position: absolute;
+	bottom: 25%;
+	left: 0;
+	right: 0;
+	font-size: 185%;
+	text-align: center;
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-weight: 700;
+}
+
+.year-blob {
+	position: relative;
+	background-image: url(assets/year_blob.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100px;
+	z-index: 2;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.year-blob h1 {
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	font-size: 185%;
+	text-align: center;
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-weight: 700;
+}
+
+.roadmap {
+	position: relative;
+	margin-bottom: 50px;
+}
+.roadmap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #bdbdbd;
+  width: 2px;
+  top: 0;
+  bottom: -50px;
+  left: 50%;
+  z-index: 1;
+}
+
+.roadmap {
+	font-size: 18px;
+}
+.roadmap p {
+	display:inline-block;
+	background-color: white;
+	position: relative;
+	max-width: 25%;
+
+	@include media-breakpoint-down(xs) { 
+		font-size: 13px;
+	}
+}
+
+.roadmap span {
+	display: block;
+	width: 40%;
+
+	@include media-breakpoint-down(xs) { 
+		font-size: 13px;
+	}
+}
+
+.roadmap .left {
+	position: relative;
+	text-align: left;
+}
+
+.roadmap .left:before {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 15px;
+    background-color: #bdbdbd;
+}
+
+.roadmap .left p {
+	padding-right: 15px;
+}
+
+
+.roadmap .right {
+	position: relative;
+	text-align: right;
+}
+
+.roadmap .right:before {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    left: 50%;
+    top: 15px;
+    background-color: #bdbdbd;
+}
+
+.roadmap .title {
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+.roadmap .right p {
+	padding-left: 15px;
+}
