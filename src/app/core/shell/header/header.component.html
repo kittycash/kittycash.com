@@ -1,0 +1,38 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+
+    <img class="logo" src="assets/logo.svg" routerLink="/home">
+ 
+    <button class="navbar-toggler" type="button" aria-controls="navbar-menu"
+            aria-label="Toggle navigation" (click)="toggleMenu()" [attr.aria-expanded]="!menuHidden">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
+      <div class="navbar-nav mx-auto">
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/faq" routerLinkActive="active">
+          <span translate>FAQ</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/explore" routerLinkActive="active">
+          <span translate>explore kitties</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase sb-black" href="/blog/index.html">
+          <span translate>blog</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/roadmap" routerLinkActive="active">
+          <span translate>roadmap</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase sb-black" href="https://t.me/kittycash">
+          <i class="fab fa-lg fa-telegram-plane"></i>
+          <span translate>telegram</span>
+        </a>
+        <a class="nav-item nav-link text-uppercase sb-black" href="https://twitter.com/kittycash_com">
+          <i class="fab fa-lg fa-twitter"></i>
+          <span translate>twitter</span>
+        </a>
+      </div>
+      </div>
+    </div>
+  </nav>
+</header>
