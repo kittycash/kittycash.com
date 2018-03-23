@@ -71,9 +71,14 @@ q {
 	font-size: 28px;
 }
 
+.social img {
+	width: 49px;
+	height: 49px;
+}
 .social span {
 	margin-left: 20px;
 	font-size: 30px;
+	color: black;
 	@include media-breakpoint-down(sm) { 
        font-size: 14px;
     }
