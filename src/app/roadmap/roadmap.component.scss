@@ -42,6 +42,35 @@
 	font-weight: 700;
 }
 
+.quarter-blob {
+	position: absolute;
+	background-image: url(assets/year_blob.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 100px;
+	z-index: 2;
+	margin-top: 25px;
+	margin-bottom: 25px;
+
+	left: 0;
+    right: 0;
+    width: 75px;
+    bottom: -15px;
+    margin: 0 auto;
+}
+
+.quarter-blob h1 {
+	position: absolute;
+	bottom: 15%;
+	left: 0;
+	right: 0;
+	font-size: 155%;
+	text-align: center;
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-weight: 700;
+}
+
 .roadmap {
 	position: relative;
 	margin-bottom: 50px;
@@ -60,6 +89,7 @@
 
 .roadmap {
 	font-size: 18px;
+	margin-top: 25px;
 }
 .roadmap p {
 	display:inline-block;
