@@ -41,6 +41,7 @@ q {
 
 .cat-box {
 	color: white;
+	z-index:20;
 }
 
 .cat-box h2 {
@@ -62,6 +63,7 @@ q {
   height: 350px;
   background-color: #ffffff;
   box-shadow: 2px 2px 4px 0 rgba(223, 223, 223, 0.5);
+  border-radius: 25px;
 }
 
 .blog-box h1{
