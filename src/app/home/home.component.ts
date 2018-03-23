@@ -30,5 +30,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.renderer.removeClass(document.body, 'blob');
   }
 
+  playGame() {
+    const element = this.renderer.selectRootElement('#gameFrame');
+    console.log(element);
+    setTimeout(() => {
+      element.focus();
+    }, 0);
+  }
+
 
 }
