@@ -3,8 +3,12 @@
 .logo {
   width: 134px;
   height: 134px;
+  cursor: pointer;
 }
 
+.logo:focus {
+  outline: none;
+}
 
 .navbar {
   margin-bottom: $spacer;

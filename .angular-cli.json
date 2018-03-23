@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ng-x-rocket"
+    "name": "KittyCash-Website"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "build",
       "assets": [
         "assets",
         "favicon.ico",
