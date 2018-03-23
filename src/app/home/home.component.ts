@@ -32,9 +32,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   playGame() {
     const element = this.renderer.selectRootElement('#gameFrame');
-    console.log(element);
     setTimeout(() => {
       element.focus();
+      element.contentWindow.doStart();
     }, 0);
   }
 
