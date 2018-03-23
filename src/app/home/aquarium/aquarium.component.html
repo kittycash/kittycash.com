@@ -1,0 +1,3 @@
+<div class="aquarium">
+	<img class="fish" src="assets/fish.svg" *ngFor="let fish of fishes" [ngStyle]="{'top':fish.y + 'px', 'left':fish.x + 'px'}" (mouseenter)="mouseIn(fish)" [@swimAnimation]="fish.swim">
+</div>
