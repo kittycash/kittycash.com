@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
 
 import Container from 'components/Container';
 import { COLORS, FONT_FAMILIES } from 'config';
@@ -62,9 +61,7 @@ const ListItem = styled.div`
  }
 `;
 
-const Img = styled.img.attrs({
-  alt: "Limited",
-})`
+const Img = styled.img`
 display: block;
 width: 100%;
 height: auto;
@@ -90,20 +87,22 @@ const Price = styled.div`
 `;
 
 
-const Kitty = ({ title, list, id}) => (
+const Kitty = ({ title, list, id, hide_address}) => (
   <div>
     <Wrap>
       <Container>
         <List>
           {list.map(({ name, priceBTC, priceSKY, description, img, sold }, i) => (
-            <ListItemWrap>
+            <ListItemWrap key={i}>
               <ListItem>
-                <Img src={img} />
-                <Name><FormattedMessage id={name} /></Name>
+                <Img src={img} alt={name} />
+                <Name>{name}</Name>
                 <Price>
-                  <FormattedMessage id={sold ? "Owner: " + sold : priceBTC + " BTC | " + priceSKY + " SKY"} />
+                  {priceBTC + " BTC | " + priceSKY + " SKY"}
+                  <br/>
+                  {sold && !hide_address ? "Owner: " + sold : " "}
                 </Price>
-                <Text color="black"><FormattedMessage id={description} /></Text>
+                <Text color="black">{description}</Text>
               </ListItem>
             </ListItemWrap>
           ))}

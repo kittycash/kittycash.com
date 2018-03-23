@@ -10,6 +10,8 @@ import Footer from 'components/Footer';
 import Hero from './components/Hero';
 import About from './components/About';
 import Logos from './components/Logos';
+import Blog from './components/Blog';
+import HomeKitties from './components/HomeKitties';
 import Button from 'components/Button';
 
 
@@ -20,6 +22,38 @@ const Home = ({ intl }) => (
       <meta
         name="description"
         content={intl.formatMessage({ id: 'home.description' })}
+      />      
+      <meta
+        name="twitter:title"
+        content={intl.formatMessage({ id: 'home.twitter.title' })}
+      />
+      <meta
+        name="twitter:description"
+        content={intl.formatMessage({ id: 'home.twitter.description' })}
+      />
+      <meta
+        name="twitter:image"
+        content={intl.formatMessage({ id: 'home.twitter.image' })}
+      />
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+      />
+      <meta
+        property="og:title"
+        content={intl.formatMessage({ id: 'home.facebook.title' })}
+      />
+      <meta
+        property="og:description"
+        content={intl.formatMessage({ id: 'home.facebook.description' })}
+      />
+      <meta
+        property="og:image"
+        content={intl.formatMessage({ id: 'home.facebook.image' })}
+      />
+      <meta
+        property="og:url"
+        content={intl.formatMessage({ id: 'home.facebook.url' })}
       />
     </Helmet>
 
@@ -45,6 +79,8 @@ const Home = ({ intl }) => (
         </Button>
       </Box>
     </About>
+    <HomeKitties />
+    <Blog />
     <Logos />
     <Footer />
   </div>
