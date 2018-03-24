@@ -1,6 +1,6 @@
 {
-  "name": "KittyCash-Website",
-  "version": "1.0.0",
+  "name": "www.kittycash.com",
+  "version": "0.0.30",
   "private": true,
   "scripts": {
     "ng": "ng",
