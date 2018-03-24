@@ -1,22 +1,22 @@
 [{
-  "name": "Satoshi",
+  "name": "SkyWhisker",
   "priceBTC": "1",
   "priceSKY": "480",
-  "description": "Always wanted to know how Satoshi looked in reality? Well, here he is!",
-  "img": "assets/legendary/Satoshi_sold-01.png",
-  "sold": "nEbCGNS58vchzQU1CqD1\neDWBX1amEccZ9s"
+  "description": "Custom Legend No. 1 is revealed! How will his friends look like?",
+  "img": "assets/custom/Skywhisker_sold-01.png",
+  "sold": "2HtVE12kDg57pfemo\n3ZG2S7QGCXmaPP1qiP"
 }, {
-  "name": "Synth",
+  "name": "Illuminati",
   "priceBTC": "1.2",
-  "priceSKY": "576",
-  "description": "You see that split? That's how Skycoin prevents chain splits.",
-  "img": "assets/legendary/Synth_sold-01.png",
-  "sold": "mNJgBmnjqNNjafGKJdZ\nxTQ12GNjcWdQ12S"
+  "priceSKY": "750",
+  "description": "9/11 was an inside job. Trust me.",
+  "img": "assets/legendary/Illuminati_sold-01.png",
+  "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
 }, {
-  "name": "Magician",
+  "name": "SkyKitty Huixin",
   "priceBTC": "1",
   "priceSKY": "480",
-  "description": "Abracadabra! If you take care of me, I might show you a trick or two.",
-  "img": "assets/legendary/Harry_sold-01.png",
-  "sold": "2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt"
+  "description": "First KittyCash astronaut in the universe. Floating my way to milk",
+  "img": "assets/custom/SkyKitty-sold.png",
+  "sold": "uq4nDqpnJKyEQUmLco\nF8sMUjNuGhDpwqE"
 }]

@@ -1,3 +1,3 @@
 export default {
-  'npm_package_version': '0.0.31'
+  'npm_package_version': '1.0.1'
 };
