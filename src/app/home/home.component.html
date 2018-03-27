@@ -65,11 +65,16 @@
 		<div class="row mt-5">
 			<div class="col-10 offset-1">
 				<div class="row">
-					<div class="col-md-4 col-sm-12 blog-box mb-2" *ngFor="let article of articles">
+					<div class="col-md-4 col-sm-12 blog-box mb-2" *ngFor="let article of blogPosts();">
 						<h1>{{article.title}}</h1>
 						<div [innerHTML]="article.summary"></div>
 						<a class="btn btn-lg btn-outline-primary" href="{{article.url}}">Read more</a>
 					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 text-center">
+		  				<a href="/blog/index.html" class="btn btn-lg btn-primary mt-5">Read more</a>
+		  			</div>
 				</div>
 			</div>
 		</div>
@@ -84,15 +89,17 @@
 			</div>
 			<div class="col-md-4 offset-md-2 social mt-2">
 				<div class="row mt-5">
-					<div class="col-10 offset-md-2">
+					<div class="col-6">
 						<a href="https://t.me/kittycash"><img src="assets/telegram.png"><span>Telegram</span></a>
-						<a href="https://www.facebook.com/kittycash.official/"><img class="ml-2" src="assets/fb.svg"></a>
 					</div>
-				</div>
-				<div class="row mt-3">
-					<div class="col-12">
+					<div class="col-6">
+						<a href="https://www.facebook.com/kittycash.official/"><img src="assets/fb.svg"><span>Facebook</span></a>
+					</div>
+					<div class="col-6">
 						<a href="https://twitter.com/kittycash_com"><img src="assets/twitter.png"><span>Twitter</span></a>
-						<a href="https://instagram.com/kittycash.official/"><img class="ml-2" src="assets/ig.svg"></a>
+					</div>
+					<div class="col-6">
+						<a href="https://instagram.com/kittycash.official/"><img src="assets/ig.svg"><span>Instagram</span></a>
 					</div>
 				</div>
 			</div>
