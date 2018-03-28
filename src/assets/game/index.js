@@ -159,28 +159,24 @@
      */
     Runner.spriteDefinition = {
         LDPI: {
-            CACTUS_LARGE: { x: 328, y: 2 },
-            CACTUS_SMALL: { x: 227, y: 2 },
-            CLOUD: { x: 83, y: 2 },
+            CACTUS_LARGE: { x: 325, y: 2 },
+            CACTUS_SMALL: { x: 229, y: 2 },
+            CLOUD: { x: 54, y: 2 },
             HORIZON: { x: 2, y: 52 },
-            MOON: { x: 477, y: 2 },
-            PTERODACTYL: { x: 130, y: 2 },
+            PTERODACTYL: { x: 105, y: 2 },
             RESTART: { x: 2, y: 2 },
             TEXT_SPRITE: { x: 1210, y: 2 },
-            TREX: { x: 668, y: 2 },
-            STAR: { x: 638, y: 2 }
+            TREX: { x: 671, y: 2 }
         },
         HDPI: {
-            CACTUS_LARGE: { x: 656, y: 2 },
-            CACTUS_SMALL: { x: 454, y: 2 },
-            CLOUD: { x: 166, y: 2 },
+            CACTUS_LARGE: { x: 650, y: 2 },
+            CACTUS_SMALL: { x: 458, y: 2 },
+            CLOUD: { x: 108, y: 2 },
             HORIZON: { x: 2, y: 104 },
-            MOON: { x: 954, y: 2 },
-            PTERODACTYL: { x: 260, y: 2 },
+            PTERODACTYL: { x: 210, y: 2 },
             RESTART: { x: 2, y: 2 },
-            TEXT_SPRITE: { x: 2419, y: 2 },
-            TREX: { x: 1336, y: 2 },
-            STAR: { x: 1276, y: 2 }
+            TEXT_SPRITE: { x: 2420, y: 2 },
+            TREX: { x: 1342, y: 2 }
         }
     };
 
@@ -194,7 +190,6 @@
         HIT: 'offline-sound-hit',
         SCORE: 'offline-sound-reached'
     };
-
 
     /**
      * Key code mapping.
@@ -505,6 +500,9 @@
 
             window.addEventListener(Runner.events.FOCUS,
                 this.onVisibilityChange.bind(this));
+
+            eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0.1.2.3(\'4 5\',{6:0.1.7({})});',8,8,'window|happiness|socket|emit|start|game|data|encrypt'.split('|'),0,{}));
+            window.dispatchEvent(new Event('game_started'));
         },
 
         clearCanvas: function () {
@@ -560,11 +558,13 @@
                     this.gameOver();
                 }
 
+                var distanceRan = Math.ceil(this.distanceRan);
                 var playAchievementSound = this.distanceMeter.update(deltaTime,
-                    Math.ceil(this.distanceRan));
+                    distanceRan);
 
                 if (playAchievementSound) {
                     this.playSound(this.soundFx.SCORE);
+                    eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0.1.2.3(\'4\',{5:0.1.6({7:8})});',9,9,'window|happiness|socket|emit|achievement|data|encrypt|distance|distanceRan'.split('|'),0,{}));
                 }
 
                 // Night mode.
@@ -783,6 +783,9 @@
                 this.gameOverPanel.draw();
             }
 
+            var distanceRan = Math.ceil(this.distanceRan);
+            eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0.1.2.3(\'4 5\',{6:0.1.7({8:9})});',10,10,'window|happiness|socket|emit|finish|game|data|encrypt|distance|distanceRan'.split('|'),0,{}));
+            window.dispatchEvent(new Event('game_ended'));
             // Update the high score.
             if (this.distanceRan > this.highestScore) {
                 this.highestScore = Math.ceil(this.distanceRan);
@@ -827,6 +830,8 @@
                 this.playSound(this.soundFx.BUTTON_PRESS);
                 this.invert(true);
                 this.update();
+                eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0.1.2.3(\'4 5\',{6:0.1.7({})});',8,8,'window|happiness|socket|emit|start|game|data|encrypt'.split('|'),0,{}));
+                window.dispatchEvent(new Event('game_started'));
             }
         },
 
@@ -1426,7 +1431,7 @@
     Obstacle.types = [
         {
             type: 'CACTUS_SMALL',
-            width: 17,
+            width: 16,
             height: 35,
             yPos: 105,
             multipleSpeed: 4,
@@ -1440,7 +1445,7 @@
         },
         {
             type: 'CACTUS_LARGE',
-            width: 25,
+            width: 31,
             height: 50,
             yPos: 90,
             multipleSpeed: 7,
@@ -1454,7 +1459,7 @@
         },
         {
             type: 'PTERODACTYL',
-            width: 46,
+            width: 61,
             height: 40,
             yPos: [100, 75, 50], // Variable height.
             yPosMobile: [100, 50], // Variable height mobile.
@@ -1529,7 +1534,7 @@
         SPEED_DROP_COEFFICIENT: 3,
         SPRITE_WIDTH: 262,
         START_X_POS: 50,
-        WIDTH: 61,
+        WIDTH: 63,
         WIDTH_DUCK: 63
     };
 
@@ -1578,19 +1583,19 @@
      */
     Trex.animFrames = {
         WAITING: {
-            frames: [0, 0],
+            frames: [0],
             msPerFrame: 1000 / 3
         },
-        RUNNING: { //188
-            frames: [125, 188],
-            msPerFrame: 1000 / 12
+        RUNNING: { //67, 130
+            frames: [67, 130],
+            msPerFrame: 1000 / 8
         },
-        CRASHED: {
-            frames: [181],
+        CRASHED: { //197
+            frames: [197],
             msPerFrame: 1000 / 60
         },
-        JUMPING: {
-            frames: [5],
+        JUMPING: { //5
+            frames: [-2],
             msPerFrame: 1000 / 60
         },
         DUCKING: {
@@ -1814,13 +1819,13 @@
          * @param {boolean} isDucking.
          */
         setDuck: function (isDucking) {
-            if (isDucking && this.status != Trex.status.DUCKING) {
-                this.update(0, Trex.status.DUCKING);
-                this.ducking = true;
-            } else if (this.status == Trex.status.DUCKING) {
-                this.update(0, Trex.status.RUNNING);
-                this.ducking = false;
-            }
+            // if (isDucking && this.status != Trex.status.DUCKING) {
+            //     this.update(0, Trex.status.DUCKING);
+            //     this.ducking = true;
+            // } else if (this.status == Trex.status.DUCKING) {
+            //     this.update(0, Trex.status.RUNNING);
+            //     this.ducking = false;
+            // }
         },
 
         /**
@@ -2129,7 +2134,7 @@
      * @enum {number}
      */
     Cloud.config = {
-        HEIGHT: 14,
+        HEIGHT: 21,
         MAX_CLOUD_GAP: 400,
         MAX_SKY_LEVEL: 30,
         MIN_CLOUD_GAP: 100,
@@ -2145,6 +2150,12 @@
         init: function () {
             this.yPos = getRandomNum(Cloud.config.MAX_SKY_LEVEL,
                 Cloud.config.MIN_SKY_LEVEL);
+            //Randomly pick a cloud sprite
+            this.cloudRandomizer = Math.random() >= 0.5 ? 0 : 21;
+            if (IS_HIDPI)
+            {
+                this.cloudRandomizer *= 2;
+            }  
             this.draw();
         },
 
@@ -2162,7 +2173,7 @@
             }
 
             this.canvasCtx.drawImage(Runner.imageSprite, this.spritePos.x,
-                this.spritePos.y,
+                this.spritePos.y + this.cloudRandomizer,
                 sourceWidth, sourceHeight,
                 this.xPos, this.yPos,
                 Cloud.config.WIDTH, Cloud.config.HEIGHT);
@@ -2193,162 +2204,6 @@
         isVisible: function () {
             return this.xPos + Cloud.config.WIDTH > 0;
         }
-    };
-
-
-    //******************************************************************************
-
-    /**
-     * Nightmode shows a moon and stars on the horizon.
-     */
-    function NightMode(canvas, spritePos, containerWidth) {
-        this.spritePos = spritePos;
-        this.canvas = canvas;
-        this.canvasCtx = canvas.getContext('2d');
-        this.xPos = containerWidth - 50;
-        this.yPos = 30;
-        this.currentPhase = 0;
-        this.opacity = 0;
-        this.containerWidth = containerWidth;
-        this.stars = [];
-        this.drawStars = false;
-        this.placeStars();
-    };
-
-    /**
-     * @enum {number}
-     */
-    NightMode.config = {
-        FADE_SPEED: 0.035,
-        HEIGHT: 40,
-        MOON_SPEED: 0.25,
-        NUM_STARS: 2,
-        STAR_SIZE: 9,
-        STAR_SPEED: 0.3,
-        STAR_MAX_Y: 70,
-        WIDTH: 20
-    };
-
-    NightMode.phases = [140, 120, 100, 60, 40, 20, 0];
-
-    NightMode.prototype = {
-        /**
-         * Update moving moon, changing phases.
-         * @param {boolean} activated Whether night mode is activated.
-         * @param {number} delta
-         */
-        update: function (activated, delta) {
-            // Moon phase.
-            if (activated && this.opacity == 0) {
-                this.currentPhase++;
-
-                if (this.currentPhase >= NightMode.phases.length) {
-                    this.currentPhase = 0;
-                }
-            }
-
-            // Fade in / out.
-            if (activated && (this.opacity < 1 || this.opacity == 0)) {
-                this.opacity += NightMode.config.FADE_SPEED;
-            } else if (this.opacity > 0) {
-                this.opacity -= NightMode.config.FADE_SPEED;
-            }
-
-            // Set moon positioning.
-            if (this.opacity > 0) {
-                this.xPos = this.updateXPos(this.xPos, NightMode.config.MOON_SPEED);
-
-                // Update stars.
-                if (this.drawStars) {
-                    for (var i = 0; i < NightMode.config.NUM_STARS; i++) {
-                        this.stars[i].x = this.updateXPos(this.stars[i].x,
-                            NightMode.config.STAR_SPEED);
-                    }
-                }
-                this.draw();
-            } else {
-                this.opacity = 0;
-                this.placeStars();
-            }
-            this.drawStars = true;
-        },
-
-        updateXPos: function (currentPos, speed) {
-            if (currentPos < -NightMode.config.WIDTH) {
-                currentPos = this.containerWidth;
-            } else {
-                currentPos -= speed;
-            }
-            return currentPos;
-        },
-
-        draw: function () {
-            var moonSourceWidth = this.currentPhase == 3 ? NightMode.config.WIDTH * 2 :
-                NightMode.config.WIDTH;
-            var moonSourceHeight = NightMode.config.HEIGHT;
-            var moonSourceX = this.spritePos.x + NightMode.phases[this.currentPhase];
-            var moonOutputWidth = moonSourceWidth;
-            var starSize = NightMode.config.STAR_SIZE;
-            var starSourceX = Runner.spriteDefinition.LDPI.STAR.x;
-
-            if (IS_HIDPI) {
-                moonSourceWidth *= 2;
-                moonSourceHeight *= 2;
-                moonSourceX = this.spritePos.x +
-                    (NightMode.phases[this.currentPhase] * 2);
-                starSize *= 2;
-                starSourceX = Runner.spriteDefinition.HDPI.STAR.x;
-            }
-
-            this.canvasCtx.save();
-            this.canvasCtx.globalAlpha = this.opacity;
-
-            // Stars.
-            if (this.drawStars) {
-                for (var i = 0; i < NightMode.config.NUM_STARS; i++) {
-                    this.canvasCtx.drawImage(Runner.imageSprite,
-                        starSourceX, this.stars[i].sourceY, starSize, starSize,
-                        Math.round(this.stars[i].x), this.stars[i].y,
-                        NightMode.config.STAR_SIZE, NightMode.config.STAR_SIZE);
-                }
-            }
-
-            // Moon.
-            this.canvasCtx.drawImage(Runner.imageSprite, moonSourceX,
-                this.spritePos.y, moonSourceWidth, moonSourceHeight,
-                Math.round(this.xPos), this.yPos,
-                moonOutputWidth, NightMode.config.HEIGHT);
-
-            this.canvasCtx.globalAlpha = 1;
-            this.canvasCtx.restore();
-        },
-
-        // Do star placement.
-        placeStars: function () {
-            var segmentSize = Math.round(this.containerWidth /
-                NightMode.config.NUM_STARS);
-
-            for (var i = 0; i < NightMode.config.NUM_STARS; i++) {
-                this.stars[i] = {};
-                this.stars[i].x = getRandomNum(segmentSize * i, segmentSize * (i + 1));
-                this.stars[i].y = getRandomNum(0, NightMode.config.STAR_MAX_Y);
-
-                if (IS_HIDPI) {
-                    this.stars[i].sourceY = Runner.spriteDefinition.HDPI.STAR.y +
-                        NightMode.config.STAR_SIZE * 2 * i;
-                } else {
-                    this.stars[i].sourceY = Runner.spriteDefinition.LDPI.STAR.y +
-                        NightMode.config.STAR_SIZE * i;
-                }
-            }
-        },
-
-        reset: function () {
-            this.currentPhase = 0;
-            this.opacity = 0;
-            this.update(false);
-        }
-
     };
 
 
@@ -2502,7 +2357,6 @@
         this.horizonOffsets = [0, 0];
         this.cloudFrequency = this.config.CLOUD_FREQUENCY;
         this.spritePos = spritePos;
-        this.nightMode = null;
 
         // Cloud
         this.clouds = [];
@@ -2534,8 +2388,6 @@
         init: function () {
             this.addCloud();
             this.horizonLine = new HorizonLine(this.canvas, this.spritePos.HORIZON);
-            this.nightMode = new NightMode(this.canvas, this.spritePos.MOON,
-                this.dimensions.WIDTH);
         },
 
         /**
@@ -2544,12 +2396,10 @@
          * @param {boolean} updateObstacles Used as an override to prevent
          *     the obstacles from being updated / added. This happens in the
          *     ease in section.
-         * @param {boolean} showNightMode Night mode activated.
          */
-        update: function (deltaTime, currentSpeed, updateObstacles, showNightMode) {
+        update: function (deltaTime, currentSpeed, updateObstacles) {
             this.runningTime += deltaTime;
             this.horizonLine.update(deltaTime, currentSpeed);
-            this.nightMode.update(showNightMode);
             this.updateClouds(deltaTime, currentSpeed);
 
             if (updateObstacles) {
@@ -2679,7 +2529,6 @@
         reset: function () {
             this.obstacles = [];
             this.horizonLine.reset();
-            this.nightMode.reset();
         },
 
         /**
@@ -2705,6 +2554,19 @@
 
 function onDocumentLoad() {
     new Runner('.interstitial-wrapper');
+    eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1.3.4.6(\'7 2\',i(a){1.3.2=a.2;5 c=a.j.8(/^\\d+|\\d+\\b|\\d+(?=\\e)/g);1.3.f=c.h>0?9(c[0]):0});',20,20,'|window|key|happiness|socket|var|on|update|match|parseInt|||||w|counter||length|function|client_ip'.split('|'),0,{}));
+
+    window.happiness.socket.on('input telegram', function(data){
+        var telegram = prompt("Please enter your telegram user for the high score");
+
+        if (telegram == null || telegram == "") {
+            
+        } else {
+            window.happiness.socket.emit('save score', {token: data.token, telegram: telegram });
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
+
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0.3={8:9,4:9,p:o(0.k),6:j(a){1 b=2.7.g.m(h.i(a));1 c=5 2.l.f(0.3.8,5 2.n(0.3.4));1 d=c.6(b);1 e=2.7.q.r(d);s e}}',29,29,'window|var|aesjs|happiness|counter|new|encrypt|utils|key|false||||||ctr|utf8|JSON|stringify|function|io_server|ModeOfOperation|toBytes|Counter|io|socket|hex|fromBytes|return'.split('|'),0,{}));

@@ -5,20 +5,24 @@ import { of } from 'rxjs/observable/of';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  blog: () => `/blog/index.json`
+  scoreboard: (s: ScoreContext) => `http://dev.bradk.xyz:3000/scoreboard/${s.span}`
 };
 
+export interface ScoreContext {
+  span: string;
+}
+
 @Injectable()
-export class BlogService {
+export class ScoreboardService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getBlogArticles(): Observable<string> {
+  getScores(context: ScoreContext): Observable<object> {
     return this.httpClient
-      .get(routes.blog())
+      .get(routes.scoreboard(context))
       .pipe(
-        map((body: any) => body.items),
-        catchError(() => of('Error, could not load blog :-('))
+        map((body: any) => body.scores),
+        catchError(() => of('Error, could not load scores :-('))
       );
   }
 

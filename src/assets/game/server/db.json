@@ -1,0 +1,633 @@
+{
+  "scores": [
+    {
+      "created_at": "2018-03-27T05:31:01.608Z",
+      "telegram": "Brad",
+      "score": 146,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          173,
+          240,
+          73,
+          145,
+          226,
+          46,
+          123,
+          159,
+          169,
+          109,
+          67,
+          69,
+          90,
+          157,
+          126,
+          33,
+          76,
+          161,
+          34,
+          234,
+          71,
+          11,
+          224,
+          246,
+          235,
+          169,
+          21,
+          98,
+          146,
+          222,
+          101,
+          101
+        ],
+        "created_at": 1522128661491,
+        "started_at": 1522128645504,
+        "achievements": [
+          {
+            "created_at": 1522128655068,
+            "distance": 3980,
+            "diff": 0
+          }
+        ],
+        "token": "151409b472ab8af0f4d96a6ac040cf7a3b0e261f9e355dee05198995fe9ef908e89c085132983d69ae6d13c145f702cc",
+        "score": 146
+      }
+    },
+    {
+      "created_at": "2018-03-27T05:33:39.818Z",
+      "telegram": "Brad 2",
+      "score": 95,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          191,
+          249,
+          4,
+          124,
+          135,
+          11,
+          243,
+          142,
+          51,
+          104,
+          113,
+          35,
+          143,
+          97,
+          202,
+          63,
+          215,
+          249,
+          180,
+          132,
+          180,
+          249,
+          246,
+          57,
+          70,
+          165,
+          43,
+          231,
+          199,
+          72,
+          112,
+          40
+        ],
+        "created_at": 1522128818137,
+        "started_at": 1522128807914,
+        "achievements": [],
+        "token": "c9b78b7cdf1e48ecf90f7db9f992a95fe2419fac05ff258fad6f8a48fce8879e5d0d59d55714cb56d21a82b879c4d3bc",
+        "score": 95
+      }
+    },
+    {
+      "created_at": "2018-03-27T05:54:32.507Z",
+      "telegram": "Bradley Klingon",
+      "score": 138,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          30,
+          69,
+          216,
+          114,
+          253,
+          139,
+          162,
+          159,
+          74,
+          123,
+          216,
+          165,
+          146,
+          43,
+          105,
+          236,
+          122,
+          172,
+          115,
+          204,
+          217,
+          41,
+          139,
+          141,
+          98,
+          150,
+          128,
+          215,
+          95,
+          123,
+          128,
+          8
+        ],
+        "created_at": 1522131570421,
+        "started_at": 1522130116744,
+        "achievements": [
+          {
+            "created_at": 1522130127245,
+            "distance": 3980,
+            "diff": 0
+          },
+          {
+            "created_at": 1522130136884,
+            "distance": 7982,
+            "diff": 9639
+          },
+          {
+            "created_at": 1522130145804,
+            "distance": 11984,
+            "diff": 8920
+          },
+          {
+            "created_at": 1522130154144,
+            "distance": 15983,
+            "diff": 8340
+          },
+          {
+            "created_at": 1522130161997,
+            "distance": 19980,
+            "diff": 7853
+          },
+          {
+            "created_at": 1522130169467,
+            "distance": 23986,
+            "diff": 7470
+          },
+          {
+            "created_at": 1522130176573,
+            "distance": 27981,
+            "diff": 7106
+          },
+          {
+            "created_at": 1522130183392,
+            "distance": 31987,
+            "diff": 6819
+          },
+          {
+            "created_at": 1522130189928,
+            "distance": 35984,
+            "diff": 6536
+          },
+          {
+            "created_at": 1522130196234,
+            "distance": 39983,
+            "diff": 6306
+          },
+          {
+            "created_at": 1522130202317,
+            "distance": 43981,
+            "diff": 6083
+          },
+          {
+            "created_at": 1522130208223,
+            "distance": 47985,
+            "diff": 5906
+          },
+          {
+            "created_at": 1522130213941,
+            "distance": 51984,
+            "diff": 5718
+          },
+          {
+            "created_at": 1522130219510,
+            "distance": 55992,
+            "diff": 5569
+          },
+          {
+            "created_at": 1522130224915,
+            "distance": 59985,
+            "diff": 5405
+          },
+          {
+            "created_at": 1522130230185,
+            "distance": 63981,
+            "diff": 5270
+          },
+          {
+            "created_at": 1522130235339,
+            "distance": 67981,
+            "diff": 5154
+          },
+          {
+            "created_at": 1522130240470,
+            "distance": 71986,
+            "diff": 5131
+          },
+          {
+            "created_at": 1522130245606,
+            "distance": 75992,
+            "diff": 5136
+          }
+        ],
+        "token": "66237217fa91b3c8bd60bc5e194fb9fab8fbcca7cc91b124a485be88e80eac098c9a8d453cb6e6ec3867986f88fef889",
+        "score": 1928
+      }
+    },
+    {
+      "created_at": "2018-03-27T05:55:15.917Z",
+      "telegram": "Wow",
+      "score": 366,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          30,
+          69,
+          216,
+          114,
+          253,
+          139,
+          162,
+          159,
+          74,
+          123,
+          216,
+          165,
+          146,
+          43,
+          105,
+          236,
+          122,
+          172,
+          115,
+          204,
+          217,
+          41,
+          139,
+          141,
+          98,
+          150,
+          128,
+          215,
+          95,
+          123,
+          128,
+          8
+        ],
+        "created_at": 1522131570421,
+        "started_at": 1522130116744,
+        "achievements": [
+          {
+            "created_at": 1522130127245,
+            "distance": 3980,
+            "diff": 0
+          },
+          {
+            "created_at": 1522130136884,
+            "distance": 7982,
+            "diff": 9639
+          },
+          {
+            "created_at": 1522130145804,
+            "distance": 11984,
+            "diff": 8920
+          },
+          {
+            "created_at": 1522130154144,
+            "distance": 15983,
+            "diff": 8340
+          },
+          {
+            "created_at": 1522130161997,
+            "distance": 19980,
+            "diff": 7853
+          },
+          {
+            "created_at": 1522130169467,
+            "distance": 23986,
+            "diff": 7470
+          },
+          {
+            "created_at": 1522130176573,
+            "distance": 27981,
+            "diff": 7106
+          },
+          {
+            "created_at": 1522130183392,
+            "distance": 31987,
+            "diff": 6819
+          },
+          {
+            "created_at": 1522130189928,
+            "distance": 35984,
+            "diff": 6536
+          },
+          {
+            "created_at": 1522130196234,
+            "distance": 39983,
+            "diff": 6306
+          },
+          {
+            "created_at": 1522130202317,
+            "distance": 43981,
+            "diff": 6083
+          },
+          {
+            "created_at": 1522130208223,
+            "distance": 47985,
+            "diff": 5906
+          },
+          {
+            "created_at": 1522130213941,
+            "distance": 51984,
+            "diff": 5718
+          },
+          {
+            "created_at": 1522130219510,
+            "distance": 55992,
+            "diff": 5569
+          },
+          {
+            "created_at": 1522130224915,
+            "distance": 59985,
+            "diff": 5405
+          },
+          {
+            "created_at": 1522130230185,
+            "distance": 63981,
+            "diff": 5270
+          },
+          {
+            "created_at": 1522130235339,
+            "distance": 67981,
+            "diff": 5154
+          },
+          {
+            "created_at": 1522130240470,
+            "distance": 71986,
+            "diff": 5131
+          },
+          {
+            "created_at": 1522130245606,
+            "distance": 75992,
+            "diff": 5136
+          }
+        ],
+        "token": "66237217fa91b3c8bd60bc5e194fb9fab8fbcca7cc91b124a485be88e80eac098c9a8d453cb6e6ec3867986f88fef889",
+        "score": 1928
+      }
+    },
+    {
+      "created_at": "2018-03-27T05:57:33.005Z",
+      "telegram": " Brad's big score!",
+      "score": 1928,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          30,
+          69,
+          216,
+          114,
+          253,
+          139,
+          162,
+          159,
+          74,
+          123,
+          216,
+          165,
+          146,
+          43,
+          105,
+          236,
+          122,
+          172,
+          115,
+          204,
+          217,
+          41,
+          139,
+          141,
+          98,
+          150,
+          128,
+          215,
+          95,
+          123,
+          128,
+          8
+        ],
+        "created_at": 1522131570421,
+        "started_at": 1522130116744,
+        "achievements": [
+          {
+            "created_at": 1522130127245,
+            "distance": 3980,
+            "diff": 0
+          },
+          {
+            "created_at": 1522130136884,
+            "distance": 7982,
+            "diff": 9639
+          },
+          {
+            "created_at": 1522130145804,
+            "distance": 11984,
+            "diff": 8920
+          },
+          {
+            "created_at": 1522130154144,
+            "distance": 15983,
+            "diff": 8340
+          },
+          {
+            "created_at": 1522130161997,
+            "distance": 19980,
+            "diff": 7853
+          },
+          {
+            "created_at": 1522130169467,
+            "distance": 23986,
+            "diff": 7470
+          },
+          {
+            "created_at": 1522130176573,
+            "distance": 27981,
+            "diff": 7106
+          },
+          {
+            "created_at": 1522130183392,
+            "distance": 31987,
+            "diff": 6819
+          },
+          {
+            "created_at": 1522130189928,
+            "distance": 35984,
+            "diff": 6536
+          },
+          {
+            "created_at": 1522130196234,
+            "distance": 39983,
+            "diff": 6306
+          },
+          {
+            "created_at": 1522130202317,
+            "distance": 43981,
+            "diff": 6083
+          },
+          {
+            "created_at": 1522130208223,
+            "distance": 47985,
+            "diff": 5906
+          },
+          {
+            "created_at": 1522130213941,
+            "distance": 51984,
+            "diff": 5718
+          },
+          {
+            "created_at": 1522130219510,
+            "distance": 55992,
+            "diff": 5569
+          },
+          {
+            "created_at": 1522130224915,
+            "distance": 59985,
+            "diff": 5405
+          },
+          {
+            "created_at": 1522130230185,
+            "distance": 63981,
+            "diff": 5270
+          },
+          {
+            "created_at": 1522130235339,
+            "distance": 67981,
+            "diff": 5154
+          },
+          {
+            "created_at": 1522130240470,
+            "distance": 71986,
+            "diff": 5131
+          },
+          {
+            "created_at": 1522130245606,
+            "distance": 75992,
+            "diff": 5136
+          }
+        ],
+        "token": "66237217fa91b3c8bd60bc5e194fb9fab8fbcca7cc91b124a485be88e80eac098c9a8d453cb6e6ec3867986f88fef889",
+        "score": 1928
+      }
+    },
+    {
+      "created_at": "2018-03-27T06:10:33.339Z",
+      "telegram": "Brad sucks",
+      "score": 48,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          104,
+          165,
+          83,
+          228,
+          98,
+          146,
+          155,
+          3,
+          165,
+          32,
+          146,
+          186,
+          70,
+          135,
+          14,
+          106,
+          36,
+          126,
+          243,
+          68,
+          109,
+          32,
+          218,
+          124,
+          199,
+          215,
+          86,
+          228,
+          100,
+          225,
+          249,
+          248
+        ],
+        "created_at": 1522131569090,
+        "started_at": 1522131025699,
+        "achievements": [],
+        "token": "ada02967e5cf5ddc01971507bb9fb09b54cce2ce857746de73a5ab6f4ff208cdd3449c136180bd3ad8de537b3b12541e",
+        "score": 48
+      }
+    },
+    {
+      "created_at": "2018-03-27T06:19:30.810Z",
+      "telegram": "Brad testing",
+      "score": 105,
+      "user_data": {
+        "client_ip": "::1",
+        "key": [
+          43,
+          114,
+          186,
+          224,
+          115,
+          144,
+          37,
+          52,
+          253,
+          128,
+          179,
+          212,
+          72,
+          59,
+          240,
+          36,
+          108,
+          173,
+          130,
+          96,
+          59,
+          135,
+          178,
+          105,
+          253,
+          132,
+          127,
+          95,
+          218,
+          227,
+          155,
+          124
+        ],
+        "created_at": 1522131570516,
+        "started_at": 1522131557442,
+        "achievements": [
+          {
+            "created_at": 1522131566986,
+            "distance": 3980,
+            "diff": 0
+          }
+        ],
+        "token": "c051e6a0e5014753f5acefdbb58e409e7a8ebd06d6e7cfaae72a715fa2773af3f269983e218e0b0dcd07293bb9a7eb2c",
+        "score": 105
+      }
+    }
+  ]
+}

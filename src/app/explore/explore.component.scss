@@ -1,3 +1,6 @@
+
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
 .explorer-title {
 	background-image: url(assets/explore_blob.svg);
 	background-size: contain;
@@ -33,4 +36,16 @@
 
 .cat-box h4 {
 	font-size: 14px;
+}
+.mx-k-sm-1 {
+	@include media-breakpoint-down(sm) { 
+       margin-left: 15px !important;
+       margin-right: 15px !important; 
+    }
+}
+.px-k-sm-1 {
+	@include media-breakpoint-down(sm) { 
+       padding-left: 15px !important;
+       padding-right: 15px !important; 
+    }
 }
