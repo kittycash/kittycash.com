@@ -5,7 +5,7 @@ import { of } from 'rxjs/observable/of';
 import { map, catchError } from 'rxjs/operators';
 
 const routes = {
-  scoreboard: (s: ScoreContext) => `http://dev.bradk.xyz:3000/scoreboard/${s.span}`
+  scoreboard: (s: ScoreContext) => `https://dev.bradk.xyz/scoreboard/${s.span}`
 };
 
 export interface ScoreContext {
