@@ -9,6 +9,25 @@ html, body {
   height: 100%;
 }
 
+.interstitial-wrapper {
+  position: relative;
+  z-index: 99999;
+}
+
+#scoreboard_link {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 9999999;
+}
+
+#scoreboard_link a {
+  color: #ff7e76;
+  font-size: 24px;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+}
 .icon {
   -webkit-user-select: none;
   display: inline-block;
@@ -38,6 +57,7 @@ html, body {
   position: absolute;
   top: 35px;
   width: 82px;
+  background-image: url(assets/color-background.png);
 }
 
 .offline .runner-canvas {

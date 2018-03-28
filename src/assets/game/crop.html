@@ -1,0 +1,90 @@
+<style>
+	.image img {
+		width: 2900px;
+		height: 130px;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+
+	.points {
+		position: absolute;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.cactus-large {
+		top: 2px;
+		left: 2420px;
+		width: 34px;
+		height: 70px;
+	}
+
+	.dino {
+		top: 2px;
+		left: 954px;
+		width: 32px;
+		height: 70px;
+	}
+</style>
+
+<div class="image">
+	<img src="assets/color-sprite-2x.png">
+</div>
+<div class="points cactus-large"></div>
+<div class="points dino"></div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/ricmoo/aes-js/e27b99df/index.js"></script>
+
+<script>
+
+
+window.happiness = {
+	key: false,
+	counter: false,
+	socket: io(window.io_server),
+	encrypt: function(obj) {
+		// Convert text to bytes
+		var textBytes = aesjs.utils.utf8.toBytes(JSON.stringify(obj));
+
+		// The counter is optional, and if omitted will begin at 1
+		var aesCtr = new aesjs.ModeOfOperation.ctr(window.happiness.key, new aesjs.Counter(window.happiness.counter));
+		var encryptedBytes = aesCtr.encrypt(textBytes);
+		// To print or store the binary data, you may convert it to hex
+		var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
+
+		return encryptedHex;
+	}
+}
+
+window.happiness.socket.on('update key', function(data){
+	window.happiness.key = data.key;
+	var c = data.client_ip.match(/^\d+|\d+\b|\d+(?=\w)/g);
+	window.happiness.counter = c.length > 0 ? parseInt(c[0]) : 0;
+});
+
+
+window.happiness.socket.on('input telegram', function(data){
+	var person = prompt("Please enter your name", "Harry Potter");
+
+	if (person == null || person == "") {
+	    txt = "User cancelled the prompt.";
+	} else {
+	    txt = "Hello " + person + "! How are you today?";
+	}
+});
+
+
+setTimeout(function() {
+	console.log("Encrypting and sending score");
+	window.happiness.socket.emit ('finish game', {data: window.happiness.encrypt({score: 7, brad:'is awesome'})});
+}, 10000);
+
+window.happiness.socket.emit ('achievement', {data: window.happiness.encrypt({distance: distanceRan})});
+
+window.happiness.socket.emit ('start game', {data: window.happiness.encrypt({})});
+
+window.happiness.socket.emit ('finish game', {data: window.happiness.encrypt({distance: distanceRan})});
+
+
+</script>
