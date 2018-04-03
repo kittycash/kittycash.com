@@ -14,6 +14,7 @@ import { ExploreModule } from './explore/explore.module';
 import { RoadmapModule } from './roadmap/roadmap.module';
 import { FaqModule } from './faq/faq.module';
 import { ScoreboardModule } from './scoreboard/scoreboard.module';
+import { DownloadsModule } from './downloads/downloads.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -33,6 +34,7 @@ import { AppRoutingModule } from './app-routing.module';
     RoadmapModule,
     FaqModule,
     ScoreboardModule,
+    DownloadsModule,
     AppRoutingModule
   ],
   declarations: [AppComponent],

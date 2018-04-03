@@ -5,11 +5,25 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+/*
+ * Bootstrap / mobile safari bug.  Body has to have position: relative to prevent horizontal overflow.
+ */
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+.row { 
+	margin: 0; 
+	padding: 0 
 }
 
 .container-fluid {
 	padding-left: 0;
 	padding-right: 0;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	overflow-x: hidden;
 }
 
 .btn-primary {

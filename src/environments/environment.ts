@@ -6,7 +6,7 @@
 export const environment = {
   production: false,
   version: '(dev)',
-  serverUrl: '/api',
+  serverUrl: 'https://dev.bradk.xyz',
   defaultLanguage: 'en-US',
   supportedLanguages: [
     'en-US',
