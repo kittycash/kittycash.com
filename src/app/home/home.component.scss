@@ -25,6 +25,11 @@ q {
 		padding-left: 0;
 	}
 }
+.what-is-kittycash h1 {
+	@include media-breakpoint-down(sm) { 
+		font-size: 35px;
+	}
+}
 
 .px-sm-1 {
 	@include media-breakpoint-down(sm) { 
@@ -72,17 +77,33 @@ q {
 	font-size: 28px;
 }
 
+.social .col-6 {
+	@include media-breakpoint-down(sm) { 
+       padding-left: 35px;
+       padding-right: 35px;
+    }
+}
+.social a {
+	@include media-breakpoint-up(md) { 
+        float: right;
+    }	
+}
 .social img {
 	width: 49px;
 	height: 49px;
+	@include media-breakpoint-up(md) { 
+        float: right;
+    }
+
 }
 .social span {
-	text-align: left;
+	text-align: left !important;
 	display: block;
 	font-size: 20px;
 	color: black;
 	@include media-breakpoint-down(sm) { 
        font-size: 14px;
+       text-align: center !important;
     }
 }
 
@@ -93,6 +114,7 @@ q {
  	background-size: 60%;
  	@include media-breakpoint-down(sm) { 
         background-image: none;
+        text-align: center;
     }
 }
 

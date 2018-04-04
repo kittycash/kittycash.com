@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "build": "npm run env -s && ng build --prod",
-    "start": "npm run env -s && ng serve --aot --disable-host-check --proxy-config proxy.conf.js",
+    "start": "npm run env -s && ng serve --aot --disable-host-check --host 0.0.0.0 --proxy-config proxy.conf.js",
     "translations:extract": "ngx-translate-extract --input ./src --output ./src/translations/template.json --format=json --clean -sort --marker extract",
     "env": "ngx-scripts env npm_package_version",
     "generate": "ng generate"
@@ -24,10 +24,15 @@
     "@fortawesome/fontawesome-free-webfonts": "^1.0.4",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0",
     "@ngx-translate/core": "^9.0.1",
+    "aes-js": "^3.1.0",
     "bootstrap": "4.0.0",
     "core-js": "^2.5.2",
     "lodash": "^4.17.4",
+    "lowdb": "^1.0.0",
+    "moment": "^2.21.0",
     "rxjs": "^5.5.5",
+    "socket.io": "^2.0.4",
+    "swig": "^1.4.2",
     "xml2js": "^0.4.19",
     "zone.js": "^0.8.18"
   },

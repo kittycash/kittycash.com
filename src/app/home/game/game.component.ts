@@ -1,5 +1,6 @@
 import { Component, OnInit, Directive, ElementRef, HostListener, HostBinding, Renderer, Input } from '@angular/core';
 import { finalize } from 'rxjs/operators';
+import { environment } from '@env/environment';
 
 @Component({
   selector: 'game',
@@ -8,7 +9,11 @@ import { finalize } from 'rxjs/operators';
 })
 export class GameComponent implements OnInit {
  
-  constructor() { }
+  gameUrl: string;
+
+  constructor() { 
+  	this.gameUrl = environment.serverUrl + "/scoreboard/game?show_scoreboard_link=true";
+  }
 
  
   ngOnInit() {

@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   blogPosts() {
-    if (this.articles)
+    if (this.articles && this.articles.filter)
     {
       return this.articles.filter((item: any, index: number) => index < 3);
     }
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     const element = this.renderer.selectRootElement('#gameFrame');
     setTimeout(() => {
       element.focus();
-      element.contentWindow.doStart();
+      element.contentWindow.postMessage('start game', '*');
     }, 0);
   }
 

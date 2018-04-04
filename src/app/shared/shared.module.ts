@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AquariumComponent } from '../home/aquarium/aquarium.component';
 import { GameComponent } from "../home/game/game.component";
 import { LoaderComponent } from './loader/loader.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { LoaderComponent } from './loader/loader.component';
   declarations: [
     LoaderComponent,
     AquariumComponent,
-    GameComponent
+    GameComponent,
+    SafePipe
   ],
   exports: [
     LoaderComponent,
