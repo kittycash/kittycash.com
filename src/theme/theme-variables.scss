@@ -15,19 +15,13 @@ $fa-font-path: "~@fortawesome/fontawesome-free-webfonts/webfonts";
 // Color system
 //
 
-$white:  #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #868e96;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
-$black:  #000;
 
-$kittyred: rgb(255, 126, 118);
+
+$kittyred: #FF9891;
+$kittyblack: #000000;
+$kittywhite: #FFFFFF;
+$kittylightgray: #F3F3F3;
+$kittydarkgray: #9B9B9B;
 
 $blue:    #0073dd;
 $indigo:  #6610f2;
@@ -42,13 +36,13 @@ $cyan:    #17a2b8;
 
 $theme-colors: (
   primary: $kittyred,
-  secondary: $gray-600,
+  secondary: $kittylightgray,
   success: $green,
   info: $cyan,
   warning: $yellow,
   danger: $red,
-  light: $gray-100,
-  dark: $gray-800
+  light: $kittylightgray,
+  dark: $kittydarkgray
 );
 
 $spacer: 2rem;

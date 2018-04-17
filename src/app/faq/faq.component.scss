@@ -1,36 +1,26 @@
-.explorer-title {
-	background-image: url(assets/explore_blob.svg);
+.faq-title {
+	background-image: url(assets/faq_blob.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	min-height: 300px;
 }
 
-.explorer-title h1 {
+.faq-title h1 {
 	position: absolute;
 	bottom: 25%;
 	left: 0;
 	right: 0;
-	font-size: 185%;
 	text-align: center;
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-weight: 700;
+	font-size: 245%;
+	font-family: 'Montserrat-SemiBold', sans-serif;
 }
 
-.cat-box {
-	color: black;
-}
-
-.cat-box h2 {
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-size: 24px;
-}
-
-.cat-box h3 {
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-size: 18px;
-}
-
-.cat-box h4 {
-	font-size: 14px;
+.faq-btn {
+	padding: 0;
+	font-family: 'Montserrat-Light', sans-serif;	
+	font-size: 160%;
+	white-space: normal !important;
+    word-wrap: break-word !important;
+    text-align: left;
 }

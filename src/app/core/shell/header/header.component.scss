@@ -1,8 +1,8 @@
 @import "src/theme/theme-variables";
 
 .logo {
-  width: 134px;
-  height: 134px;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
 }
 
@@ -28,6 +28,9 @@
   cursor: pointer;
 }
 
-header {
-
+nav {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }

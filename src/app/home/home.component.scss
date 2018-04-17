@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap-grid.scss";
 @import "src/theme/theme-variables";
+
 .logo {
   width: 100px;
 }
@@ -10,26 +11,48 @@ q {
   quotes: "« " " »";
 }
 
-.next-generation {
-	font-size: 60px;
-}
-
 .legendary {
 	position: relative;
 }
-
-.what-is-kittycash {
-	padding-left: 15px;
-	margin-bottom: -50px;
-	@include media-breakpoint-down(sm) { 
-		padding-left: 0;
-	}
+ /* 
+.legendary::before {
+   content: " ";
+   position: absolute;
+   left: -11%;
+   right: -11%;
+   height: 100%;
+   z-index: -1;
+   background-image: url(assets/l-top.png);
+   background-repeat: no-repeat;
+   background-size:contain;
 }
-.what-is-kittycash h1 {
-	@include media-breakpoint-down(sm) { 
-		font-size: 35px;
-	}
+*/
+ /* 
+.legendary::after {
+   content: " ";
+   position: absolute;
+   left: -11%;
+   right: -11%;
+   height: 100%;
+   z-index: -1;
+   background-image: url(assets/l-bottom.png);
+   background-repeat: no-repeat;
+   background-size: contain;
 }
+*/
+.legendary-inner {
+	position: relative;
+}
+ /* 
+.legendary-inner::before {
+	content: " ";
+	position: absolute;
+	left: -11%;
+	right: -11%;
+	background-image: url(assets/l-fill.png);
+	height: 100%;
+}
+*/
 
 .px-sm-1 {
 	@include media-breakpoint-down(sm) { 
@@ -45,10 +68,32 @@ q {
     }
 }
 
-.cat-box {
-	color: white;
+.cat-box-container .col-md-4{
 	z-index:20;
 }
+
+.cat-box {
+	color: white;
+	@include media-breakpoint-up(md) { 
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+}
+
+.cat-box-container > .col-md-4:first-child .cat-box{
+	@include media-breakpoint-up(md) { 
+		padding-right: 20%;
+		padding-left: 0;
+	}
+}
+
+.cat-box-container > .col-md-4:last-child .cat-box{
+	@include media-breakpoint-up(md) { 
+		padding-left: 20%;
+		padding-right: 0;
+	}
+}
+
 
 .cat-box h2 {
 	font-family: 'Montserrat-Bold', sans-serif;
@@ -65,8 +110,8 @@ q {
 }
 
 .kitty-img-container {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   background-color: #ffffff;
   box-shadow: 2px 2px 4px 0 rgba(223, 223, 223, 0.5);
   border-radius: 25px;
@@ -109,13 +154,27 @@ q {
 
 
 .get-in-touch {
-	background-repeat: no-repeat;
- 	background-image: url(/assets/get_in_touch_bg.svg);
- 	background-size: 60%;
  	@include media-breakpoint-down(sm) { 
-        background-image: none;
         text-align: center;
     }
+}
+
+.get-in-touch::before {
+	content: "";
+    background-repeat: no-repeat;
+    background-image: url(/assets/get_in_touch_bg.svg);
+    background-size: 65%;
+    max-width: 2000px;
+    max-height: 445px;
+    position: absolute;
+    left: -11%;
+    right: -11%;
+    height: 100%;
+
+    @include media-breakpoint-down(sm) {
+    	background-size: 125%;
+    }
+
 }
 
 .contact p {
@@ -126,3 +185,10 @@ q {
 	font-size: 24px;
 	color: white;
 }
+
+#legendary-container-2 {
+	margin-top: 18%;
+}
+
+
+
