@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isLoading: boolean;
 
   constructor(private renderer: Renderer2, private blogService: BlogService) {
-  	 this.renderer.addClass(document.body, 'blob');
+  	 this.renderer.addClass(document.getElementById("kc"), 'blob');
      this.kitties = kitties;
   }
 
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.renderer.removeClass(document.body, 'blob');
+    this.renderer.removeClass(document.getElementById("kc"), 'blob');
   }
 
   blogPosts() {

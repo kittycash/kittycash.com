@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap-grid.scss";
 
 .downloads-title {
-	background-image: url(assets/roadmap_blob.svg);
+	background-image: url(assets/downloads_blob.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -13,8 +13,7 @@
 	bottom: 25%;
 	left: 0;
 	right: 0;
-	font-size: 185%;
 	text-align: center;
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-weight: 700;
+	font-size: 245%;
+	font-family: 'Montserrat-SemiBold', sans-serif;
 }

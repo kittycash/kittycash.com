@@ -17,15 +17,49 @@ body {
 	padding: 0 
 }
 
+.kitty-container {
+	margin-left: 9%;
+	margin-right: 9%;
+}
+
+#kc {
+	position: absolute;
+    width: 60%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 1200px;
+    z-index:0;
+}
+
+.blob {
+	background-repeat: no-repeat;
+ 	background-image: url(/assets/home_clip.svg);
+ 	background-position: top right;
+ 	background-size: 100%;
+
+ 	@include media-breakpoint-down(sm) { 
+		display: none;
+	}
+
+	@media only screen and (min-width: 1500px) {
+		background-position-y: -200px;
+	}
+}
+
+
 .container-fluid {
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
 	max-width: 100%;
 	min-width: 100%;
-	overflow-x: hidden;
 }
 
+.btn {
+	font-family: 'Montserrat-Medium', sans-serif;
+	font-size: 150%;
+}
 .btn-primary {
     color: $white;
 }
@@ -41,3 +75,49 @@ body {
 .btn-outline-primary:hover {
     color: $white;
 }
+
+
+.kitty-menu a{
+	font-family: 'Montserrat-SemiBold', sans-serif;
+  	font-size: 120%;
+  	color: $kittyblack !important;
+}
+
+.kitty-menu a:hover {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.kitty-menu a.active {
+	color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.kitty-header-lg {
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-size: 300%;
+	color: $kittyblack;
+}
+
+.kitty-header-s1 {
+	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-size: 245%;
+	color: $kittyblack;
+}
+
+.kitty-header-s2 {
+	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-size: 150%;
+	color: $kittyblack;
+}
+
+.kitty-header-s3 {
+	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-size: 120%;
+	color: $kittyblack;
+}
+
+p {
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 130%;
+	color: $kittyblack
+}
+

@@ -1,0 +1,31 @@
+#legendary-bg {
+	position: absolute;
+	left: -11%;
+	right: -11%;
+	height: 100%;
+	top: 11%;
+	display: none;
+}
+
+#legendary-bg #l-filler {
+	background-image: url(assets/l-fill.png);
+	position: absolute;
+	width: 100%;
+}
+#legendary-bg #l-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-height: 315px;
+}
+
+#legendary-bg #l-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-height: 150px;
+}

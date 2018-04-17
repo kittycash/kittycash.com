@@ -1,7 +1,7 @@
 <div class="container-fluid px-0">
-  <div class="row mx-4 px-sm-1 mb-5">
+  <div class="row mb-5">
   	<div class="col-md-7 col-sm-12">
-	  	<h1 class="next-generation sb-black">Next generation of blockchain gaming.</h1>
+	  	<h1 class="kitty-header-lg pb-3">Next generation of <br class="d-none d-md-block"> blockchain gaming.</h1>
 	  	<button class="btn btn-lg btn-primary" (click)="playGame()">Play</button>
 	  	<a class="btn btn-lg btn-outline-primary" routerLink="/faq" routerLinkActive="active">What is KittyCash?</a>
 
@@ -11,54 +11,53 @@
   		<img class="img-fluid" src="/assets/home_cat.png" />
   	</div>
   </div>
-
+  <div class="pt-5"></div>
   <div class="legendary mt-5">
 	  <div class="row what-is-kittycash">
-	  	<div class="col-12 mx-4 px-sm-1">
-		  	<h1>What is KittyCash?</h1>
+	  	<div class="col-12">
+		  	<h1 class="kitty-header-s1">What is KittyCash?</h1>
 		  	<p>KittyCash is a next generation blockchain game that is fulfilling Satoshi's original vision of blockchain collectables.</p>
-		  	<button class="btn btn-lg btn-outline-primary" routerLink="/faq" routerLinkActive="active">Read more</button>
+		  	<button id="read_more_button" class="btn btn-lg btn-outline-primary" routerLink="/faq" routerLinkActive="active">Read more</button>
 		  </div>
 	  </div>
-
-	  <img src="assets/l-top.png" style="width: 100%; height: auto; left:0; right: 0;">	 	
-	  	 <div>
-		  <div class="row" style="background-image:url(assets/l-fill.png);">
+	    	<legendary-bg></legendary-bg>
+	  	 <div id="legendary-container-2">
+		  <div class="row">
 			<div class="col-10 offset-1 text-center">
-				<h1>Our Legendary Kitties</h1>
+				<h1 class="kitty-header-s1" id="legendary-title">Our Legendary Kitties</h1>
 			</div>
 		  </div>
 
-		  <div class="row" style="position: relative;">
+		  <div class="row legendary-inner">
 		  	<aquarium class="d-none d-md-block"></aquarium>
-		  	<div class="col-12">
-		  		<div class="row pt-4 pb-4" style="background-image:url(assets/l-fill.png);">
-		  			<div class="col-md-4 col-sm-12 cat-box pb-2" *ngFor="let cat of kitties">
-		  				<div class="mx-auto text-center kitty-img-container">
-			  				<img class="img-fluid" src="{{cat.img}}">
-			  			</div>
-		  				<div class="mt-3 mx-3">
-			  				<h2>{{cat.name}}</h2>
-			  				<h3>{{cat.priceBTC}} BTC | {{cat.priceSKY}} SKY</h3>
-			  				<h4>{{cat.description}}</h4>
-			  			</div>
+		  	<div class="col-12 pb-5">
+		  		<div class="row pt-4 pb-4 no-gutters cat-box-container">
+		  			<div class="col-md-4 col-sm-12 pb-2" *ngFor="let cat of kitties">
+		  				<div class="cat-box">
+			  				<div class="mx-auto text-center kitty-img-container">
+				  				<img class="img-fluid" src="{{cat.img}}">
+				  			</div>
+			  				<div class="mt-3 mx-3">
+				  				<h2>{{cat.name}}</h2>
+				  				<h3>{{cat.price_btc}} BTC | {{cat.price_sky}} SKY</h3>
+				  				<h4>{{cat.description}}</h4>
+				  			</div>
+				  		</div>
 			  		</div>	  			
 		  		</div>
 
-		  		<div class="row pb-5" style="background-image:url(assets/l-bottom.png); background-repeat:no-repeat; background-size: 100%;">
-		  			<div class="col-12 text-center">
-		  				<button routerLink="/explore" class="btn btn-lg btn-primary mt-5">Explore them all</button>
-		  			</div>
+		  		<div class="text-center" style="position: absolute; bottom: -50px; left: 0; right: 0;">
+		  		<button routerLink="/explore" class="btn btn-lg btn-primary">Explore them all</button>
 		  		</div>
 		  	</div>
 		  </div>
-	  </div>
+	  	</div>
 	</div>
 
-	<div>
+	<div class="mt-5">
 		<div class="row">
 			<div class="col-10 offset-1 mt-5 text-center">
-				<h1>From Our Blog</h1>
+				<h1 class="kitty-header-s1">From Our Blog</h1>
 			</div>
 		</div>
 
@@ -66,7 +65,7 @@
 			<div class="col-10 offset-1">
 				<div class="row">
 					<div class="col-md-4 col-sm-12 blog-box mb-2" *ngFor="let article of blogPosts();">
-						<h1>{{article.title}}</h1>
+						<h1 class="kitty-header-s2">{{article.title}}</h1>
 						<div [innerHTML]="article.summary"></div>
 						<a class="btn btn-lg btn-outline-primary" href="{{article.url}}">Read more</a>
 					</div>
@@ -80,36 +79,36 @@
 		</div>
 	</div>
 
-	<div class="get-in-touch sm-bg">
+	<div class="get-in-touch">
 		<div class="row mt-5 pb-5">
-			<div class="col-xs-10 offset-xs-1 col-sm-10 offset-sm-1 col-md-4 offset-md-1 contact mt-4">
-				<h1>Get in Touch</h1>
-				<p class="px-1">Got something to say? We love hearing from you!</p>
+			<div class="col-xs-10 col-sm-10 col-md-4 contact mt-4">
+				<h1 class="kitty-header-s1">Get in Touch</h1>
+				<p class="pr-1">Got something to say? We love hearing from you!</p>
 				<a href="mailto:hello@kittycash.com">hello@kittycash.com</a>
 			</div>
-			<div class="col-md-5 offset-md-2 social mt-2 pr-2">
-				<div class="row mt-5">
-					<div class="col-6">
-						<a class="pl-xs-4" href="https://t.me/kittycash"><img src="assets/telegram.png"><span>Telegram</span></a>
+			<div class="col-md-5 offset-md-3 social mt-2">
+				<div class="row mt-5 no-gutters">
+					<div class="col-3 offset-md-6 offset-sm-0">
+						<a class="mr-4" href="https://t.me/kittycash"><img src="assets/telegram.png"><span>Telegram</span></a>
 					</div>
-					<div class="col-6">
-						<a class="pr-4" href="https://www.facebook.com/kittycash.official/"><img src="assets/fb.svg"><span>Facebook</span></a>
+					<div class="col-3">
+						<a href="https://www.facebook.com/kittycash.official/"><img src="assets/fb.svg"><span>Facebook</span></a>
 					</div>
-					<div class="col-6">
-						<a href="https://twitter.com/kittycash_com"><img src="assets/twitter.png"><span>Twitter</span></a>
+					<div class="col-3 offset-md-6 offset-sm-0">
+						<a class="mr-4" href="https://twitter.com/kittycash_com"><img src="assets/twitter.png"><span>Twitter</span></a>
 					</div>
-					<div class="col-6">
-						<a class="pr-4" href="https://instagram.com/kittycash.official/"><img src="assets/ig.svg"><span>Instagram</span></a>
+					<div class="col-3">
+						<a href="https://instagram.com/kittycash.official/"><img src="assets/ig.svg"><span>Instagram</span></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<div class="mt-5"></div>
 	<div class="pb-5 pt-5">
 		<div class="row">
 			<div class="col-10 offset-1 text-center mt-1">
-				<h1>Proudly made possible with Skycoin technologies</h1>
+				<h1 class="kitty-header-s1">Proudly made possible with Skycoin technologies</h1>
 			</div>
 		</div>
 

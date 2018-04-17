@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap-grid.scss";
+@import "src/theme/theme-variables";
 
 .roadmap-title {
 	background-image: url(assets/roadmap_blob.svg);
@@ -13,10 +14,9 @@
 	bottom: 25%;
 	left: 0;
 	right: 0;
-	font-size: 185%;
 	text-align: center;
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-weight: 700;
+	font-size: 245%;
+	font-family: 'Montserrat-SemiBold', sans-serif;
 }
 
 .year-blob {
@@ -33,31 +33,32 @@
 
 .year-blob h1 {
 	position: absolute;
-	bottom: 10%;
+	bottom: 12%;
 	left: 0;
 	right: 0;
-	font-size: 185%;
 	text-align: center;
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-weight: 700;
+	font-size: 130%;
+	text-align: center;
+	font-family: 'Montserrat-Medium', sans-serif;
 }
 
 .quarter-blob {
 	position: absolute;
-	background-image: url(assets/year_blob.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
 	min-height: 100px;
 	z-index: 2;
-	margin-top: 25px;
-	margin-bottom: 25px;
-
-	left: 0;
-    right: 0;
-    width: 75px;
-    bottom: -15px;
+    bottom: 0;
+    top: 0;
     margin: 0 auto;
+}
+
+.roadmap .left .quarter-blob {
+	left: 0;
+    right: 40px;
+}
+
+.roadmap .right .quarter-blob {
+	left: 40px;
+    right: 0;
 }
 
 .quarter-blob h1 {
@@ -65,32 +66,29 @@
 	bottom: 15%;
 	left: 0;
 	right: 0;
-	font-size: 155%;
+	font-size: 130%;
 	text-align: center;
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-weight: 700;
+	font-family: 'Montserrat-Medium', sans-serif;
+	color: $kittydarkgray;
 }
 
 .roadmap {
 	position: relative;
 	margin-bottom: 50px;
+	font-size: 18px;
 }
 .roadmap:before {
   content: "";
   display: block;
   position: absolute;
-  background-color: #bdbdbd;
-  width: 2px;
+  background-color: $kittyred;
+  width: 3px;
   top: 0;
   bottom: -50px;
   left: 50%;
   z-index: 1;
 }
 
-.roadmap {
-	font-size: 18px;
-	margin-top: 25px;
-}
 .roadmap p {
 	display:inline-block;
 	background-color: white;

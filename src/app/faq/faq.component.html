@@ -1,27 +1,27 @@
 <div class="container-fluid px-0">
 
 	<div class="row">
-		<div class="col-md-6 offset-md-3 col-sm-12">
+		<div class="col-12">
 		  <div class="row">
 		  	<div class="col-lg-4 offset-lg-4 col-md-12">
-		  		<div class="explorer-title">
+		  		<div class="faq-title">
 			  		<h1>FAQ</h1>
 			  	</div>
 		  	</div>
 		  </div>
 
-		  <div class="row m-2">
+		  <div class="row my-2">
 		  	<div class="col-12">
-		  		<h1>Basic FAQ:</h1>
+		  		<h1 class="kitty-header-s1">Basic FAQ:</h1>
 		  		<div class="panel-group">
 			        <div class="panel panel-default" *ngFor="let faq of faqs.basic">
 			            <div class="panel-heading accordion-toggle question-toggle collapsed">
 			                 <h4 class="panel-title">
-			                    <button class="btn btn-link" (click)="currentFaq = faq">{{faq.question}}</button>
+			                    <button class="btn btn-link faq-btn" (click)="currentFaq = faq">{{faq.question}}</button>
 			              	 </h4>
 			            </div>
-			            <div id="question0" class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
-			                <div class="panel-body ml-3">
+			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
+			                <div class="panel-body">
 			                    <p>{{faq.answer}}</p>
 			                </div>
 			            </div>
@@ -31,19 +31,19 @@
 		  </div>
 
 
-		    <div class="row m-2">
+		    <div class="row my-2">
 		  	<div class="col-12">
-		  		<h1>Technical FAQ:</h1>
+		  		<h1 class="kitty-header-s1">Technical FAQ:</h1>
 		  		<div class="panel-group">
 			        <div class="panel panel-default" *ngFor="let faq of faqs.technical">
 			            <div class="panel-heading accordion-toggle question-toggle collapsed">
 			                 <h4 class="panel-title">
-			                    <button class="btn btn-link" (click)="currentFaq = faq">{{faq.question}}</button>
+			                    <button class="btn btn-link faq-btn" (click)="currentFaq = faq">{{faq.question}}</button>
 			              </h4>
 
 			            </div>
-			            <div id="question0" class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
-			                <div class="panel-body ml-3">
+			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
+			                <div class="panel-body">
 			                    <p>{{faq.answer}}</p>
 			                </div>
 			            </div>
@@ -53,19 +53,19 @@
 		  </div>
 
 
-		    <div class="row m-2">
+		    <div class="row my-2">
 		  	<div class="col-12">
-		  		<h1>Economics FAQ:</h1>
+		  		<h1 class="kitty-header-s1">Economics FAQ:</h1>
 		  		<div class="panel-group">
 			        <div class="panel panel-default" *ngFor="let faq of faqs.economics">
 			            <div class="panel-heading accordion-toggle question-toggle collapsed">
 			                 <h4 class="panel-title">
-			                    <button class="btn btn-link" (click)="currentFaq = faq">{{faq.question}}</button>
+			                    <button class="btn btn-link faq-btn" (click)="currentFaq = faq">{{faq.question}}</button>
 			              </h4>
 
 			            </div>
-			            <div id="question0" class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
-			                <div class="panel-body ml-3">
+			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
+			                <div class="panel-body">
 			                    <p>{{faq.answer}}</p>
 			                </div>
 			            </div>
@@ -75,5 +75,5 @@
 		  </div>
 		</div>
 	</div>
-
+  
 </div>
