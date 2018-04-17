@@ -36,10 +36,11 @@
     "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
   }, {
     "name": "Donald The Cat",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "We're making collectables great again while puppers are ruining this country! AUCTION IS OPEN: https://t.me/KittyCashAuction",
-    "img": "assets/legendary/Trump-01.png"
+    "priceBTC": "0.555",
+    "priceSKY": "500",
+    "description": "We're making collectables great again while puppers are ruining this country!",
+    "img": "assets/legendary/Trump-01.png",
+    "sold": "EbEjtA5GifxRKez\n76Gat8RWB5LmFKFVh5W"
   }, {
     "name": "Thor",
     "priceBTC": "0.95",
@@ -95,11 +96,11 @@
   "img": "assets/custom/Jackson_sold-01.png",
   "sold": "2LH6TDrrvjneQwUMGQR\n1AnjeXKEWJtuUXY6"
 }, {
-  "name": "???",
+  "name": "Steve Jobs",
   "priceBTC": "1",
   "priceSKY": "480",
-  "description": "What could he possibly be up to?",
-  "img": "assets/custom/Genie.png",
+  "description": "I told them not to eat from that tree.",
+  "img": "assets/custom/Steve-Jobs_sold-01.png",
   "sold": "3U4LDCpjMnDFwMjS7S5MtQ\nyuRio6edgqex"
 }, {
   "name": "SkyKitty Huixin",
@@ -135,7 +136,7 @@
   "priceSKY": "625",
   "description": "Hey there. What are you looking at?",
   "img": "assets/custom/Smurf_sold-01.png",
-  "sold": "2RD6yCerPLc8VeBvB\nRHVZUP3W84uXJyWMU5"
+  "sold": "v1KADJbjKo16x7kp\nA2Auu5Qk6rQTqk8CmA"
 }, {
   "name": "???",
   "priceBTC": "?",
