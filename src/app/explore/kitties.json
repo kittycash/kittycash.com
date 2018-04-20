@@ -35,12 +35,25 @@
     "img": "assets/legendary/Illuminati_sold-01.png",
     "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
   }, {
+    "name": "???",
+    "priceBTC": "?",
+    "priceSKY": "?",
+    "description": "This special kitty will be revealed soon!",
+    "img": "assets/legendary/Genie.png"
+  }, {
     "name": "Donald The Cat",
     "priceBTC": "0.555",
     "priceSKY": "500",
     "description": "We're making collectables great again while puppers are ruining this country!",
     "img": "assets/legendary/Trump-01.png",
     "sold": "EbEjtA5GifxRKez\n76Gat8RWB5LmFKFVh5W"
+  }, {
+    "name": "Cat Jong Un",
+    "priceBTC": "0.62",
+    "priceSKY": "320",
+    "description": "Great Leader of Best Korea.",
+    "img": "assets/legendary/KimJong_sold-01.png",
+    "sold": "2cMH22VgsV45R7ed\nfChhFdm6i8DyDFGDS3d"
   }, {
     "name": "Thor",
     "priceBTC": "0.95",
@@ -55,18 +68,6 @@
     "description": "Come on son! All these other kitties got nothing on me.",
     "img": "assets/legendary/AlCapone_sold-01.png",
     "sold": "TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr"
-  }, {
-    "name": "???",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "This special kitty will be revealed soon!",
-    "img": "assets/legendary/Genie.png"
-  }, {
-    "name": "???",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "This special kitty will be revealed soon!",
-    "img": "assets/legendary/Genie.png"
   }, {
     "name": "???",
     "priceBTC": "?",
