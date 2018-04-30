@@ -43,13 +43,13 @@ export class FooterComponent implements OnInit {
 
     switch(deviceInfo.os) {
     case 'mac':
-        url = 'https://github.com/kittycash/wallet/releases/download/untagged-84ea36572e1d78bb9275/kittycash-0.0.1-gui-osx.dmg';
+        url = 'https://github.com/kittycash/wallet/releases/download/v0.0.1/kittycash-0.0.1-gui-osx.dmg';
         break;
     case 'windows':
-        url = 'https://github.com/kittycash/wallet/releases/download/untagged-84ea36572e1d78bb9275/kittycash-0.0.1-gui-win-setup.exe';
+        url = 'https://github.com/kittycash/wallet/releases/download/v0.0.1/kittycash-0.0.1-gui-win-setup.exe';
         break;
     case 'linux':
-        url = 'https://github.com/kittycash/wallet/releases/download/untagged-84ea36572e1d78bb9275/kittycash-0.0.1-gui-linux-x64.AppImage';
+        url = 'https://github.com/kittycash/wallet/releases/download/v0.0.1/kittycash-0.0.1-gui-linux-x64.AppImage';
         break;
     default:
         url = 'https://github.com/kittycash/wallet/releases';
