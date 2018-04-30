@@ -17,6 +17,7 @@ import { ScoreboardModule } from './scoreboard/scoreboard.module';
 import { DownloadsModule } from './downloads/downloads.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { AppRoutingModule } from './app-routing.module';
     FaqModule,
     ScoreboardModule,
     DownloadsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DeviceDetectorModule.forRoot()
   ],
   declarations: [AppComponent],
   providers: [
