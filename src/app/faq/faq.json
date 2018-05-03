@@ -1,79 +1,105 @@
-{
-  "basic": [
-    {
-    "question": "What is KittyCash?",
-    "answer": "KittyCash is a next generation blockchain game developed on Skycoin’s Fiber blockchain. It combines a crypto-collectable and arcade tamagotchi-like game where you can trade, breed, feed, and play mini-games with your Kitties. KittyCash is a proof of concept for the future of the blockchain gaming."
-  }, {
-    "question": "How do you play KittyCash?",
-    "answer": "To play KittyCash you need to first download our wallet that we conveniently call The Kittery and then obtain a Kitty. You can win one or buy one from our website. Once you have the Kitty you will have to take care of it to make sure it’s healthy and does not die. Your Kitty has to be fed at least once every few days. You can also fully customize your Kitty with our wide range of accessories. All the Kitties can breed with each other to create an offspring that you can use to play the game or trade it with other players. After you fed and dressed up your Kitty you’re ready to explore the game. In the future we will launch a series of mini-games where you can compete with other players and win accessories and items. We’re currently working on racing game, arcade game and open world game called KittyCash World. KittyCash is playable via our desktop wallet compatible with Linxus, macOS and Windows. KittyCash Alpha 1.0 is currently live and allows players to obtain Kitties for miners, community engagement and other contributions to the project. Please contact us at marketing@kittycash.com for further info. "
-  }, {
-    "question": "What are the minimum requirements to play KittyCash?",
-    "answer": "To play KittyCash you need a stable internet connection and one of the supported operating systems (macOS 10.9 or later, Windows 7 or later, Ubuntu 12.04 or later, Fedora 21 or later, Debian 8 or later). Hardware requirements aren’t currently specified. Mobile wallet is estimated to be released in Q3 2018."
-  }, {
-    "question": "Where can I download the KittyCash Wallet?",
-    "answer": "You can download KittyCash from: https://github.com/kittycash/wallet/releases"
-  }, {
-    "question": "Is KittyCash multiplayer or single player game?",
-    "answer": "KittyCash is a game built for the Skycoin community and puts an emphasis on bringing value to the ecosystem and the growing community. The finished game will allow players to either play solo or engage in competitions with the community via mini-games."
-  }, {
-    "question": "Whats the goal of the game?",
-    "answer": "You can’t win the game. KittyCash is game for collectors who like to be challenged and who love to compete with others. There’s no specific single goal in the KittyCash game. It’s all about the swag. Get the Kitty, tune it up, beat the leaderboards and join the hall of fame."
-  }, {
-    "question": "Is KittyCash free-to-play?",
-    "answer": "Yes, and no. KittyCash allows you to win the Kitty for free in our competitions, or get one from other community members making the game free to play. You can also buy the Kitty from our website or other community members, but once you have the Kitty you don’t have to pay ever again. We will supply your Kitty with food and all the required items, but you can buy additional items and accessories if you wish to speed up your game progress or get some unique accessories for your Kitty. KittyCash allows you to play the game for free, but specific actions as trading or breeding have a very small fee attached."
-  }, {
-    "question": "Why are you running the KittyCash Alpha 1.0?",
-    "answer": "As every other game we need to make sure that our game is properly developed and flawless before we can push out the official release. The Alpha will be used to find the bugs and issues in the game code, but also to attract wider audience as it will be a free-trial of the game for our community. You will be able to experience the basic features of the game such as feeding, customization with accessories, breeding and trading. During the Alpha we will not release any mini-games as we will be focused on perfecting the breeding algorithms and the game mechanics. There will be also only one breed available at the beginning of the Alpha, Tabby, and all the offspring will be of this same breed. We highly value your feedback and if you find any flaws or if you have any suggestions for improvements, please don’t hesitate to submit them here: (create buttons that will redirect to feedback forms for tech and non-tech issues)."
-  }, {
-    "question": "Why are you called KittyCash?",
-    "answer": "KittyCash is a reference to important events in blockchain history and remembers those in a slightly satirical fashion. It also portrays two of the central elements of our game- Kitties and Cash."
-  }, {
-    "question": "Why is KittyCash important for blockchain?",
-    "answer": "KittyCash is designed to push the limits and prove concepts of gaming on the blockchain. By developing a game on Fiber blockchain we’re attempting to highlight the advantages of using Fiber compared to other blockchain platform but also compared to classic game development platforms.  KittyCash is a Proof of Concept for games on Skycoin’s Fiber blockchain platform."
-  }
-  , {
-    "question": "How is KittyCash different to other blockchain collectables?",
-    "answer": "KittyCash moves well beyond the mere breeding and trading of other collectables. Our Kitties allow the user to play games and customize the Kitties as desired."
-  }
-  , {
-    "question": "Why Kitties?",
-    "answer": "Our lead developer always wanted a Kitty, but he is allergic to them."
-  }
-  , {
-    "question": "Can I buy a Kitty with Bitcoin?",
-    "answer": "Yes, you can buy your own Kitty with Skycoin or Bitcoin. However, in-game purchases can only be made with Skycoin and later on Skycoin Coinhours."
-  }
-  , {
-    "question": "What are Legendary Kitties? Where can I buy one?",
-    "answer": "Legendary Kitties are our custom hand-drawn Kitties designed to impersonate different celebrities, influencers and personalities. They are equipped with special traits and extremely rare. When a Legendary Kitty is available for purchase we will announce the auction in our Legendaries Auction channel on Telegram: https://t.me/KittyCashAuction "
-  }
-  , {
-    "question": "How does breeding work?",
-    "answer": "Our breeding algorithm is fairly complicated and very realistic as it’s developed by using the real-world breeding mechanics. All our Kitties carry a Kitty-DNA chain that will affect the outcome of breeding once their bred. It works exactly as in the real world. Breeding outcome is affected positively and negatively by several factors such as breed of the parents and their ancestors, crossbreeding between two different breeds, inbreeding between Kitties with direct family relation, health points of the parents and by how often the Kitties are used for breeding. If you want to achieve better results of breeding you should make sure that your Kitty is healthy and not in direct family relation to other Kitty."
-  }],
-  "technical": [
+[
   {
-    "question": "Is KittyCash running on Ethereum blockchain?",
-    "answer": "No, the Ethereum blockchain gets congested very easily during busy times, this drives fees and transaction times high. Ethereum blockchain is centralized and is controlled by its founder Vitalik Buterin. KittyCash is part of the Skycoin ecosystem and employs Skycoin’s next generation Fiber blockchain technology."
-  }, {
-    "question": "What are the advantages of using Skycoin’s ecosystem?",
-    "answer": "There are several reasons why we’ve decided to run KittyCash on Skycoin. Skycoin offers public-private blockchain platform that provides instanteanous and feeless transactions. By using Skycoin’s Fiber platform we have access to Obelisk consensus algorithm that works on a free and decentralized Skywire internet."
-  }, {
-    "question": "Why does the world need blockchain games?",
-    "answer": "As the Ethereum co-founder rightly observed, centralization sucks. In-game items often hold monetary or sentimental value for players and they should be the rightful owners of these items and game developers should not have the power to take these virtual goods away from the players. Blockchain ensures that players are the only owners of their in-game items and can do with them as they please."
-  }],
-  "economics": [
+    "name": "Basic FAQ",
+    "data": [
+      {
+        "question": "What is KittyCash?",
+        "answer": "KittyCash is a next generation blockchain game developed on Skycoin\u2019s Fiber blockchain. It combines a crypto-collectable and arcade tamagotchi-like game where you can trade, breed, feed, and play mini-games with your Kitties. KittyCash is a proof of concept for the future of the blockchain gaming."
+      },
+      {
+        "question": "How do you play KittyCash?",
+        "answer": "To play KittyCash you need to first download our wallet that we conveniently call The Kittery and then obtain a Kitty. You can win one or buy one from our website. Once you have the Kitty you will have to take care of it to make sure it\u2019s healthy and does not die. Your Kitty has to be fed at least once every few days. You can also fully customize your Kitty with our wide range of accessories. All the Kitties can breed with each other to create an offspring that you can use to play the game or trade it with other players. After you fed and dressed up your Kitty you\u2019re ready to explore the game. In the future we will launch a series of mini-games where you can compete with other players and win accessories and items. We\u2019re currently working on racing game, arcade game and open world game called KittyCash World. KittyCash is playable via our desktop wallet compatible with Linxus, macOS and Windows. KittyCash Alpha 1.0 is currently live and allows players to obtain Kitties for miners, community engagement and other contributions to the project. Please contact us at marketing@kittycash.com for further info. "
+      },
+      {
+        "question": "What are the minimum requirements to play KittyCash?",
+        "answer": "To play KittyCash you need a stable internet connection and one of the supported operating systems (macOS 10.9 or later, Windows 7 or later, Ubuntu 12.04 or later, Fedora 21 or later, Debian 8 or later). Hardware requirements aren\u2019t currently specified. Mobile wallet is estimated to be released in Q3 2018."
+      },
+      {
+        "question": "Where can I download the KittyCash Wallet?",
+        "answer": "You can download KittyCash from: https:\/\/github.com\/kittycash\/wallet\/releases"
+      },
+      {
+        "question": "Is KittyCash multiplayer or single player game?",
+        "answer": "KittyCash is a game built for the Skycoin community and puts an emphasis on bringing value to the ecosystem and the growing community. The finished game will allow players to either play solo or engage in competitions with the community via mini-games."
+      },
+      {
+        "question": "Whats the goal of the game?",
+        "answer": "You can\u2019t win the game. KittyCash is game for collectors who like to be challenged and who love to compete with others. There\u2019s no specific single goal in the KittyCash game. It\u2019s all about the swag. Get the Kitty, tune it up, beat the leaderboards and join the hall of fame."
+      },
+      {
+        "question": "Is KittyCash free-to-play?",
+        "answer": "Yes, and no. KittyCash allows you to win the Kitty for free in our competitions, or get one from other community members making the game free to play. You can also buy the Kitty from our website or other community members, but once you have the Kitty you don\u2019t have to pay ever again. We will supply your Kitty with food and all the required items, but you can buy additional items and accessories if you wish to speed up your game progress or get some unique accessories for your Kitty. KittyCash allows you to play the game for free, but specific actions as trading or breeding have a very small fee attached."
+      },
+      {
+        "question": "Why are you running the KittyCash Alpha 1.0?",
+        "answer": "As every other game we need to make sure that our game is properly developed and flawless before we can push out the official release. The Alpha will be used to find the bugs and issues in the game code, but also to attract wider audience as it will be a free-trial of the game for our community. You will be able to experience the basic features of the game such as feeding, customization with accessories, breeding and trading. During the Alpha we will not release any mini-games as we will be focused on perfecting the breeding algorithms and the game mechanics. There will be also only one breed available at the beginning of the Alpha, Tabby, and all the offspring will be of this same breed. We highly value your feedback and if you find any flaws or if you have any suggestions for improvements, please don\u2019t hesitate to submit them here: (create buttons that will redirect to feedback forms for tech and non-tech issues)."
+      },
+      {
+        "question": "Why are you called KittyCash?",
+        "answer": "KittyCash is a reference to important events in blockchain history and remembers those in a slightly satirical fashion. It also portrays two of the central elements of our game- Kitties and Cash."
+      },
+      {
+        "question": "Why is KittyCash important for blockchain?",
+        "answer": "KittyCash is designed to push the limits and prove concepts of gaming on the blockchain. By developing a game on Fiber blockchain we\u2019re attempting to highlight the advantages of using Fiber compared to other blockchain platform but also compared to classic game development platforms.  KittyCash is a Proof of Concept for games on Skycoin\u2019s Fiber blockchain platform."
+      },
+      {
+        "question": "How is KittyCash different to other blockchain collectables?",
+        "answer": "KittyCash moves well beyond the mere breeding and trading of other collectables. Our Kitties allow the user to play games and customize the Kitties as desired."
+      },
+      {
+        "question": "Why Kitties?",
+        "answer": "Our lead developer always wanted a Kitty, but he is allergic to them."
+      },
+      {
+        "question": "Can I buy a Kitty with Bitcoin?",
+        "answer": "Yes, you can buy your own Kitty with Skycoin or Bitcoin. However, in-game purchases can only be made with Skycoin and later on Skycoin Coinhours."
+      },
+      {
+        "question": "What are Legendary Kitties? Where can I buy one?",
+        "answer": "Legendary Kitties are our custom hand-drawn Kitties designed to impersonate different celebrities, influencers and personalities. They are equipped with special traits and extremely rare. When a Legendary Kitty is available for purchase we will announce the auction in our Legendaries Auction channel on Telegram: https:\/\/t.me\/KittyCashAuction "
+      },
+      {
+        "question": "How does breeding work?",
+        "answer": "Our breeding algorithm is fairly complicated and very realistic as it\u2019s developed by using the real-world breeding mechanics. All our Kitties carry a Kitty-DNA chain that will affect the outcome of breeding once their bred. It works exactly as in the real world. Breeding outcome is affected positively and negatively by several factors such as breed of the parents and their ancestors, crossbreeding between two different breeds, inbreeding between Kitties with direct family relation, health points of the parents and by how often the Kitties are used for breeding. If you want to achieve better results of breeding you should make sure that your Kitty is healthy and not in direct family relation to other Kitty."
+      }
+    ]
+  },
   {
-    "question": "Can I make money by playing KittyCash?",
-    "answer": "KittyCash is a next generation of collectables and games developed on Skycoin’s Fiber blockchain but is by no means an investment. Our Kitties and accessories are digital goods, non-fungible assets and should not be seens as securities or investments as they may decline in value at any time. Please be aware that when you’re buying a Kitty you’re not making and investment and KittyCash is not responsible for potential financial losses associated with a purchase of a Kitty or other in-game goods. Your capital is at risk."
-  }, {
-    "question": "Is there a limited supply of Kitties?",
-    "answer": "During the Alpha release we are providing a limited supply of Kitties to encourage our community and interested players to join the game and experience the interface while helping us with testing and bug-finding. Once the Alpha is over all the Kitties distributed for the Alpha purposes will be kept and added to a limited supply of Initial Kitty Offering Kitties. The total amount of Kitties that will exist is not limited and depends on the breeding behavior of the players."
-  }, {
-    "question": "Are there any fees in the game?",
-    "answer": "Skycoin does not charge transaction fees in the network as you can make transactions without mining costs. During the Alpha release KittyCash will not charge any fees. After the official release KittyCash will charge 2% fees on trading and breeding transactions."
-  }, {
-    "question": "How does trading work?",
-    "answer": "The Marketplace allows players to trade Kitties, accessories, food and other in-game items with the rest of the community. Trading in KittyCash works on an open economy model where players, and players only, decide the trading value of in-game items on The Marketplace. To trade a Kitty or an in-game item you have to create a Marketplace listing where you will specify the asking price and wait for a buyer."
-  }]
-}
+    "name": "Technical FAQ",
+    "data": [
+      {
+        "question": "Is KittyCash running on Ethereum blockchain?",
+        "answer": "No, the Ethereum blockchain gets congested very easily during busy times, this drives fees and transaction times high. Ethereum blockchain is centralized and is controlled by its founder Vitalik Buterin. KittyCash is part of the Skycoin ecosystem and employs Skycoin\u2019s next generation Fiber blockchain technology."
+      },
+      {
+        "question": "What are the advantages of using Skycoin\u2019s ecosystem?",
+        "answer": "There are several reasons why we\u2019ve decided to run KittyCash on Skycoin. Skycoin offers public-private blockchain platform that provides instanteanous and feeless transactions. By using Skycoin\u2019s Fiber platform we have access to Obelisk consensus algorithm that works on a free and decentralized Skywire internet."
+      },
+      {
+        "question": "Why does the world need blockchain games?",
+        "answer": "As the Ethereum co-founder rightly observed, centralization sucks. In-game items often hold monetary or sentimental value for players and they should be the rightful owners of these items and game developers should not have the power to take these virtual goods away from the players. Blockchain ensures that players are the only owners of their in-game items and can do with them as they please."
+      }
+    ]
+  },
+  {
+    "name": "Economics FAQ",
+    "data": [
+      {
+        "question": "Can I make money by playing KittyCash?",
+        "answer": "KittyCash is a next generation of collectables and games developed on Skycoin\u2019s Fiber blockchain but is by no means an investment. Our Kitties and accessories are digital goods, non-fungible assets and should not be seens as securities or investments as they may decline in value at any time. Please be aware that when you\u2019re buying a Kitty you\u2019re not making and investment and KittyCash is not responsible for potential financial losses associated with a purchase of a Kitty or other in-game goods. Your capital is at risk."
+      },
+      {
+        "question": "Is there a limited supply of Kitties?",
+        "answer": "During the Alpha release we are providing a limited supply of Kitties to encourage our community and interested players to join the game and experience the interface while helping us with testing and bug-finding. Once the Alpha is over all the Kitties distributed for the Alpha purposes will be kept and added to a limited supply of Initial Kitty Offering Kitties. The total amount of Kitties that will exist is not limited and depends on the breeding behavior of the players."
+      },
+      {
+        "question": "Are there any fees in the game?",
+        "answer": "Skycoin does not charge transaction fees in the network as you can make transactions without mining costs. During the Alpha release KittyCash will not charge any fees. After the official release KittyCash will charge 2% fees on trading and breeding transactions."
+      },
+      {
+        "question": "How does trading work?",
+        "answer": "The Marketplace allows players to trade Kitties, accessories, food and other in-game items with the rest of the community. Trading in KittyCash works on an open economy model where players, and players only, decide the trading value of in-game items on The Marketplace. To trade a Kitty or an in-game item you have to create a Marketplace listing where you will specify the asking price and wait for a buyer."
+      }
+    ]
+  }
+]
