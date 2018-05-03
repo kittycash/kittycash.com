@@ -4,6 +4,7 @@ import { AquariumComponent } from '../home/aquarium/aquarium.component';
 import { LegendaryBGComponent } from '../home/legendary_bg/legendary_bg.component';
 import { GameComponent } from "../home/game/game.component";
 import { LoaderComponent } from './loader/loader.component';
+import { DownloadService } from './download.service';
 import { SafePipe } from './safe.pipe';
 
 @NgModule({
@@ -16,6 +17,9 @@ import { SafePipe } from './safe.pipe';
     LegendaryBGComponent,
     GameComponent,
     SafePipe
+  ],
+  providers: [
+    DownloadService
   ],
   exports: [
     LoaderComponent,
