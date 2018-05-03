@@ -1,8 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { DeviceDetectorService } from 'ngx-device-detector';
 import { I18nService } from '../../i18n.service';
+import { DownloadService } from '../../../shared/download.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,9 +14,9 @@ export class FooterComponent implements OnInit {
   menuHidden = true;
 
   constructor(@Inject(DOCUMENT) private document: any,
-              private deviceService: DeviceDetectorService,
               private router: Router,
-              private i18nService: I18nService) { }
+              private i18nService: I18nService,
+              private downloadService: DownloadService) { }
 
   ngOnInit() { }
 
@@ -37,25 +37,10 @@ export class FooterComponent implements OnInit {
   }
 
   downloadWallet() {
-    let deviceInfo = this.deviceService.getDeviceInfo();
-
-    let url = 'https://github.com/kittycash/wallet/releases';
-
-    switch(deviceInfo.os) {
-    case 'mac':
-        url = 'https://github.com/kittycash/wallet/releases/download/v0.0.1/kittycash-0.0.1-gui-osx.dmg';
-        break;
-    case 'windows':
-        url = 'https://github.com/kittycash/wallet/releases/download/v0.0.1/kittycash-0.0.1-gui-win-setup.exe';
-        break;
-    case 'linux':
-        url = 'https://github.com/kittycash/wallet/releases/download/v0.0.1/kittycash-0.0.1-gui-linux-x64.AppImage';
-        break;
-    default:
-        url = 'https://github.com/kittycash/wallet/releases';
-    }
-
-    this.document.location.href = url;
+    this.downloadService.getDownloadLink().then(
+      url => {
+         this.document.location.href = url;
+      });
   }
 
 }
