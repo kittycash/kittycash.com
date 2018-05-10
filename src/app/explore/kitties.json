@@ -1,166 +1,199 @@
-{
-  "legendary": [
-    {
-    "name": "Satoshi",
-    "priceBTC": "1",
-    "priceSKY": "480",
-    "description": "Always wanted to know how Satoshi looked in reality? Well, here he is!",
-    "img": "assets/legendary/Satoshi_sold-01.png",
-    "sold": "nEbCGNS58vchzQU1CqD1\neDWBX1amEccZ9s"
-  }, {
-    "name": "Synth",
-    "priceBTC": "1.2",
-    "priceSKY": "576",
-    "description": "You see that split? That's how Skycoin prevents chain splits.",
-    "img": "assets/legendary/Synth_sold-01.png",
-    "sold": "mNJgBmnjqNNjafGKJdZ\nxTQ12GNjcWdQ12S"
-  }, {
-    "name": "???",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "This special kitty will be revealed soon!",
-    "img": "assets/legendary/Genie.png"
-  }, {
-    "name": "Magician",
-    "priceBTC": "1",
-    "priceSKY": "480",
-    "description": "Abracadabra! If you take care of me, I might show you a trick or two.",
-    "img": "assets/legendary/Harry_sold-01.png",
-    "sold": "2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt"
-  }, {
-    "name": "Illuminati",
-    "priceBTC": "1.2",
-    "priceSKY": "750",
-    "description": "9/11 was an inside job. Trust me.",
-    "img": "assets/legendary/Illuminati_sold-01.png",
-    "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
-  }, {
-    "name": "???",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "This special kitty will be revealed soon!",
-    "img": "assets/legendary/Genie.png"
-  }, {
-    "name": "Donald The Cat",
-    "priceBTC": "0.555",
-    "priceSKY": "500",
-    "description": "We're making collectables great again while puppers are ruining this country!",
-    "img": "assets/legendary/Trump_sold-01.png",
-    "sold": "EbEjtA5GifxRKez\n76Gat8RWB5LmFKFVh5W"
-  }, {
-    "name": "Cat Jong Un",
-    "priceBTC": "0.62",
-    "priceSKY": "320",
-    "description": "Great Leader of Best Korea.",
-    "img": "assets/legendary/KimJong_sold-01.png",
-    "sold": "2cMH22VgsV45R7ed\nfChhFdm6i8DyDFGDS3d"
-  }, {
-    "name": "Thor",
-    "priceBTC": "0.95",
-    "priceSKY": "456",
-    "description": "To fight with, or to fight against? That's the question.",
-    "img": "assets/legendary/Thor_sold-01.png",
-    "sold": "HewGgmvfhNA1Ui2CZH\nyWeqzHciADcDaZUe"
-  }, {
-    "name": "Al Capone",
-    "priceBTC": "0.936",
-    "priceSKY": "585",
-    "description": "Come on son! All these other kitties got nothing on me.",
-    "img": "assets/legendary/AlCapone_sold-01.png",
-    "sold": "TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr"
-  }, {
-    "name": "Hacker",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "This special kitty will be revealed soon!",
-    "img": "assets/legendary/Hacker_sold-01.png"
-  }, {
-    "name": "???",
-    "priceBTC": "?",
-    "priceSKY": "?",
-    "description": "This special kitty will be revealed soon!",
-    "img": "assets/legendary/Genie.png"
+[
+  {
+    "title": "Legendary Kitties",
+    "description": "We sell twelve legendary cats that will feature crypto-legends, superheroes and other famous characters. The funds raised will go towards the development of Kitty Cash. If you are interested, contact us on Telegram.",
+    "data": [
+      {
+        "name": "Satoshi",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "Always wanted to know how Satoshi looked in reality? Well, here he is!",
+        "img": "assets\/legendary\/Satoshi_sold-01.png",
+        "sold": "nEbCGNS58vchzQU1CqD1\neDWBX1amEccZ9s"
+      },
+      {
+        "name": "Synth",
+        "priceBTC": "1.2",
+        "priceSKY": "576",
+        "description": "You see that split? That's how Skycoin prevents chain splits.",
+        "img": "assets\/legendary\/Synth_sold-01.png",
+        "sold": "mNJgBmnjqNNjafGKJdZ\nxTQ12GNjcWdQ12S"
+      },
+      {
+        "name": "Hacker",
+        "priceBTC": false,
+        "priceSKY": "500",
+        "description": "You just got hacked!",
+        "img": "assets\/legendary\/Hacker_sold-01.png",
+        "sold": "9FB4yHMw4NHHvH6EJiuzXVD73B3aKJSTzh"
+      },
+      {
+        "name": "Magician",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "Abracadabra! If you take care of me, I might show you a trick or two.",
+        "img": "assets\/legendary\/Harry_sold-01.png",
+        "sold": "2FG3ZfmxR8TxugAoyXLkUf\nxTjirgSSXNkvt"
+      },
+      {
+        "name": "Illuminati",
+        "priceBTC": "1.2",
+        "priceSKY": "750",
+        "description": "9\/11 was an inside job. Trust me.",
+        "img": "assets\/legendary\/Illuminati_sold-01.png",
+        "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This special kitty will be revealed soon!",
+        "img": "assets\/legendary\/Genie.png"
+      },
+      {
+        "name": "Donald The Cat",
+        "priceBTC": "0.555",
+        "priceSKY": "500",
+        "description": "We're making collectables great again while puppers are ruining this country!",
+        "img": "assets\/legendary\/Trump_sold-01.png",
+        "sold": "EbEjtA5GifxRKez\n76Gat8RWB5LmFKFVh5W"
+      },
+      {
+        "name": "Cat Jong Un",
+        "priceBTC": "0.62",
+        "priceSKY": "320",
+        "description": "Great Leader of Best Korea.",
+        "img": "assets\/legendary\/KimJong_sold-01.png",
+        "sold": "2cMH22VgsV45R7ed\nfChhFdm6i8DyDFGDS3d"
+      },
+      {
+        "name": "Thor",
+        "priceBTC": "0.95",
+        "priceSKY": "456",
+        "description": "To fight with, or to fight against? That's the question.",
+        "img": "assets\/legendary\/Thor_sold-01.png",
+        "sold": "HewGgmvfhNA1Ui2CZH\nyWeqzHciADcDaZUe"
+      },
+      {
+        "name": "Al Capone",
+        "priceBTC": "0.936",
+        "priceSKY": "585",
+        "description": "Come on son! All these other kitties got nothing on me.",
+        "img": "assets\/legendary\/AlCapone_sold-01.png",
+        "sold": "TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This special kitty will be revealed soon!",
+        "img": "assets\/legendary\/Genie.png"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This special kitty will be revealed soon!",
+        "img": "assets\/legendary\/Genie.png"
+      }
+    ]
+  },
+  {
+    "title": "Custom Legendary Kitties",
+    "description": "Do you want something truly unique? We offer twelve completely custom made kitties that can be tailored to your desires. Make sure to get exactly the cat you want and design a kitty in cooperation with our artists.",
+    "data": [
+      {
+        "name": "SkyWhisker",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "Custom Legend No. 1 is revealed! How will his friends look like?",
+        "img": "assets\/custom\/Skywhisker_sold-01.png",
+        "sold": "2HtVE12kDg57pfemo\n3ZG2S7QGCXmaPP1qiP"
+      },
+      {
+        "name": "Jackson",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "I can thrill you all night, baby.",
+        "img": "assets\/custom\/Jackson_sold-01.png",
+        "sold": "2LH6TDrrvjneQwUMGQR\n1AnjeXKEWJtuUXY6"
+      },
+      {
+        "name": "Steve Jobs",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "I told them not to eat from that tree.",
+        "img": "assets\/custom\/Steve-Jobs_sold-01.png",
+        "sold": "3U4LDCpjMnDFwMjS7S5MtQ\nyuRio6edgqex"
+      },
+      {
+        "name": "SkyKitty Huixin",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "First KittyCash astronaut in the universe. Floating my way to milk",
+        "img": "assets\/custom\/SkyKitty-sold.png",
+        "sold": "uq4nDqpnJKyEQUmLco\nF8sMUjNuGhDpwqE"
+      },
+      {
+        "name": "J.J. Jenkins",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "J.J. Jenkins SkyKitty MILLIONAIRE",
+        "img": "assets\/custom\/JJ_sold-01.png",
+        "sold": "2Rudkvk3d3j3s7GcXU\nJ5TDyiCiupR2NZaXc"
+      },
+      {
+        "name": "???",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "What could he possibly be up to?",
+        "img": "assets\/custom\/Genie.png",
+        "sold": "2Tu8XmMhZonVaz76\nyJvpY86ihHb7XYeWnYr"
+      },
+      {
+        "name": "Audrey",
+        "priceBTC": "1",
+        "priceSKY": "625",
+        "description": "A girl can't go on blockchain without her lipstick",
+        "img": "assets\/custom\/Audrey_sold-03.png",
+        "sold": "2ctGrJzexYf6eo3Q\n6TCbcF4aX3WNPbStTi9"
+      },
+      {
+        "name": "Smurfette",
+        "priceBTC": "1",
+        "priceSKY": "625",
+        "description": "Hey there. What are you looking at?",
+        "img": "assets\/custom\/Smurf_sold-01.png",
+        "sold": "v1KADJbjKo16x7kp\nA2Auu5Qk6rQTqk8CmA"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This custom cat is waiting for an owner to design him.",
+        "img": "assets\/custom\/Genie.png"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This custom cat is waiting for an owner to design him.",
+        "img": "assets\/custom\/Genie.png"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This custom cat is waiting for an owner to design him.",
+        "img": "assets\/custom\/Genie.png"
+      },
+      {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This custom cat is waiting for an owner to design him.",
+        "img": "assets\/custom\/Genie.png"
+      }
+    ]
   }
-  ],
-  "custom": [{
-  "name": "SkyWhisker",
-  "priceBTC": "1",
-  "priceSKY": "480",
-  "description": "Custom Legend No. 1 is revealed! How will his friends look like?",
-  "img": "assets/custom/Skywhisker_sold-01.png",
-  "sold": "2HtVE12kDg57pfemo\n3ZG2S7QGCXmaPP1qiP"
-}, {
-  "name": "Jackson",
-  "priceBTC": "1",
-  "priceSKY": "480",
-  "description": "I can thrill you all night, baby.",
-  "img": "assets/custom/Jackson_sold-01.png",
-  "sold": "2LH6TDrrvjneQwUMGQR\n1AnjeXKEWJtuUXY6"
-}, {
-  "name": "Steve Jobs",
-  "priceBTC": "1",
-  "priceSKY": "480",
-  "description": "I told them not to eat from that tree.",
-  "img": "assets/custom/Steve-Jobs_sold-01.png",
-  "sold": "3U4LDCpjMnDFwMjS7S5MtQ\nyuRio6edgqex"
-}, {
-  "name": "SkyKitty Huixin",
-  "priceBTC": "1",
-  "priceSKY": "480",
-  "description": "First KittyCash astronaut in the universe. Floating my way to milk",
-  "img": "assets/custom/SkyKitty-sold.png",
-  "sold": "uq4nDqpnJKyEQUmLco\nF8sMUjNuGhDpwqE"
-}, {
-  "name": "J.J. Jenkins",
-  "priceBTC": "1",
-  "priceSKY": "480",
-  "description": "J.J. Jenkins SkyKitty MILLIONAIRE",
-  "img": "assets/custom/JJ_sold-01.png",
-  "sold": "2Rudkvk3d3j3s7GcXU\nJ5TDyiCiupR2NZaXc"
-}, {
-  "name": "???",
-  "priceBTC": "1",
-  "priceSKY": "480",
-  "description": "What could he possibly be up to?",
-  "img": "assets/custom/Genie.png",
-  "sold": "2Tu8XmMhZonVaz76\nyJvpY86ihHb7XYeWnYr"
-}, {
-  "name": "Audrey",
-  "priceBTC": "1",
-  "priceSKY": "625",
-  "description": "A girl can't go on blockchain without her lipstick",
-  "img": "assets/custom/Audrey_sold-03.png",
-  "sold": "2ctGrJzexYf6eo3Q\n6TCbcF4aX3WNPbStTi9"
-}, {
-  "name": "Smurfette",
-  "priceBTC": "1",
-  "priceSKY": "625",
-  "description": "Hey there. What are you looking at?",
-  "img": "assets/custom/Smurf_sold-01.png",
-  "sold": "v1KADJbjKo16x7kp\nA2Auu5Qk6rQTqk8CmA"
-}, {
-  "name": "???",
-  "priceBTC": "?",
-  "priceSKY": "?",
-  "description": "This custom cat is waiting for an owner to design him.",
-  "img": "assets/custom/Genie.png"
-}, {
-  "name": "???",
-  "priceBTC": "?",
-  "priceSKY": "?",
-  "description": "This custom cat is waiting for an owner to design him.",
-  "img": "assets/custom/Genie.png"
-}, {
-  "name": "???",
-  "priceBTC": "?",
-  "priceSKY": "?",
-  "description": "This custom cat is waiting for an owner to design him.",
-  "img": "assets/custom/Genie.png"
-}, {
-  "name": "???",
-  "priceBTC": "?",
-  "priceSKY": "?",
-  "description": "This custom cat is waiting for an owner to design him.",
-  "img": "assets/custom/Genie.png"
-}]
-}
+]

@@ -69,7 +69,8 @@ q {
 }
 
 .cat-box-container .col-md-4{
-	z-index:20;
+	z-index:500;
+  pointer-events: none;
 }
 
 .cat-box {
@@ -98,6 +99,9 @@ q {
 .cat-box h2 {
 	font-family: 'Montserrat-Bold', sans-serif;
 	font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .cat-box h3 {
@@ -177,6 +181,16 @@ q {
 
 }
 
+.lg-flex-row {
+  @include media-breakpoint-up(md) {
+      -webkit-box-orient: horizontal !important;
+      -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+    }
+    
+}
 .contact p {
 	font-size: 24px;
 }
@@ -191,4 +205,10 @@ q {
 }
 
 
-
+#explore_button_container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  text-align: center;
+}

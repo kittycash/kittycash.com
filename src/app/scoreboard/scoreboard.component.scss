@@ -1,3 +1,13 @@
-
 @import "~bootstrap/scss/bootstrap-grid.scss";
+@import "src/theme/theme-variables";
 
+.score-title {
+	@include media-breakpoint-down(sm) { 
+		padding-left: 12px;
+	}
+}
+.score-menu {
+	@include media-breakpoint-up(md) { 
+		float: right !important;
+	}
+}

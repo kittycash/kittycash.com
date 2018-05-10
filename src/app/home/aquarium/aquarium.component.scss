@@ -6,8 +6,299 @@
 
 .aquarium {
 	top: 0;
-	bottom: 0;
+	bottom: 130px;
 	right: 0;
 	left: 0;
 	position: absolute;
+	overflow: hidden
 }
+
+.fish_wrap{
+	left: 200px;
+	position: absolute;
+	top: 0;
+	z-index: 90;
+}
+
+/* start of fish animation */
+.fish_wrap{
+	left: 200px;
+	top: 0;
+	z-index: 100;	
+}
+
+.do_swim_2 img {
+	-moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+.do_swim img {
+	-moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+.do_swim {
+	animation-name:swim;
+	animation-duration:30s;
+	animation-iteration-count:infinite;
+	animation-timing-function: linear;
+
+	/*webkit*/
+	-webkit-animation-name:swim;
+	-webkit-animation-duration:30s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function: linear;
+
+	/*firefox*/
+	-moz-animation-name:swim;
+	-moz-animation-duration:30s;
+	-moz-animation-iteration-count:infinite;
+	-moz-animation-timing-function: linear;
+}
+
+.do_swim_2 {
+	animation-name:swim;
+	animation-duration:30s;
+	animation-iteration-count:1;
+	animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+
+	/*webkit*/
+	-webkit-animation-name:swim;
+	-webkit-animation-duration:30s;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+
+	/*firefox*/
+	-moz-animation-name:swim;
+	-moz-animation-duration:30s;
+	-moz-animation-iteration-count:1;
+	-moz-animation-timing-function: linear;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes swim{
+
+	0% {
+		transform: scaleX(1);
+	}
+	10%{
+		transform:scaleX(1) translate(70px, 0px);
+	}
+	10.5%{
+		transform:scaleX(-1) translate(-30px, 0px);
+	}
+	21%{
+		transform: scaleX(-1) translate(80px, 0px);
+	}
+	42%{
+		transform: scaleX(-1) translate(200px, 0px);
+	}
+	50%{
+		transform:scaleX(-1) translate(250px, 130px);
+	}
+	50.5%{
+		transform:scaleX(1) translate(250px, 160px);
+	}
+	51%{
+		transform: scaleX(1) translate(200px, 160px);
+	}
+	60%{
+		transform: scaleX(1) translate(180px, 160px);
+	}
+	64%{
+		transform: scaleX(1) translate(140px, 160px);
+	}
+	66%{
+		transform: scaleX(1) translate(80px, 160px);
+	}
+	69%{
+		transform: scaleX(1) translate(-30px, 160px);
+	}
+	70%{
+		transform:scaleX(1) translate(-30px, 105px);
+	}
+	70.5%{
+		transform:scaleX(-1) translate(-30px, 105px);
+	}
+	71%{
+		transform: scaleX(-1) translate(40px, 105px);
+	}
+	80%{
+		transform: scaleX(-1) translate(80px, 105px);
+	}
+	81%{
+		transform: scaleX(-1) translate(90px, 70px);
+	}
+	82%{
+		transform:scaleX(-1) translate(100px, 70px);
+	}
+	82.5%{
+		transform:scaleX(1) translate(90px, 70px);
+	}
+	84%{
+		transform: scaleX(1) translate(60px, 105px);
+	}
+	88%{
+		transform: scaleX(1) translate(50px, 105px);
+	}
+	100% {
+		transform: scaleX(1) translate(0px,0px);
+	}
+}
+
+@-webkit-keyframes swim{
+
+	0% {
+		transform: scaleX(1);
+	}
+	10%{
+		transform:scaleX(1) translate(70px, 0px);
+	}
+	10.5%{
+		transform:scaleX(-1) translate(-30px, 0px);
+	}
+	21%{
+		transform: scaleX(-1) translate(80px, 0px);
+	}
+	42%{
+		transform: scaleX(-1) translate(200px, 0px);
+	}
+	50%{
+		transform:scaleX(-1) translate(250px, 130px);
+	}
+	50.5%{
+		transform:scaleX(1) translate(250px, 160px);
+	}
+	51%{
+		transform: scaleX(1) translate(200px, 160px);
+	}
+	60%{
+		transform: scaleX(1) translate(180px, 160px);
+	}
+	64%{
+		transform: scaleX(1) translate(140px, 160px);
+	}
+	66%{
+		transform: scaleX(1) translate(80px, 160px);
+	}
+	69%{
+		transform: scaleX(1) translate(-30px, 160px);
+	}
+	70%{
+		transform:scaleX(1) translate(-30px, 105px);
+	}
+	70.5%{
+		transform:scaleX(-1) translate(-30px, 105px);
+	}
+	71%{
+		transform: scaleX(-1) translate(40px, 105px);
+	}
+	80%{
+		transform: scaleX(-1) translate(80px, 105px);
+	}
+	81%{
+		transform: scaleX(-1) translate(90px, 70px);
+	}
+	82%{
+		transform:scaleX(-1) translate(100px, 70px);
+	}
+	82.5%{
+		transform:scaleX(1) translate(90px, 70px);
+	}
+	84%{
+		transform: scaleX(1) translate(60px, 105px);
+	}
+	88%{
+		transform: scaleX(1) translate(50px, 105px);
+	}
+	100% {
+		transform: scaleX(1) translate(0px,0px);
+	}
+}
+
+@-moz-keyframes swim{
+
+	0% {
+		transform: scaleX(1);
+	}
+	10%{
+		transform:scaleX(1) translate(70px, 0px);
+	}
+	10.5%{
+		transform:scaleX(-1) translate(-30px, 0px);
+	}
+	21%{
+		transform: scaleX(-1) translate(80px, 0px);
+	}
+	42%{
+		transform: scaleX(-1) translate(200px, 0px);
+	}
+	50%{
+		transform:scaleX(-1) translate(250px, 130px);
+	}
+	50.5%{
+		transform:scaleX(1) translate(250px, 160px);
+	}
+	51%{
+		transform: scaleX(1) translate(200px, 160px);
+	}
+	60%{
+		transform: scaleX(1) translate(180px, 160px);
+	}
+	64%{
+		transform: scaleX(1) translate(140px, 160px);
+	}
+	66%{
+		transform: scaleX(1) translate(80px, 160px);
+	}
+	69%{
+		transform: scaleX(1) translate(-30px, 160px);
+	}
+	70%{
+		transform:scaleX(1) translate(-30px, 105px);
+	}
+	70.5%{
+		transform:scaleX(-1) translate(-30px, 105px);
+	}
+	71%{
+		transform: scaleX(-1) translate(40px, 105px);
+	}
+	80%{
+		transform: scaleX(-1) translate(80px, 105px);
+	}
+	81%{
+		transform: scaleX(-1) translate(90px, 70px);
+	}
+	82%{
+		transform:scaleX(-1) translate(100px, 70px);
+	}
+	82.5%{
+		transform:scaleX(1) translate(90px, 70px);
+	}
+	84%{
+		transform: scaleX(1) translate(60px, 105px);
+	}
+	88%{
+		transform: scaleX(1) translate(50px, 105px);
+	}
+	100% {
+		transform: scaleX(1) translate(0px,0px);
+	}
+}
+
+
+
+
+
+
+

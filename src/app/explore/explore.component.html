@@ -7,50 +7,28 @@
   	</div>
   </div>
 
-  <div class="row mx-4 mt-4 mx-k-sm-1">
-  	<div class="col-12 px-5 px-k-sm-1">
-  		<h2 class="kitty-header-s1">Legendary Kitties</h2>
-  		<p>We sell twelve legendary cats that will feature crypto-legends, superheroes and other famous characters. The funds raised will go towards the development of Kitty Cash. If you are interested, contact us on Telegram.</p>
-  	</div>
-  </div>
+  <div *ngFor="let section of kitties">
+    <div class="row mt-4">
+    	<div class="col-12">
+    		<h2 class="kitty-header-s1">{{section.title}}</h2>
+    		<p>{{section.description}}</p>
+    	</div>
+    </div>
 
-  <div class="row kitty-container px-5 px-k-sm-1">
-  	<div class="col-md-4 col-sm-12 cat-box mb-2" *ngFor="let cat of kitties.legendary">
-      <div class="px-4 px-k-sm-1">
-    		<div class="mx-auto text-center">
-    			<img class="img-fluid" src="{{cat.img}}">
-    		</div>
-    		<div class="mt-3 mx-3 mx-k-sm-0">
-    			<h2>{{cat.name}}</h2>
-    			<h3>{{cat.priceBTC}} BTC | {{cat.priceSKY}} SKY</h3>
-    			<p *ngIf="cat.sold">Owner: {{cat.sold}}</p>
-    			<p>{{cat.description}}</p>
-    		</div>
-      </div>
-	 </div>
-  </div>
-
-    <div class="row mx-4 mt-4 mx-k-sm-1">
-    <div class="col-12 px-5 px-k-sm-1">
-      <h2 class="kitty-header-s1">Custom Legendary Kitties</h2>
-      <p>Do you want something truly unique? We offer twelve completely custom made kitties that can be tailored to your desires. Make sure to get exactly the cat you want and design a kitty in cooperation with our artists.</p>
+    <div class="row kitty-container">
+    	<div class="col-md-4 col-sm-12 cat-box mb-2" *ngFor="let cat of section.data">
+        <div class="">
+      		<div class="mx-auto text-center explore-image-container">
+             <img class="img-fluid explore-image" src="{{cat.img}}">    			   
+      		</div>
+      		<div class="mt-3 mx-3 mx-k-sm-0">
+      			<h2>{{cat.name}}</h2>
+      			<h3 [ngClass]="{'mb-0':cat.sold}"><span *ngIf="cat.priceBTC">{{cat.priceBTC}} BTC</span><span *ngIf="cat.priceBTC && cat.priceSKY"> | </span><span *ngIf="cat.priceSKY">{{cat.priceSKY}} SKY</span></h3>
+      			<p class="owner" *ngIf="cat.sold"><strong>Owner:</strong> {{cat.sold}}</p>
+      			<p>{{cat.description}}</p>
+      		</div>
+        </div>
+  	 </div>
     </div>
   </div>
-
-  <div class="row kitty-container px-5 px-k-sm-1">
-    <div class="col-md-4 col-sm-12 cat-box mb-2" *ngFor="let cat of kitties.custom">
-      <div class="px-4 px-k-sm-1">
-        <div class="mx-auto text-center">
-          <img class="img-fluid" src="{{cat.img}}">
-        </div>
-        <div class="mt-3 mx-3 mx-k-sm-0">
-          <h2>{{cat.name}}</h2>
-          <h3>{{cat.priceBTC}} BTC | {{cat.priceSKY}} SKY</h3>
-          <p *ngIf="cat.sold">Owner: {{cat.sold}}</p>
-          <p>{{cat.description}}</p>
-        </div>
-      </div>
-   </div>
-  </div>
-
 </div>

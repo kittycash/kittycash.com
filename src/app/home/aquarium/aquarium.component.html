@@ -1,3 +1,5 @@
 <div class="aquarium">
-	<img class="fish" src="assets/fish.svg" *ngFor="let fish of fishes" [ngStyle]="{'top':fish.y + 'px', 'left':fish.x + 'px'}" (mouseenter)="mouseIn(fish)" [@swimAnimation]="fish.swim">
+	<div class="fish_wrap" *ngFor="let fish of fishes" [ngStyle]="{'top':fish.y + 'px', 'left':fish.x + 'px'}" [ngClass]="{'do_swim': fish.swimming == 1, 'do_swim_2': fish.swimming == 2}" (mouseenter)="mouseIn(fish)">
+		<img src="assets/fish-rev.png" >
+	</div>
 </div>

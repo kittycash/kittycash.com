@@ -33,63 +33,56 @@ export class AquariumComponent implements OnInit {
   fishes: Array<object> = [];
   dWidth: number;
   dHeight: number;
+  numAnimations: number = 2;
 
   ngOnInit() {
     //Build our aquarium
+    setTimeout(() => {
+      let max_height = 0;
+      let elm = document.body.querySelector("#l-filler");
 
-    let max_height = 0;
-    let elm = this.el.nativeElement.children[0];
+      console.log(elm);
+      if (elm)
+      {
+        this.dWidth = elm.clientWidth;
+        this.dHeight = elm.clientHeight;
+      }
 
-    if (elm)
-    {
-    	this.dWidth = elm.offsetWidth;
-    	this.dHeight = elm.offsetHeight;
-    }
+      console.log("Width: " + this.dWidth + " Height: " + this.dHeight);
 
-    let center_y = this.dHeight / 2;
+      let center_y = this.dHeight / 2;
 
-    const rows = 4;
-    const cols = 10;
+      const cols = 12;
 
-    const m = [0, 0.5, -1, 1, -0.5, 0.9, -0.6, -0.8, 0.5, 1, 1.5];
+      const m = [0, 0.5, -1, 1, -0.5, 0.9, -0.6, -0.8, 0.5, -1.4, 1, 1.2];
 
+      for (var i = 0; i < cols; i++)
+      {
+        //Evenly distribute across the x axis and stagger on the y
 
-    for (var i = 0; i < cols; i++)
-    {
-    	//Evenly distribute across the x axis and stagger on the y
+        let x = ((this.dWidth / cols) * i) - 40;
 
-    	let x = ((this.dWidth / cols) * i) - 40;
+        let y = center_y + (m[(i % m.length)] * (center_y));
 
-    	let y = center_y + (m[(i % m.length)] * (center_y));
-
-    	const fish = {
-    		id: i,
-    		x: x,
-    		y: y
-    	};
-    	this.fishes.push(fish);
-    }
+        const fish = {
+          id: i,
+          x: x,
+          y: y,
+          swimming: false
+        };
+        this.fishes.push(fish);
+      }
+    }, 1000);
+    
    
   }
 
   mouseIn(fish:any) {
-
-  	if (fish && fish.swim && fish.swim.value == "swim")
-  	{
-  		fish.swim = {
-	        value: 'swimaway'
-	    };
-  	}
-  	else
-  	{
-  		fish.swim = {
-	        value: 'swim'
-	    };
-  	}
+    if (!fish.swimming)
+    {
+      fish.swimming = Math.floor(Math.random() * (this.numAnimations - 1 + 1)) + 1; 
+    }
   	
-  	setTimeout(()=>{  
-	    fish.swim = {value: 'swimhome'};
-	 },2000);
   }
 
  

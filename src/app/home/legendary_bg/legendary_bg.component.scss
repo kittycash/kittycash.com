@@ -1,14 +1,16 @@
+@import "~bootstrap/scss/bootstrap-grid.scss";
+@import "src/theme/theme-variables";
+
 #legendary-bg {
 	position: absolute;
 	left: -11%;
 	right: -11%;
 	height: 100%;
-	top: 11%;
 	display: none;
 }
 
 #legendary-bg #l-filler {
-	background-image: url(assets/l-fill.png);
+	background: $kittyred;
 	position: absolute;
 	width: 100%;
 }
