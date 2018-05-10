@@ -10,59 +10,19 @@
 		  	</div>
 		  </div>
 
-		  <div class="row my-2">
-		  	<div class="col-12">
-		  		<h1 class="kitty-header-s1">Basic FAQ:</h1>
+		  <div class="row my-2" *ngFor="let category of faqs;">
+		  	<div class="col-md-8 offset-md-2">
+		  		<h1 class="kitty-header-s2">{{category.name}}:</h1>
 		  		<div class="panel-group">
-			        <div class="panel panel-default" *ngFor="let faq of faqs.basic">
-			            <div class="panel-heading accordion-toggle question-toggle collapsed">
-			                 <h4 class="panel-title">
-			                    <button class="btn btn-link faq-btn" (click)="currentFaq = faq">{{faq.question}}</button>
-			              	 </h4>
-			            </div>
-			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
-			                <div class="panel-body">
-			                    <p>{{faq.answer}}</p>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-		  	</div>
-		  </div>
-
-
-		    <div class="row my-2">
-		  	<div class="col-12">
-		  		<h1 class="kitty-header-s1">Technical FAQ:</h1>
-		  		<div class="panel-group">
-			        <div class="panel panel-default" *ngFor="let faq of faqs.technical">
-			            <div class="panel-heading accordion-toggle question-toggle collapsed">
-			                 <h4 class="panel-title">
-			                    <button class="btn btn-link faq-btn" (click)="currentFaq = faq">{{faq.question}}</button>
-			              </h4>
-
-			            </div>
-			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
-			                <div class="panel-body">
-			                    <p>{{faq.answer}}</p>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-		  	</div>
-		  </div>
-
-
-		    <div class="row my-2">
-		  	<div class="col-12">
-		  		<h1 class="kitty-header-s1">Economics FAQ:</h1>
-		  		<div class="panel-group">
-			        <div class="panel panel-default" *ngFor="let faq of faqs.economics">
-			            <div class="panel-heading accordion-toggle question-toggle collapsed">
-			                 <h4 class="panel-title">
-			                    <button class="btn btn-link faq-btn" (click)="currentFaq = faq">{{faq.question}}</button>
-			              </h4>
-
+			        <div class="panel panel-default" *ngFor="let faq of category.data">
+			            <div class="panel-heading accordion-toggle question-toggle collapsed d-flex">
+			                 <h1 class="panel-title">
+			                    <button class="btn btn-link faq-btn kitty-header-s3" (click)="toggleFaq(faq)">{{faq.question}}</button>
+			              	 </h1>
+			              	 <div class="ml-auto my-auto expanded" (click)="toggleFaq(faq)">
+			              	 	<span *ngIf="faq == currentFaq"><i class="fa fa-minus"></i></span>
+			              	 	<span *ngIf="faq != currentFaq"><i class="fa fa-plus"></i></span>
+			              	 </div>
 			            </div>
 			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
 			                <div class="panel-body">

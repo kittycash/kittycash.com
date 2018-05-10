@@ -21,4 +21,16 @@ export class FaqComponent implements OnInit {
 
   }
 
+  toggleFaq(faq:any) {
+    if (faq != this.currentFaq)
+    {
+      this.currentFaq = faq;
+    }
+    else
+    {
+      this.currentFaq = false;
+    }
+    
+  }
+
 }

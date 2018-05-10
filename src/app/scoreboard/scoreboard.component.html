@@ -1,10 +1,10 @@
-<div class="container-fluid px-5">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-6">
-      <h2>Top scores for {{span}}</h2>
+    <div class="col-md-6 col-12">
+      <h1 class="kitty-header-s2 score-title">Top scores for {{span}}</h1>
     </div>
-    <div class="col-6">
-      <div class="float-right">
+    <div class="col-md-6 col-12">
+      <div class="score-menu">
         <button class="btn btn-link" (click)="loadScores('day')" [disabled]="span == 'day'">Day</button>
         <button class="btn btn-link" (click)="loadScores('week')" [disabled]="span == 'week'">Week</button>
         <button class="btn btn-link" (click)="loadScores('month')" [disabled]="span == 'month'">Month</button>

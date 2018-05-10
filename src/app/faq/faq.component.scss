@@ -1,3 +1,5 @@
+@import "src/theme/theme-variables";
+
 .faq-title {
 	background-image: url(assets/faq_blob.png);
 	background-size: contain;
@@ -19,8 +21,36 @@
 .faq-btn {
 	padding: 0;
 	font-family: 'Montserrat-Light', sans-serif;	
-	font-size: 160%;
+	font-size: 40%;
+    font-weight: 500;
+    color: $kittydarkgray;
 	white-space: normal !important;
     word-wrap: break-word !important;
     text-align: left;
+}
+.faq-btn:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.faq-btn:focus {
+	text-decoration: none;
+	color: black;
+}
+
+.panel {
+	    border-top: 2px solid $kittylightgray;
+}
+
+.expanded {
+	cursor: pointer;
+}
+.expanded span {
+	color: $kittyred;
+	font-size: 100%;
+}
+
+.panel-body p {
+	font-size: 100%;
+	color: $kittydarkgray;
 }

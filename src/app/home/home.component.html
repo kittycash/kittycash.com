@@ -13,7 +13,7 @@
   </div>
   <div class="pt-5"></div>
   <div class="legendary mt-5">
-	  <div class="row what-is-kittycash">
+	  <div class="row what-is-kittycash" id="what_is_container">
 	  	<div class="col-12">
 		  	<h1 class="kitty-header-s1">What is KittyCash?</h1>
 		  	<p>KittyCash is a next generation blockchain game that is fulfilling Satoshi's original vision of blockchain collectables.</p>
@@ -31,24 +31,69 @@
 		  <div class="row legendary-inner">
 		  	<aquarium class="d-none d-md-block"></aquarium>
 		  	<div class="col-12 pb-5">
-		  		<div class="row pt-4 pb-4 no-gutters cat-box-container">
-		  			<div class="col-md-4 col-sm-12 pb-2" *ngFor="let cat of kitties">
-		  				<div class="cat-box">
+		  		<div class="row lg-flex-row pt-4 pb-4 no-gutters cat-box-container">
+		  			<div class="col-md-4 col-sm-12 pb-2">
+		  				<div class="cat-box" [@trans]="rmap">
 			  				<div class="mx-auto text-center kitty-img-container">
-				  				<img class="img-fluid" src="{{cat.img}}">
+				  				<img class="img-fluid" src="{{cats[0].img}}">
 				  			</div>
 			  				<div class="mt-3 mx-3">
-				  				<h2>{{cat.name}}</h2>
-				  				<h3>{{cat.price_btc}} BTC | {{cat.price_sky}} SKY</h3>
-				  				<h4>{{cat.description}}</h4>
+				  				<h2>{{cats[0].name}}</h2>
+				  				<h3>{{cats[0].priceBTC}} BTC | {{cats[0].priceSKY}} SKY</h3>
+				  				<h4>{{cats[0].description}}</h4>
 				  			</div>
-				  		</div>
-			  		</div>	  			
+				  		</div>	
+			  		</div> 
+				  
+
+				  	<div class="col-md-4 col-sm-12 pb-2">
+		  				<div class="cat-box" [@trans]="rmap">
+			  				<div class="mx-auto text-center kitty-img-container">
+				  				<img class="img-fluid" src="{{cats[1].img}}">
+				  			</div>
+			  				<div class="mt-3 mx-3">
+				  				<h2>{{cats[1].name}}</h2>
+				  				<h3>{{cats[1].priceBTC}} BTC | {{cats[1].priceSKY}} SKY</h3>
+				  				<h4>{{cats[1].description}}</h4>
+				  			</div>
+				  		</div>	
+			  		</div> 
+				  	
+
+				  	<div class="col-md-4 col-sm-12 pb-2">
+		  				<div class="cat-box" [@trans]="rmap">
+			  				<div class="mx-auto text-center kitty-img-container">
+				  				<img class="img-fluid" src="{{cats[2].img}}">
+				  			</div>
+			  				<div class="mt-3 mx-3">
+				  				<h2>{{cats[2].name}}</h2>
+				  				<h3>{{cats[2].priceBTC}} BTC | {{cats[2].priceSKY}} SKY</h3>
+				  				<h4>{{cats[2].description}}</h4>
+				  			</div>
+				  		</div>	
+			  		</div> 
+
+
+		  		<!-- 	<ng-container *ngFor="let cat of kitties; index as i;">
+				  		<div class="col-md-4 col-sm-12 pb-2" *ngIf="shouldShow(i)" [@enterAnimation]>
+			  				<div class="cat-box">
+				  				<div class="mx-auto text-center kitty-img-container">
+					  				<img class="img-fluid" src="{{cat.img}}">
+					  			</div>
+				  				<div class="mt-3 mx-3">
+					  				<h2>{{cat.name}}</h2>
+					  				<h3>{{cat.priceBTC}} BTC | {{cat.priceSKY}} SKY</h3>
+					  				<h4>{{cat.description}}</h4>
+					  			</div>
+					  		</div>	
+				  		</div>  
+			  		</ng-container>	 -->		
 		  		</div>
 
-		  		<div class="text-center" style="position: absolute; bottom: -50px; left: 0; right: 0;">
-		  		<button routerLink="/explore" class="btn btn-lg btn-primary">Explore them all</button>
-		  		</div>
+		  		<div id="explore_button_container">
+			  		<button routerLink="/explore" class="btn btn-lg btn-primary" id="explore_button">Explore them all</button>
+			  	</div>
+		  		
 		  	</div>
 		  </div>
 	  	</div>
