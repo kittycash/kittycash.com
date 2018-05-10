@@ -41,14 +41,11 @@ export class AquariumComponent implements OnInit {
       let max_height = 0;
       let elm = document.body.querySelector("#l-filler");
 
-      console.log(elm);
       if (elm)
       {
         this.dWidth = elm.clientWidth;
         this.dHeight = elm.clientHeight;
       }
-
-      console.log("Width: " + this.dWidth + " Height: " + this.dHeight);
 
       let center_y = this.dHeight / 2;
 
@@ -82,9 +79,5 @@ export class AquariumComponent implements OnInit {
     {
       fish.swimming = Math.floor(Math.random() * (this.numAnimations - 1 + 1)) + 1; 
     }
-  	
   }
-
- 
-
 }
