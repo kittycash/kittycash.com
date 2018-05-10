@@ -24,7 +24,7 @@ export class LegendaryBGComponent implements OnInit {
   ngOnInit() {
     setTimeout(()=>{
       this.setBGSize();
-    }, 250);
+    }, 1000);
     
   } 
 
@@ -61,17 +61,9 @@ export class LegendaryBGComponent implements OnInit {
     bottom.style.bottom = container.clientHeight - top.clientHeight - content_height - bottom.clientHeight + "px";
 
     //Set the height of fill to be the height of the main element minus the heights of top and bottom
-    fill.style.height = (content_height + 5) + "px";//(container.clientHeight - top.clientHeight - bottom.clientHeight - (bottom.clientHeight / 2)) + "px";    
-  
-    // console.log(bottom.getBoundingClientRect());
-    var top_pos = bottom.getBoundingClientRect().y
-    var hank = top_pos - Math.floor(top_pos);
-    if (hank < 0.8)
-    {
-      console.log("It's bad!");
-      console.log(hank);
-    }
-    }
+    fill.style.height = (content_height + 5) + "px";
+ 
+  }
 
 
 
