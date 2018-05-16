@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentIndex: number = -1;
   rmap: string = 'active';
   cats: Array<any> = [];  
+  total_cats: number = 200;
 
   constructor(@Inject(DOCUMENT) private document: any, 
               private renderer: Renderer2, 
@@ -53,8 +54,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       {
         __this.rmap = 'active';
       }
-      
-
       this.setCats();
     }, 5000);
   }
@@ -63,7 +62,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     for (let i = 0; i < 3; i++)
     {
-      if (this.currentIndex + 1 >= this.kitties.length)
+      if (this.currentIndex + 1 >= this.total_cats)
       {
         this.currentIndex = 0;
       }
@@ -72,7 +71,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.currentIndex = this.currentIndex + 1;
       }
 
-      this.cats[i] = this.kitties[this.currentIndex];
+      this.cats[i] = {
+        name: "Kitty " + this.currentIndex,
+        priceBTC: "?",
+        priceSKY: "?",
+        description: "Here is Kitty #" + this.currentIndex,
+        img: "assets/generated_kitties/" + this.currentIndex + ".png"
+      };
     }
     
   }
