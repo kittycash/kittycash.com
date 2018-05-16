@@ -8,7 +8,7 @@
 	  	<game></game>
   	</div>
   	<div class="col-md-5 d-none d-md-block text-center mx-auto">
-  		<img class="img-fluid" src="/assets/home_cat.png" />
+  		<img class="img-fluid" src="/assets/home_cat.png" alt="Next generation of blockchain gaming" />
   	</div>
   </div>
   <div class="pt-5"></div>
@@ -24,7 +24,7 @@
 	  	 <div id="legendary-container-2">
 		  <div class="row">
 			<div class="col-10 offset-1 text-center">
-				<h1 class="kitty-header-s1" id="legendary-title">Our Legendary Kitties</h1>
+				<h1 class="kitty-header-s1" id="legendary-title">Some of our Kitties</h1>
 			</div>
 		  </div>
 
@@ -35,7 +35,7 @@
 		  			<div class="col-md-4 col-sm-12 pb-2">
 		  				<div class="cat-box" [@trans]="rmap">
 			  				<div class="mx-auto text-center kitty-img-container">
-				  				<img class="img-fluid" src="{{cats[0].img}}">
+				  				<img class="img-fluid" src="{{cats[0].img}}" alt="{{cats[0].name}}">
 				  			</div>
 			  				<div class="mt-3 mx-3">
 				  				<h2>{{cats[0].name}}</h2>
@@ -49,7 +49,7 @@
 				  	<div class="col-md-4 col-sm-12 pb-2">
 		  				<div class="cat-box" [@trans]="rmap">
 			  				<div class="mx-auto text-center kitty-img-container">
-				  				<img class="img-fluid" src="{{cats[1].img}}">
+				  				<img class="img-fluid" src="{{cats[1].img}}" alt="{{cats[1].name}}">
 				  			</div>
 			  				<div class="mt-3 mx-3">
 				  				<h2>{{cats[1].name}}</h2>
@@ -63,7 +63,7 @@
 				  	<div class="col-md-4 col-sm-12 pb-2">
 		  				<div class="cat-box" [@trans]="rmap">
 			  				<div class="mx-auto text-center kitty-img-container">
-				  				<img class="img-fluid" src="{{cats[2].img}}">
+				  				<img class="img-fluid" src="{{cats[2].img}}" alt="{{cats[2].name}}">
 				  			</div>
 			  				<div class="mt-3 mx-3">
 				  				<h2>{{cats[2].name}}</h2>
@@ -71,23 +71,7 @@
 				  				<h4>{{cats[2].description}}</h4>
 				  			</div>
 				  		</div>	
-			  		</div> 
-
-
-		  		<!-- 	<ng-container *ngFor="let cat of kitties; index as i;">
-				  		<div class="col-md-4 col-sm-12 pb-2" *ngIf="shouldShow(i)" [@enterAnimation]>
-			  				<div class="cat-box">
-				  				<div class="mx-auto text-center kitty-img-container">
-					  				<img class="img-fluid" src="{{cat.img}}">
-					  			</div>
-				  				<div class="mt-3 mx-3">
-					  				<h2>{{cat.name}}</h2>
-					  				<h3>{{cat.priceBTC}} BTC | {{cat.priceSKY}} SKY</h3>
-					  				<h4>{{cat.description}}</h4>
-					  			</div>
-					  		</div>	
-				  		</div>  
-			  		</ng-container>	 -->		
+			  		</div> 	
 		  		</div>
 
 		  		<div id="explore_button_container">
@@ -134,16 +118,16 @@
 			<div class="col-md-5 offset-md-3 social mt-2">
 				<div class="row mt-5 no-gutters">
 					<div class="col-3 offset-md-6 offset-sm-0">
-						<a class="mr-4" href="https://t.me/kittycash"><img src="assets/telegram.png"><span>Telegram</span></a>
+						<a class="mr-4" href="https://t.me/kittycash"><img src="assets/telegram.png" alt="KittyCash on Telegram"><span>Telegram</span></a>
 					</div>
 					<div class="col-3">
-						<a href="https://www.facebook.com/kittycash.official/"><img src="assets/fb.svg"><span>Facebook</span></a>
+						<a href="https://www.facebook.com/kittycash.official/"><img src="assets/fb.svg" alt="KittyCash on Facebook"><span>Facebook</span></a>
 					</div>
 					<div class="col-3 offset-md-6 offset-sm-0">
-						<a class="mr-4" href="https://twitter.com/kittycash_com"><img src="assets/twitter.png"><span>Twitter</span></a>
+						<a class="mr-4" href="https://twitter.com/kittycash_com"><img src="assets/twitter.png" alt="KittyCash on Twitter"><span>Twitter</span></a>
 					</div>
 					<div class="col-3">
-						<a href="https://instagram.com/kittycash.official/"><img src="assets/ig.svg"><span>Instagram</span></a>
+						<a href="https://instagram.com/kittycash.official/"><img src="assets/ig.svg" alt="KittyCash on Instagram"><span>Instagram</span></a>
 					</div>
 				</div>
 			</div>
@@ -159,7 +143,7 @@
 
 		<div class="row">
 			<div class="col-10 offset-1 text-center">
-				<a href="http://www.skycoin.net/"><img class="img-fluid" src="assets/skycoin.svg"></a>
+				<a href="http://www.skycoin.net/"><img class="img-fluid" src="assets/skycoin.svg" alt="Proudly made possible with Skycoin technologies"></a>
 			</div>
 		</div>
 	</div>

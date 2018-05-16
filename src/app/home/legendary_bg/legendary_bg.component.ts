@@ -17,15 +17,15 @@ export class LegendaryBGComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event:any) {
-
     this.setBGSize();
-
   }
+
   ngOnInit() {
     setTimeout(()=>{
       this.setBGSize();
-    }, 1000);
-    
+    }, 2500);
+
+    this.setBGSize();
   } 
 
   private setBGSize() {
