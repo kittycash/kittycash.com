@@ -23,10 +23,14 @@
   <meta property="og:image" content="https://www.kittycash.com/assets/home_cat.png" />
   <meta property="og:url" content="https://www.kittycash.com"/>
 
-  <JSONLD>
-    <Generic type="organization" jsonldtype="Organization" schema={{url: "https://www.kittycash.com/", name: "KittyCash"}}>
-    </Generic>
-  </JSONLD>
+  <script type="application/ld+json">
+   { "@context": "http://schema.org",
+     "@type": "Organization",
+     "name": "KittyCash",
+     "url": "https://www.kittycash.com",
+     "logo": "https://www.kittycash.com/assets/logo.svg",
+   }
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112845083-1"></script>
