@@ -1,5 +1,20 @@
 <div class="kitty-container">
-	<div id="kc"></div>
+	<div id="bc"></div>
+	<div id="sc"></div>
+	<div id="kc" class="under-nav">
+		<div class="no-scroll"></div>
+		<div class="kitty-shell-scroller" id="kittyScroller">
+			<div class="kitty-shell-container" [ngStyle]="{'width.px':colNum * 205}">
+				<div class="shell-kitty" *ngFor="let kitty of kitties; let i = index;"  [ngClass]="{'spacer': i % colNum == 0, 'push-right': i % (colNum * 2) == colNum + 1}" [ngStyle]="{'animation-delay':getDelay(i), 'background-color': kitty.background_color}">
+					<div class="grid-lines"></div>
+
+					<div class="img-container">
+						<img [src]="kitty.image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <app-header></app-header>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

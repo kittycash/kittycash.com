@@ -1,0 +1,30 @@
+@import "src/theme/theme-variables";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+.blog-box h1{
+	font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+	font-size: 28px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog-box h6 {
+  color: $kittyred;
+  font-size: 14px;
+}
+
+.blog-box p {
+  font-size: 14px;
+}
+
+.blog-box .card {
+  border: none;
+}
+.blog-box a {
+  color: inherit;
+  text-decoration: inherit;
+}

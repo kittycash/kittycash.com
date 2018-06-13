@@ -1,39 +1,57 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 scroll-header">
 
-	<div class="row">
+	<div class="row mt-4">
 		<div class="col-12">
 		  <div class="row">
-		  	<div class="col-lg-4 offset-lg-4 col-md-12">
-		  		<div class="faq-title">
-			  		<h1>FAQ</h1>
-			  	</div>
+		  	<div class="col-lg-4 offset-lg-4 col-md-12 text-center p-3">
+		  		<img class="img-fluid" src="assets/faq-header.png">
 		  	</div>
 		  </div>
 
-		  <div class="row my-2" *ngFor="let category of faqs;">
-		  	<div class="col-md-8 offset-md-2">
-		  		<h1 class="kitty-header-s2">{{category.name}}:</h1>
-		  		<div class="panel-group">
-			        <div class="panel panel-default" *ngFor="let faq of category.data">
-			            <div class="panel-heading accordion-toggle question-toggle collapsed d-flex">
-			                 <h1 class="panel-title">
-			                    <button class="btn btn-link faq-btn kitty-header-s3" (click)="toggleFaq(faq)">{{faq.question}}</button>
-			              	 </h1>
-			              	 <div class="ml-auto my-auto expanded" (click)="toggleFaq(faq)">
+		  <div class="row mt-1">
+		  	<div class="col-lg-4 offset-lg-4 col-md-12 faq-nav text-center">
+			  		<a href="faq#{{category.name}}" class="mx-1" *ngFor="let category of faqs;">{{category.name}}</a>
+			  </div>
+		  </div>
+
+		  <div class="row my-2" *ngFor="let category of faqs;" id="{{category.name}}">
+		  	<div class="col-md-10 offset-md-1 col-12">
+		  		<div class="row">
+		  			<div class="col-11 offset-1">
+		  				<h1 class="kitty-header-s2">{{category.name}} FAQ</h1>
+		  			</div>
+		  		</div>
+		  		<div class="mb-1" *ngFor="let faq of category.data" style="background-color: rgba(255, 249, 249, 1)">
+			  		<div class="row py-1">
+			  			<div class="col-2 col-md-1 toggle">
+			  				<div class="expanded text-center" (click)="toggleFaq(faq)">
 			              	 	<span *ngIf="faq == currentFaq"><i class="fa fa-minus"></i></span>
 			              	 	<span *ngIf="faq != currentFaq"><i class="fa fa-plus"></i></span>
 			              	 </div>
-			            </div>
-			            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
-			                <div class="panel-body">
-			                    <p>{{faq.answer}}</p>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
+			  			</div>
+			  			<div class="col-10 col-md-11">
+			  				<div class="panel-group">
+				        		<div class="panel panel-default">
+				        			<div class="panel-heading accordion-toggle question-toggle collapsed d-flex">
+				                 <h1 class="panel-title">
+				                    <button class="btn btn-link faq-btn kitty-header-s3" (click)="toggleFaq(faq)">{{faq.question}}</button>
+				              	 </h1>
+			
+				            </div>
+				            <div class="panel-collapse" [ngClass]="{'collapse': faq != currentFaq}">
+				                <div class="panel-body">
+				                    <p>{{faq.answer}}</p>
+				                </div>
+				            </div>
+				        		</div>
+				        	</div>
+			  			</div>
+			  		</div>
+			  	</div>
 		  	</div>
 		  </div>
 		</div>
 	</div>
-  
+  	<get-in-touch></get-in-touch>
+	<mail-list></mail-list>
 </div>

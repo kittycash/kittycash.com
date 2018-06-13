@@ -18,4 +18,15 @@ export class ExploreComponent implements OnInit {
 
   ngOnInit() { }
 
+
+  showOwner(cat:any)
+  {
+  	cat.showOwner = true;
+  }
+
+  hideOwner(cat:any)
+  {
+  	cat.showOwner = false;
+  }
+
 }

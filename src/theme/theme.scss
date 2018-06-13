@@ -12,6 +12,7 @@ body {
   max-width: 100%;
   position: relative;
 }
+
 .row { 
 	margin: 0; 
 	padding: 0 
@@ -22,14 +23,79 @@ body {
 	margin-right: 9%;
 }
 
+.show {
+	display: block !important;
+}
+
+.under-nav {
+	top: 150px !important;
+	background-color: $kittyred !important;	
+	max-height: 450px !important;
+}
+
+.scroll-header {
+	margin-top: 450px !important;
+	@include media-breakpoint-down(sm) { 
+		margin-top: 0 !important;
+	}
+}
+
+.no-scroll {
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:100;
+	@include media-breakpoint-down(sm) { 
+		display: none;
+	}
+}
 #kc {
+	position: absolute;
+    width: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index:0;
+    max-height: 635px;
+    overflow: hidden;
+    @include media-breakpoint-down(sm) { 
+		display: none;
+	}
+}
+
+#bc {
+	position: absolute;
+	background-color: white;
+	width: 40%;
+	left:0;
+	top:0;
+	bottom:0;
+	z-index: 1;
+	display: none;
+	@include media-breakpoint-down(sm) { 
+		display: none;
+	}
+}
+#sc {
 	position: absolute;
     width: 60%;
     right: 0;
     top: 0;
     bottom: 0;
     max-width: 1200px;
-    z-index:0;
+    z-index: 1;
+    display: none;
+    background-repeat: no-repeat;
+    background-image: url(/assets/scroll-cover.png);
+    background-position: top left;
+    background-size: 100%;
+    
+ 	@include media-breakpoint-down(sm) { 
+		display: none;
+	}
+
 }
 
 .blob {
@@ -57,7 +123,8 @@ body {
 }
 
 .btn {
-	font-family: 'Montserrat-Medium', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 	font-size: 150%;
 }
 .btn-primary {
@@ -78,7 +145,8 @@ body {
 
 
 .kitty-menu a{
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
   	font-size: 120%;
   	color: $kittyblack !important;
 }
@@ -92,31 +160,35 @@ body {
 }
 
 .kitty-header-lg {
-	font-family: 'Montserrat-Bold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	font-size: 300%;
 	color: $kittyblack;
 }
 
 .kitty-header-s1 {
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 	font-size: 245%;
 	color: $kittyblack;
 }
 
 .kitty-header-s2 {
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 	font-size: 150%;
 	color: $kittyblack;
 }
 
 .kitty-header-s3 {
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 	font-size: 120%;
 	color: $kittyblack;
 }
 
 p {
-	font-family: 'Montserrat-Regular', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 130%;
 	color: $kittyblack
 }

@@ -1,34 +1,47 @@
-<div class="container-fluid px-0">
-  <div class="row">
-  	<div class="col-lg-4 offset-lg-4 col-md-12">
-  		<div class="explorer-title">
-	  		<h1>The Kitty Explorer</h1>
-	  	</div>
-  	</div>
+<div class="container-fluid px-0 scroll-header">
+  <div class="pt-5">
+    <div *ngFor="let section of kitties">
+      <div class="row my-4">
+      	<div class="col-12">
+      		<h2 class="kitty-header-s1">{{section.title}}</h2>
+      		<p>{{section.description}}</p>
+      	</div>
+      </div>
+
+      <div class="row kitty-container">
+      	<div class="col-md-3 col-sm-12 cat-box mb-2" *ngFor="let cat of section.data">
+          <div class="">
+        		<div class="mx-auto text-center explore-image-container" [ngClass]="{'sold': cat.sold}">
+               <img class="img-fluid explore-image" src="{{cat.img}}" alt="{{cat.name}}">    			   
+        		</div>
+        		<div class="mt-3  mx-k-sm-0 text-center">
+        			<h2>{{cat.name}}</h2>
+
+              <div class="row no-gutters">
+                <div class="col-6 text-left">
+        			   <h3><span *ngIf="cat.priceBTC">{{cat.priceBTC}} BTC</span><span *ngIf="cat.priceBTC && cat.priceSKY"> | </span><span *ngIf="cat.priceSKY">{{cat.priceSKY}} SKY</span></h3>
+               </div>
+               <div class="col-6 text-right">
+
+                <div class="tooltip bs-tooltip-top" role="tooltip" [ngStyle]="{'opacity': cat.showOwner ? 1 : 0}" *ngIf="cat.sold">
+                    <div class="tooltip-inner">
+                      {{cat.sold}}
+                    </div>
+                    <div class="arrow"></div>
+                  </div>
+
+        			   <p class="owner" *ngIf="cat.sold" (mouseenter)="showOwner(cat)"  (mouseleave)="hideOwner(cat)"><span>Owner:</span> {{cat.sold | slice:0:6}} <span><i class="fa fa-caret-right"></i></span></p>
+               </div>
+             </div>
+
+        			<p class="mx-1">{{cat.description}}</p>
+        		</div>
+          </div>
+    	 </div>
+      </div>
+    </div>
   </div>
 
-  <div *ngFor="let section of kitties">
-    <div class="row mt-4">
-    	<div class="col-12">
-    		<h2 class="kitty-header-s1">{{section.title}}</h2>
-    		<p>{{section.description}}</p>
-    	</div>
-    </div>
-
-    <div class="row kitty-container">
-    	<div class="col-md-4 col-sm-12 cat-box mb-2" *ngFor="let cat of section.data">
-        <div class="">
-      		<div class="mx-auto text-center explore-image-container">
-             <img class="img-fluid explore-image" src="{{cat.img}}" alt="{{cat.name}}">    			   
-      		</div>
-      		<div class="mt-3 mx-3 mx-k-sm-0">
-      			<h2>{{cat.name}}</h2>
-      			<h3 [ngClass]="{'mb-0':cat.sold}"><span *ngIf="cat.priceBTC">{{cat.priceBTC}} BTC</span><span *ngIf="cat.priceBTC && cat.priceSKY"> | </span><span *ngIf="cat.priceSKY">{{cat.priceSKY}} SKY</span></h3>
-      			<p class="owner" *ngIf="cat.sold"><strong>Owner:</strong> {{cat.sold}}</p>
-      			<p>{{cat.description}}</p>
-      		</div>
-        </div>
-  	 </div>
-    </div>
-  </div>
+  <get-in-touch></get-in-touch>
+  <mail-list></mail-list>
 </div>

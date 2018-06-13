@@ -4,6 +4,7 @@ footer {
 	position: relative;
 	background: $kittylightgray;
 	text-align: center;
+	z-index: 100;
 }
 
 footer::before {
@@ -28,15 +29,15 @@ footer ul {
 }
 
 footer ul a {
-	font-family: 'Montserrat-Regular', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 100%;
 	color: $kittydarkgray;
 }
 
 footer li:first-child {
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 100%;
 	color: $kittydarkgray;
-	font-weight: 550;
+	font-weight: 600;
 	padding-bottom: 20px;
 }

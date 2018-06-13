@@ -32,6 +32,9 @@ export class HomeComponent implements OnInit, OnDestroy {
               private blogService: BlogService, 
               private downloadService: DownloadService) {
   	 this.renderer.addClass(document.getElementById("kc"), 'blob');
+     this.renderer.removeClass(document.getElementById("kc"), 'under-nav');
+     this.renderer.addClass(document.getElementById("bc"), 'show');
+     this.renderer.addClass(document.getElementById("sc"), 'show');
      this.kitties = kitties;
   }
 
@@ -59,7 +62,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   setCats() {
-
     for (let i = 0; i < 3; i++)
     {
       if (this.currentIndex + 1 >= this.total_cats)
@@ -83,10 +85,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy() {
     this.renderer.removeClass(document.getElementById("kc"), 'blob');
+    this.renderer.removeClass(document.getElementById("bc"), 'show');
+    this.renderer.removeClass(document.getElementById("sc"), 'show');
+    this.renderer.addClass(document.getElementById("kc"), 'under-nav');
   }
 
   shouldShow(i:number) {
-
     if (i >= this.currentIndex && i < this.currentIndex + 3)
     {
       return true;
@@ -99,7 +103,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       return this.articles.filter((item: any, index: number) => index < 3);
     }
-    
   }
 
   playGame() {
