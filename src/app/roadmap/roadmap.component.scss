@@ -16,7 +16,8 @@
 	right: 0;
 	text-align: center;
 	font-size: 245%;
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 }
 
 .year-blob {
@@ -39,7 +40,8 @@
 	text-align: center;
 	font-size: 130%;
 	text-align: center;
-	font-family: 'Montserrat-Medium', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 }
 
 .quarter-blob {
@@ -68,7 +70,8 @@
 	right: 0;
 	font-size: 130%;
 	text-align: center;
-	font-family: 'Montserrat-Medium', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
 	color: $kittydarkgray;
 }
 
@@ -147,7 +150,7 @@
 }
 
 .roadmap .title {
-	font-family: 'Montserrat-Bold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
 	margin-bottom: 0px;
 }

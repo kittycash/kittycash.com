@@ -1,6 +1,6 @@
 [
   {
-    "name": "Basic FAQ",
+    "name": "Basic",
     "data": [
       {
         "question": "What is KittyCash?",
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "name": "Technical FAQ",
+    "name": "Technical",
     "data": [
       {
         "question": "Is KittyCash running on Ethereum blockchain?",
@@ -82,7 +82,7 @@
     ]
   },
   {
-    "name": "Economics FAQ",
+    "name": "Economics",
     "data": [
       {
         "question": "Can I make money by playing KittyCash?",

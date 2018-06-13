@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Inject } from '@angular/core';
+import { DownloadService } from '../shared/download.service';
+import { DOCUMENT } from '@angular/common';
 import { environment } from '@env/environment';
 
 @Component({
@@ -9,8 +10,16 @@ import { environment } from '@env/environment';
 })
 export class DownloadsComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: any,
+  			  private downloadService: DownloadService) { }
 
   ngOnInit() { }
+
+  downloadWallet() {
+    this.downloadService.getDownloadLink().then(
+      url => {
+         this.document.location.href = url;
+      });
+  }
 
 }

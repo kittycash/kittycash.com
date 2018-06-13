@@ -15,10 +15,10 @@ import { RoadmapModule } from './roadmap/roadmap.module';
 import { FaqModule } from './faq/faq.module';
 import { ScoreboardModule } from './scoreboard/scoreboard.module';
 import { DownloadsModule } from './downloads/downloads.module';
+import { BlogModule } from './blog/blog.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DeviceDetectorModule } from 'ngx-device-detector';
-
 
 @NgModule({
   imports: [
@@ -37,6 +37,7 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     FaqModule,
     ScoreboardModule,
     DownloadsModule,
+    BlogModule,
     AppRoutingModule,
     DeviceDetectorModule.forRoot()
   ],
