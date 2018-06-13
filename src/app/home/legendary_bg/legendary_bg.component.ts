@@ -17,15 +17,15 @@ export class LegendaryBGComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event:any) {
-
     this.setBGSize();
-
   }
+
   ngOnInit() {
     setTimeout(()=>{
       this.setBGSize();
-    }, 1000);
-    
+    }, 2500);
+
+    this.setBGSize();
   } 
 
   private setBGSize() {
@@ -47,7 +47,7 @@ export class LegendaryBGComponent implements OnInit {
     let top = this.el.nativeElement.querySelector("#l-top");
     let fill = this.el.nativeElement.querySelector("#l-filler");
     let bottom = this.el.nativeElement.querySelector("#l-bottom");
-   
+    let bottom_w = this.el.nativeElement.querySelector("#l-bottom-w");
     let content_height = legendary_container.clientHeight - (bottom.clientHeight * 2) + 50;
 
     // 1125 - 315 - 473 - 150
@@ -59,7 +59,7 @@ export class LegendaryBGComponent implements OnInit {
 
     //Set the bottoms bottom to half the height
     bottom.style.bottom = container.clientHeight - top.clientHeight - content_height - bottom.clientHeight + "px";
-
+    bottom_w.style.bottom = bottom.style.bottom;
     //Set the height of fill to be the height of the main element minus the heights of top and bottom
     fill.style.height = (content_height + 5) + "px";
  

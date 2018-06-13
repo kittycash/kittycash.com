@@ -1,5 +1,10 @@
 @import "src/theme/theme-variables";
+@import "~bootstrap/scss/bootstrap-grid.scss";
 
+header {
+  z-index: 20;
+  position: relative;
+}
 .logo {
   width: 100px;
   height: 100px;
@@ -33,4 +38,12 @@ nav {
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+.kitty-menu {
+  @include media-breakpoint-down(sm) { 
+    background: white;  
+    padding: 5px;
+  }
+ 
 }

@@ -1,4 +1,4 @@
-
+@import "src/theme/theme-variables";
 @import "~bootstrap/scss/bootstrap-grid.scss";
 
 .explorer-title {
@@ -16,7 +16,8 @@
 	right: 0;
 	text-align: center;
 	font-size: 220%;
-	font-family: 'Montserrat-SemiBold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 }
 
 .cat-box {
@@ -24,13 +25,16 @@
 }
 
 .cat-box h2 {
-	font-family: 'Montserrat-Bold', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 	font-size: 20px;
 }
 
 .cat-box h3 {
-	font-family: 'Montserrat-Bold', sans-serif;
-	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 12px;
+	color: $kittyred;
 }
 
 .cat-box h4 {
@@ -38,11 +42,32 @@
 }
 
 .cat-box .owner {
-	font-size: 10px;
-	margin-top: 0;
+	margin-top: -2px;
+	font-size: 12px;
+	color: $kittyred;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.cat-box .owner span {
+	font-weight: 600;
+}
+
+.cat-box .owner span i {
+	font-size: 15px;
 }
 .cat-box p {
 	font-size: 14px;
+}
+
+.cat-box .tooltip {
+	bottom: 100%;
+}
+
+.cat-box .tooltip .arrow {
+	right: 0;
+	left: 0;
+	margin: 0 auto;
 }
 .mx-k-sm-1 {
 	@include media-breakpoint-down(sm) { 
@@ -58,12 +83,31 @@
 }
 
 .explore-image-container {
-	box-shadow: 0px 0px 4px #DFDFDF;	
-	border-radius: 25px;
-	width: 255px;
-	height: 255px;
+	box-shadow: 0 0 10px 2px rgba(223, 223, 223, 0.5);
+	border-radius: 5px;
+	width: 100%;
+	position: relative;
+}
+
+.explore-image-container.sold:before {
+	content: "Sold";
+	display: block;
+	position: absolute;
+	background-image: url(assets/sold-ribbon.png);
+	background-repeat: no-repeat;
+    background-size: 65%;
+    width: 100px;
+    height: 100px;
+    left: -10px;
+    top: 5px;
+    text-align: left;
+    padding: 10px;
+    text-transform: uppercase;
+    color: $kittywhite;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
 }
 .explore-image {
-	max-width: 175px;
-	margin-top: 40px;
+	max-width: 100%;
+	padding: 20px;
 }

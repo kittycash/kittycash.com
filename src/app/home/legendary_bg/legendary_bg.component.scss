@@ -1,6 +1,16 @@
 @import "~bootstrap/scss/bootstrap-grid.scss";
 @import "src/theme/theme-variables";
 
+#legendary-pattern {
+	position: absolute;
+    left: -20%;
+    right: -20%;
+    top: 20%;
+    bottom: 10px;
+    background-image: url(assets/pattern-repeat.png);
+    z-index: 50;
+    background-size: 1600px;
+}
 #legendary-bg {
 	position: absolute;
 	left: -11%;
@@ -30,4 +40,24 @@
 	right: 0;
 	width: 100%;
 	max-height: 150px;
+}
+
+#legendary-bg #l-top-w {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-height: 315px;
+	z-index: 55;
+}
+
+#legendary-bg #l-bottom-w {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-height: 150px;
+	z-index: 55;
 }

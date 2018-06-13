@@ -25,12 +25,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentIndex: number = -1;
   rmap: string = 'active';
   cats: Array<any> = [];  
+  total_cats: number = 200;
 
   constructor(@Inject(DOCUMENT) private document: any, 
               private renderer: Renderer2, 
               private blogService: BlogService, 
               private downloadService: DownloadService) {
   	 this.renderer.addClass(document.getElementById("kc"), 'blob');
+     this.renderer.removeClass(document.getElementById("kc"), 'under-nav');
+     this.renderer.addClass(document.getElementById("bc"), 'show');
+     this.renderer.addClass(document.getElementById("sc"), 'show');
      this.kitties = kitties;
   }
 
@@ -53,17 +57,14 @@ export class HomeComponent implements OnInit, OnDestroy {
       {
         __this.rmap = 'active';
       }
-      
-
       this.setCats();
     }, 5000);
   }
 
   setCats() {
-
     for (let i = 0; i < 3; i++)
     {
-      if (this.currentIndex + 1 >= this.kitties.length)
+      if (this.currentIndex + 1 >= this.total_cats)
       {
         this.currentIndex = 0;
       }
@@ -72,16 +73,24 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.currentIndex = this.currentIndex + 1;
       }
 
-      this.cats[i] = this.kitties[this.currentIndex];
+      this.cats[i] = {
+        name: "Kitty " + this.currentIndex,
+        priceBTC: "?",
+        priceSKY: "?",
+        description: "Here is Kitty #" + this.currentIndex,
+        img: "assets/generated_kitties/" + this.currentIndex + ".png"
+      };
     }
     
   }
   ngOnDestroy() {
     this.renderer.removeClass(document.getElementById("kc"), 'blob');
+    this.renderer.removeClass(document.getElementById("bc"), 'show');
+    this.renderer.removeClass(document.getElementById("sc"), 'show');
+    this.renderer.addClass(document.getElementById("kc"), 'under-nav');
   }
 
   shouldShow(i:number) {
-
     if (i >= this.currentIndex && i < this.currentIndex + 3)
     {
       return true;
@@ -94,7 +103,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       return this.articles.filter((item: any, index: number) => index < 3);
     }
-    
   }
 
   playGame() {

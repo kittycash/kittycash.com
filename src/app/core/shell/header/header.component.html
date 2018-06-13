@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light pt-3">
     <div class="container">
 
-    <img class="logo" src="assets/logo.svg" routerLink="/home">
+    <img class="logo" src="assets/logo.svg" routerLink="/home" alt="KittyCash - Next generation of blockchain gaming">
  
     <button class="navbar-toggler" type="button" aria-controls="navbar-menu"
             aria-label="Toggle navigation" (click)="toggleMenu()" [attr.aria-expanded]="!menuHidden">
@@ -17,7 +17,7 @@
         <a class="nav-item nav-link text-uppercase sb-black" routerLink="/explore" routerLinkActive="active">
           <span translate>explore kitties</span>
         </a>
-        <a class="nav-item nav-link text-uppercase sb-black" href="/blog/index.html">
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/blog" routerLinkActive="active">
           <span translate>blog</span>
         </a>
         <a class="nav-item nav-link text-uppercase sb-black" routerLink="/roadmap" routerLinkActive="active">

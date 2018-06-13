@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { SharedModule } from '@app/shared';
 import { ExploreRoutingModule } from './explore-routing.module';
 import { ExploreComponent } from './explore.component';
 
@@ -9,7 +9,8 @@ import { ExploreComponent } from './explore.component';
   imports: [
     CommonModule,
     TranslateModule,
-    ExploreRoutingModule
+    ExploreRoutingModule,
+    SharedModule
   ],
   declarations: [
     ExploreComponent

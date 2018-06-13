@@ -1,0 +1,25 @@
+<div class="container-fluid px-0 scroll-header">
+  <div class="pt-5">
+    <div class="row">
+      <div class="col-10 offset-1">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 blog-box mb-2" *ngFor="let article of articles">
+            <div class="card" style="width: 18rem;">
+              <a [href]="article.link">
+                <div class="card-body">
+                  <img class="img-fluid" [src]="article.thumbnail" style="height:180px; border-radius:15px; object-fit: cover;">
+                  <h1 class="card-title mt-2">{{article.title}}</h1>      
+                  <p class="card-text">{{article.summary}}</p>
+                  <h6 class="card-subtitle mb-2">{{article.pubDate | date:'longDate'}}</h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <get-in-touch></get-in-touch>
+  <mail-list></mail-list>
+</div>

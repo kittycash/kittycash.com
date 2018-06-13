@@ -1,4 +1,4 @@
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 scroll-header">
   <div class="row">
   	<div class="col-lg-4 offset-lg-4 col-md-12">
   		<div class="downloads-title">
@@ -7,9 +7,23 @@
   	</div>
   </div>
   <div class="row border-top mt-3 pt-2 pb-3">
+    <div class="col-2 offset-2">
+      <a href="assets/downloads/KittyCash_Branding_Guide.pdf" target="_blank">
+        <img class="img-fluid" src="assets/wallet-thumbnail.png" alt="KittyCash wallet">
+      </a>
+    </div>
+    <div class="col-8">
+      <a (click)="downloadWallet()">
+        <h2>KittyCash Wallet</h2>
+      </a>
+      <p>Our KittyCash Wallet</p>
+      <button (click)="downloadWallet()" class="btn btn-lg btn-outline-primary">Download</button>
+    </div>
+  </div>
+  <div class="row border-top mt-3 pt-2 pb-3">
   	<div class="col-2 offset-2">
   		<a href="assets/downloads/KittyCash_Branding_Guide.pdf" target="_blank">
-  			<img class="img-fluid" src="assets/branding_guide_thumbnail.png">
+  			<img class="img-fluid" src="assets/branding_guide_thumbnail.png" alt="KittyCash branding guide">
   		</a>
   	</div>
   	<div class="col-8">
@@ -23,7 +37,7 @@
   <div class="row border-top pt-2 mb-5">
   	<div class="col-2 offset-2">
   		<a href="assets/downloads/KittyCash_Stickers_v.1.1.pdf" target="_blank">
-  			<img class="img-fluid" src="assets/stickers_thumbnail.png">
+  			<img class="img-fluid" src="assets/stickers_thumbnail.png" alt="KittyCash stickers">
   		</a>
   	</div>
   	 <div class="col-7">
