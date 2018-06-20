@@ -1,29 +1,27 @@
-language: node_js
-node_js:
-- '8'
+sudo: required
+
+services:
+- docker
+
+env:
+  global:
+  - REGISTRY_USER=kittycashrobot
+  # REGISTRY_PASS=...
+  - secure: EsYsZrmZGTRuZnqOBWyt2efsUhceu3cbzNfzRtWg70tEFy6Vxim1IF+asXQG59rRhw+51njWQWrOFK80dXSWolX+0GGnU2iOx76pCAsLWLMWZYrkp9d/zmOgqm20VMcoafwmQ6UX5rQjSY27p5l7+Zm8CnYs/eQfoPo881bfceQ49Z+hO6D60YO18/jMtdmS6y9Exo8rnrfo/BrK9fFiRPuVdbtlO+q2hnIZNsyNaSNiubuvmuMzlaIPSC+8D9vFmDPt5FBUP1hnWVUTroymF7LqKiPfX9jTN3zTuF1HVgaN7OFcAtagxUt89fiMqR0be7EiQV/Lyr8TFcKWHeI4U7VBB91JJzYJimaayd0Pr1nRa2p0c7Mbj+TAsUhAsDz1hoS/FBn6KG/j2v9Mjp6/zlZv/3w9UkLVHobZx4T5Sp5XI6ZMUFWwwDUiqB+9o2CiBNXNbWAvpXDw9Awl6gdLADWsWbRDIgahP2GQnV/kISukGvN1AmgBx83MpxFRwO1Y1tvBQ7+UQAUCn2+hrd+O4ii45rJoOLSg64LTFSqW5GSBbRvcjI1RSQAP8xuHoD/LzCBvnMFRYkHw5spE3IzqI9aaaWMjiHvkqjtnJ4KYSzP1we2Kne9XcxBILYbneZHMolMFFyWKBXwkMK7LWdta2A+khzRDOpNh0Tyvn2kosa8=
+
+before_script:
+- if [ "$REGISTRY_PASS" != "" ] ; then docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS" ; fi
+- docker pull kittycash/kittycash.com || true
+
 script:
-- yarn build
+- "./docker-build.sh"
+
+after_script:
+- docker images
+
 deploy:
-- provider: gcs
-  access_key_id: GOOG3UJZKTUH2MM2KWGJ
-  secret_access_key:
-    secure: tT+pHOM050QGzjBUlDmfvf1pPbbpIlvVG1tv3yTeBf+k/NF4kF6D6a7abWAoouToWn6RXcrHwyK1jhj7eXgvyrKwJxAY62ZqBX82ywnmJ9jIZDV9y+8hiXxx0X9NfLHTRRCbyisbkNn/79+bpjV0B8JQlVn59sI4hObyC3wA53ixqo6cFr7WQDuddXe8ucEw3qmXOwQsMiJMq9QLkQ4QG5A6Bshs396Lbo06u/rB8a76X7Oc9IJFYvlXrFq5NHbSwSO/Fa05Jnn/tu8/ICbm7IhJYiwnWCcVxXqdNAIC8q+VKd+KAc8Q6lUFRPx2Fi6/UP/LLR6pWB7HRx9U0Ux55/IhR/1tyak0Gr0lOoU0a4qcBHnqBmg3sku2gkOHo3CwHHpO112aLwsbyTZ6SApMPe91+X1GDfBn0o1z/KxnUP3gIJ/MGqGr4HrsewobzREFfvm/LaKQ0HEiLcGHNSwFKs6nATNhk7UnEYg4IwYG7JptzeZ+eO2QtVykBw1Rza2fEZGESGueZAkNp2/lgWM0NHF0zukaxdLsPK/ta01T6+NRj/IxG7i0yzbuVV9999p+SVaRxlzGG51KQEhJqZuYKwTZzI4GwOkymYPe0AQTYRErhFAr1Ll+7OVmxVIfFnYDyIdY2rV/IkCru3z887UzK5cTvkQHMgxUJqkLZMrBvbE=
-  bucket: staging.kittycash.com
-  skip_cleanup: true
-  acl: public-read
-  cache_control: "max-age=86400"
-  local-dir: build
+  provider: script
+  script: "./docker-deploy.sh"
   on:
-    repo: kittycash/kittycash.com
-- provider: gcs
-  access_key_id: GOOG3UJZKTUH2MM2KWGJ
-  secret_access_key:
-    secure: tT+pHOM050QGzjBUlDmfvf1pPbbpIlvVG1tv3yTeBf+k/NF4kF6D6a7abWAoouToWn6RXcrHwyK1jhj7eXgvyrKwJxAY62ZqBX82ywnmJ9jIZDV9y+8hiXxx0X9NfLHTRRCbyisbkNn/79+bpjV0B8JQlVn59sI4hObyC3wA53ixqo6cFr7WQDuddXe8ucEw3qmXOwQsMiJMq9QLkQ4QG5A6Bshs396Lbo06u/rB8a76X7Oc9IJFYvlXrFq5NHbSwSO/Fa05Jnn/tu8/ICbm7IhJYiwnWCcVxXqdNAIC8q+VKd+KAc8Q6lUFRPx2Fi6/UP/LLR6pWB7HRx9U0Ux55/IhR/1tyak0Gr0lOoU0a4qcBHnqBmg3sku2gkOHo3CwHHpO112aLwsbyTZ6SApMPe91+X1GDfBn0o1z/KxnUP3gIJ/MGqGr4HrsewobzREFfvm/LaKQ0HEiLcGHNSwFKs6nATNhk7UnEYg4IwYG7JptzeZ+eO2QtVykBw1Rza2fEZGESGueZAkNp2/lgWM0NHF0zukaxdLsPK/ta01T6+NRj/IxG7i0yzbuVV9999p+SVaRxlzGG51KQEhJqZuYKwTZzI4GwOkymYPe0AQTYRErhFAr1Ll+7OVmxVIfFnYDyIdY2rV/IkCru3z887UzK5cTvkQHMgxUJqkLZMrBvbE=
-  bucket: www.kittycash.com
-  skip_cleanup: true
-  acl: public-read
-  cache_control: "max-age=86400"
-  local-dir: build
-  on:
-    tags: true
-    repo: kittycash/kittycash.com
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^staging|master$ || $(git tag --points-at HEAD) != ""
