@@ -12,7 +12,7 @@ export class ExploreComponent implements OnInit {
 
   kitties: any;
 
-  image_colors: array<any> = [
+  image_colors: Array<any> = [
     'rgb(255, 249, 205)',
     'rgb(255, 178, 178)',
     'rgb(198, 255, 176)',
