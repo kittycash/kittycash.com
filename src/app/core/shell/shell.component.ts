@@ -8,14 +8,70 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class ShellComponent implements OnInit {
 
   kitties:Array<any> = [];
-  colNum: number = 34;
+  colNum: number = 20;
+
+  doScroll: boolean = false;
+  doGrow: boolean = false;
+
+  grow: any =  {run: false, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}, min_size: 1, max_size: 2, sizes: {}};
+  lines: any = {run: false, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}};
+
 
   constructor() { }
 
   getDelay(index:any) {
-
     return (index % 5) + 's';
   }
+
+
+  generateRandomGrowDelay() {
+
+    for (var i = 0; i < this.kitties.length; i++)
+    {
+        let key = 'grow_' + i;
+        this.grow.delay[key] = (Math.floor(Math.random() * (this.grow.max_delay - this.grow.min_delay + 1)) + this.grow.min_delay) + 's';
+    }
+  }
+
+  generateRandomGrowSpeed() {
+
+    for (var i = 0; i < this.kitties.length; i++)
+    {
+        let key = 'grow_' + i;
+        this.grow.speed[key] = (Math.floor(Math.random() * (this.grow.max_speed - this.grow.min_speed + 1)) + this.grow.min_speed) + 's';
+    }
+  }
+
+  generateRandomLinesDelay() {
+
+    let keys = ['hl', 'gr', 'gl'];
+
+    for (var i = 0; i < this.kitties.length; i++)
+    {
+      for (var x = 0; x < keys.length; x++)
+      {
+        let key = keys[x] + i;
+        this.lines.delay[key] = (Math.floor(Math.random() * (this.lines.max_delay - this.lines.min_delay + 1)) + this.lines.min_delay) + 's';
+      } 
+    }
+  }
+
+  generateRandomLinesSpeed() {
+
+    let keys = ['hl', 'gr', 'gl'];
+
+    for (var i = 0; i < this.kitties.length; i++)
+    {
+      for (var x = 0; x < keys.length; x++)
+      {
+        let key = keys[x] + i;
+        this.lines.speed[key] = (Math.floor(Math.random() * (this.lines.max_speed - this.lines.min_speed + 1)) + this.lines.min_speed) + 's';
+    
+      } 
+    }
+  }
+
+  
   ngOnInit() { 
 
     let __this = this;
@@ -39,7 +95,7 @@ export class ShellComponent implements OnInit {
       "rgb(132, 215, 245)"
     ];
 
-      for (let i = 0; i < 375; i++)
+      for (let i = 0; i < 60; i++)
       {
         let obj = {
           image: 'assets/generated_kitties/small/' + i % 100 + '.png',
@@ -47,6 +103,12 @@ export class ShellComponent implements OnInit {
         };
         __this.kitties.push(obj);
       }
+
+      this.generateRandomLinesDelay();
+      this.generateRandomLinesSpeed();
+
+      this.generateRandomGrowDelay();
+      this.generateRandomGrowSpeed();
 
     setTimeout(function(){
     
@@ -66,7 +128,7 @@ export class ShellComponent implements OnInit {
 
       scroller.classList.add('fade-in');
       
-      let max_width = container.clientWidth - (step * 2);
+      let max_width = container.clientWidth - (step * 4);
       let max_height = container.clientHeight - step;
 
       let scrollLeft = true;
@@ -118,12 +180,16 @@ export class ShellComponent implements OnInit {
        }
       }    
 
-      scroller.scroll({
-        top: top, 
-        left: left, 
-        behavior: 'smooth' 
-      });
+      if (__this.doScroll)
+      {
+         scroller.scroll({
+            top: top, 
+            left: left, 
+            behavior: 'smooth' 
+          });
 
+      }
+     
       }, 5000);
     });	
   }

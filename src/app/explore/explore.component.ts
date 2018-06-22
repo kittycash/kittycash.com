@@ -12,6 +12,17 @@ export class ExploreComponent implements OnInit {
 
   kitties: any;
 
+  image_colors: array<any> = [
+    'rgb(255, 249, 205)',
+    'rgb(255, 178, 178)',
+    'rgb(198, 255, 176)',
+    'rgb(218, 227, 237)',
+    'rgb(210, 188, 243)',
+    'rgb(157, 188, 253)',
+    'rgb(191, 236, 254)',
+    'rgb(240, 240, 128)'
+  ]
+
   constructor() { 
   	this.kitties = kitties;
   }
