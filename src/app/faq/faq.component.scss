@@ -64,3 +64,52 @@
     font-weight: 300;
     color: $kittydarkgray;
 }
+
+
+.submit-question {
+  position: relative;
+}
+
+.submit-question .background {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:-20%;
+  right:-20%;
+  background-color: $kittyred;
+  background-image: url(assets/pattern-repeat.png);
+  background-size: 1600px;
+}
+
+.submit-question .question-input {
+  border-radius: 30px;
+  text-indent: 20px;
+  height: 50px;
+}
+
+.submit-question h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: $kittyblack; 
+  margin-bottom: 0;
+}
+
+.submit-question h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: $kittyblack; 
+}
+
+
+.submit-question  .submit-button {
+  border: none;
+  border-radius: 30px;
+  right: 35%;
+  background-color: $kittydarkred;
+  z-index: 100;
+  font-size: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
+}

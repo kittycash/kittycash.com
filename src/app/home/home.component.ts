@@ -13,7 +13,7 @@ import * as kitties from './kitties.json';
   animations: [
         trigger('trans', [
             transition(
-            '* <=> *', [animate(100, style({opacity: 0.8})), animate(200, style({opacity: 1}))])
+            '* <=> *', [animate(1000, style({opacity: 0})), animate(2000, style({opacity: 1}))])
         ])
     ]
 })
@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         __this.rmap = 'active';
       }
       this.setCats();
-    }, 5000);
+    }, 30000);
   }
 
   setCats() {
