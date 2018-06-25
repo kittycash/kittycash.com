@@ -1,5 +1,5 @@
 <div class="container-fluid px-0 scroll-header">
-  <div class="pt-1">
+  <div class="pt-5">
     <div *ngFor="let section of kitties">
       <div class="row my-4">
       	<div class="col-12">
@@ -9,17 +9,17 @@
       </div>
 
       <div class="row kitty-container">
-      	<div class="col-md-3 col-sm-12 cat-box mb-2" *ngFor="let cat of section.data | paginate: { itemsPerPage: 8, currentPage: section.p, id: section.id } let i = index">
-          <div>
-        		<div class="mx-auto text-center explore-image-container" [ngClass]="{'sold': cat.sold}" [ngStyle]="{'background-color': image_colors[i]}">
+      	<div class="col-md-3 col-sm-12 cat-box mb-2" *ngFor="let cat of section.data">
+          <div class="">
+        		<div class="mx-auto text-center explore-image-container" [ngClass]="{'sold': cat.sold}">
                <img class="img-fluid explore-image" src="{{cat.img}}" alt="{{cat.name}}">    			   
         		</div>
         		<div class="mt-3  mx-k-sm-0 text-center">
-        		
+        			<h2>{{cat.name}}</h2>
 
               <div class="row no-gutters">
                 <div class="col-6 text-left">
-                    <h2>{{cat.name}}</h2>
+        			   <h3><span *ngIf="cat.priceBTC">{{cat.priceBTC}} BTC</span><span *ngIf="cat.priceBTC && cat.priceSKY"> | </span><span *ngIf="cat.priceSKY">{{cat.priceSKY}} SKY</span></h3>
                </div>
                <div class="col-6 text-right">
 
@@ -28,53 +28,20 @@
                       {{cat.sold}}
                     </div>
                     <div class="arrow"></div>
-                </div>
+                  </div>
 
-                <div class="row no-gutters">
-                  <div class="col-12">
-                    <p class="owner" *ngIf="cat.sold" (mouseenter)="showOwner(cat)"  (mouseleave)="hideOwner(cat)">
-                      <span>Owner</span>
-                    </p>
-                  </div>
-                  <div class="col-12">
-                    <h3>
-                      <span *ngIf="cat.priceBTC">{{cat.priceBTC}} BTC</span>
-                      <span *ngIf="cat.priceBTC && cat.priceSKY"> | </span>
-                      <span *ngIf="cat.priceSKY">{{cat.priceSKY}} SKY</span>
-                    </h3>
-                  </div>
-                </div>
-        			   
+        			   <p class="owner" *ngIf="cat.sold" (mouseenter)="showOwner(cat)"  (mouseleave)="hideOwner(cat)"><span>Owner:</span> {{cat.sold | slice:0:6}} <span><i class="fa fa-caret-right"></i></span></p>
                </div>
              </div>
 
-        			<p class="text-left">{{cat.description}}</p>
+        			<p class="mx-1">{{cat.description}}</p>
         		</div>
           </div>
     	 </div>
-       <pagination-template #p="paginationApi"
-                     (pageChange)="section.p = $event"
-                     id="{{section.id}}" style="width: 100%;">
-
-       <div class="row">
-        <div class="col-6">
-          <div class="page-control" *ngFor="let page of p.pages" [class.current]="p.getCurrent() === page.value" (click)="p.setCurrent(page.value)">
-            <span>{{page.label}}</span>  
-          </div>
-        </div>
-        <div class="col-6">
-          <button [disabled]="p.isLastPage()" (click)="p.next()" class="mx-1 btn btn-round btn-primary float-right">Next</button>
-          <button [disabled]="p.isFirstPage()" (click)="p.previous()" class="mx-1 btn btn-round btn-outline-primary float-right">Previous</button>      
-        </div>
-       </div>
-            
-        
-    </pagination-template>
-
-       <!-- <pagination-controls (pageChange)="section.p = $event" id="{{section.id}}"></pagination-controls> -->
       </div>
     </div>
   </div>
 
   <get-in-touch></get-in-touch>
+  <mail-list></mail-list>
 </div>

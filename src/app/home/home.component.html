@@ -2,8 +2,8 @@
   <div class="row mb-5">
   	<div class="col-md-7 col-sm-12">
 	  	<h1 class="kitty-header-lg pb-3">Next generation of <br class="d-none d-md-block"> blockchain gaming.</h1>
-	  	<a class="btn btn-lg btn-primary mt-1" (click)="downloadWallet()">Download</a>
-	  	<a class="btn btn-lg btn-outline-primary mt-1" routerLink="/faq" routerLinkActive="active">What is KittyCash?</a>
+	  	<a class="btn btn-lg btn-primary" (click)="downloadWallet()">Download</a>
+	  	<a class="btn btn-lg btn-outline-primary" routerLink="/faq" routerLinkActive="active">What is KittyCash?</a>
   	</div>
   	<!-- <div class="col-md-5 d-none d-md-block text-center mx-auto">
   		<img class="img-fluid" src="/assets/home_cat.png" alt="Next generation of blockchain gaming" />
@@ -36,7 +36,7 @@
 			  				<div class="mx-auto text-center kitty-img-container pb-1">
 				  				<img class="img-fluid" src="{{cats[0].img}}" alt="{{cats[0].name}}">
 				  				<h2>{{cats[0].name}}</h2>
-				  				<!-- <h3>{{cats[0].priceBTC}} BTC | {{cats[0].priceSKY}} SKY</h3> -->
+				  				<h3>{{cats[0].priceBTC}} BTC | {{cats[0].priceSKY}} SKY</h3>
 				  				<h4>{{cats[0].description}}</h4>
 				  			</div>
 				  		</div>	
@@ -48,7 +48,7 @@
 			  				<div class="mx-auto text-center kitty-img-container pb-1">
 				  				<img class="img-fluid" src="{{cats[1].img}}" alt="{{cats[1].name}}">
 				  				<h2>{{cats[1].name}}</h2>
-				  				<!-- <h3>{{cats[1].priceBTC}} BTC | {{cats[1].priceSKY}} SKY</h3> -->
+				  				<h3>{{cats[1].priceBTC}} BTC | {{cats[1].priceSKY}} SKY</h3>
 				  				<h4>{{cats[1].description}}</h4>
 				  			</div>
 				  		</div>	
@@ -60,7 +60,7 @@
 			  				<div class="mx-auto text-center kitty-img-container pb-1">
 				  				<img class="img-fluid" src="{{cats[2].img}}" alt="{{cats[2].name}}">
 				  				<h2>{{cats[2].name}}</h2>
-				  				<!-- <h3>{{cats[2].priceBTC}} BTC | {{cats[2].priceSKY}} SKY</h3> -->
+				  				<h3>{{cats[2].priceBTC}} BTC | {{cats[2].priceSKY}} SKY</h3>
 				  				<h4>{{cats[2].description}}</h4>
 				  			</div>
 				  		</div>	
@@ -84,10 +84,10 @@
 		</div>
 
 		<div class="row mt-5">
-			<div class="col-12 col-md-10 offset-md-1">
+			<div class="col-10 offset-1">
 				<div class="row">
 					<div class="col-md-4 col-sm-12 blog-box mb-2" *ngFor="let article of blogPosts();">
-						<div class="card">
+						<div class="card" style="width: 18rem;">
 							<a [href]="article.link">
 							  <div class="card-body">
 							    <img class="img-fluid" [src]="article.thumbnail" style="height:180px; border-radius:15px; object-fit: cover;">
@@ -104,21 +104,21 @@
 		</div>
 	</div>
 
+	<get-in-touch></get-in-touch>
 
 	<div class="skycoin mb-5">
 		<div class="row">
-			<div class="col-12 col-md-8 offset-md-2 text-center mt-1">
+			<div class="col-8 offset-2 text-center mt-1">
 				<h1 class="kitty-header-s1">Proudly made possible with Skycoin technologies</h1>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-12 col-md-10 offset-md-1 text-center">
+			<div class="col-10 offset-1 text-center">
 				<a href="http://www.skycoin.net/"><img class="img-fluid" src="assets/skycoin.svg" alt="Proudly made possible with Skycoin technologies"></a>
 			</div>
 		</div>
 	</div>
 
-	<get-in-touch></get-in-touch>
-
+	<mail-list></mail-list>
 </div>

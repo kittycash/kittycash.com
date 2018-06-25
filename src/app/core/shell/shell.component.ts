@@ -8,70 +8,14 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class ShellComponent implements OnInit {
 
   kitties:Array<any> = [];
-  colNum: number = 20;
-
-  doScroll: boolean = true;
-  doGrow: boolean = false;
-
-  grow: any =  {run: false, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}, min_size: 1, max_size: 2, sizes: {}};
-  lines: any = {run: true, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}};
-
+  colNum: number = 34;
 
   constructor() { }
 
   getDelay(index:any) {
+
     return (index % 5) + 's';
   }
-
-
-  generateRandomGrowDelay() {
-
-    for (var i = 0; i < this.kitties.length; i++)
-    {
-        let key = 'grow_' + i;
-        this.grow.delay[key] = (Math.floor(Math.random() * (this.grow.max_delay - this.grow.min_delay + 1)) + this.grow.min_delay) + 's';
-    }
-  }
-
-  generateRandomGrowSpeed() {
-
-    for (var i = 0; i < this.kitties.length; i++)
-    {
-        let key = 'grow_' + i;
-        this.grow.speed[key] = (Math.floor(Math.random() * (this.grow.max_speed - this.grow.min_speed + 1)) + this.grow.min_speed) + 's';
-    }
-  }
-
-  generateRandomLinesDelay() {
-
-    let keys = ['hl', 'gr', 'gl'];
-
-    for (var i = 0; i < this.kitties.length; i++)
-    {
-      for (var x = 0; x < keys.length; x++)
-      {
-        let key = keys[x] + i;
-        this.lines.delay[key] = (Math.floor(Math.random() * (this.lines.max_delay - this.lines.min_delay + 1)) + this.lines.min_delay) + 's';
-      } 
-    }
-  }
-
-  generateRandomLinesSpeed() {
-
-    let keys = ['hl', 'gr', 'gl'];
-
-    for (var i = 0; i < this.kitties.length; i++)
-    {
-      for (var x = 0; x < keys.length; x++)
-      {
-        let key = keys[x] + i;
-        this.lines.speed[key] = (Math.floor(Math.random() * (this.lines.max_speed - this.lines.min_speed + 1)) + this.lines.min_speed) + 's';
-    
-      } 
-    }
-  }
-
-  
   ngOnInit() { 
 
     let __this = this;
@@ -95,7 +39,7 @@ export class ShellComponent implements OnInit {
       "rgb(132, 215, 245)"
     ];
 
-      for (let i = 0; i < 80; i++)
+      for (let i = 0; i < 375; i++)
       {
         let obj = {
           image: 'assets/generated_kitties/small/' + i % 100 + '.png',
@@ -104,28 +48,25 @@ export class ShellComponent implements OnInit {
         __this.kitties.push(obj);
       }
 
-      this.generateRandomLinesDelay();
-      this.generateRandomLinesSpeed();
-
-      this.generateRandomGrowDelay();
-      this.generateRandomGrowSpeed();
-
     setTimeout(function(){
     
       let step = 500;
 
-      let top = 0;
+      let top = step;
       let left = step;
 
       let scroller = document.body.querySelector("#kittyScroller");
       let container = scroller.children[0];
 
-       __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 500, true);
-       __this.animateScroll(scroller, "scrollTop", "", scroller.scrollTop, top, 500, true);
+      scroller.scroll({
+        top: top, 
+        left: left, 
+        behavior: 'smooth' 
+      });
 
       scroller.classList.add('fade-in');
       
-      let max_width = container.clientWidth - (step * 4);
+      let max_width = container.clientWidth - (step * 2);
       let max_height = container.clientHeight - step;
 
       let scrollLeft = true;
@@ -177,44 +118,14 @@ export class ShellComponent implements OnInit {
        }
       }    
 
-      if (__this.doScroll)
-      {
-         // scroller.scroll({
-         //    top: top, 
-         //    left: left, 
-         //    behavior: 'smooth' 
-         //  });
+      scroller.scroll({
+        top: top, 
+        left: left, 
+        behavior: 'smooth' 
+      });
 
-         __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 700, true);
-         __this.animateScroll(scroller, "scrollTop", "", scroller.scrollTop, top, 700, true);
-
-      }
-     
       }, 5000);
     });	
-  }
-
-  private animateScroll(elem:any, style:any, unit:any, from:any, to:any, time:any, prop:any) {
-      if (!elem) {
-          return;
-      }
-      var start = new Date().getTime(),
-          timer = setInterval(function () {
-              var step = Math.min(1, (new Date().getTime() - start) / time);
-              if (prop) {
-                  elem[style] = (from + step * (to - from))+unit;
-              } else {
-                  elem.style[style] = (from + step * (to - from))+unit;
-              }
-              if (step === 1) {
-                  clearInterval(timer);
-              }
-          }, 25);
-      if (prop) {
-          elem[style] = from+unit;
-      } else {
-          elem.style[style] = from+unit;
-      }
   }
 
 
