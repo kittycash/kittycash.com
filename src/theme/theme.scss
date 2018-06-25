@@ -32,13 +32,13 @@ html {
 }
 
 .under-nav {
-	top: 150px !important;
+	top: 315px !important;
 	background-color: $kittyred !important;	
-	max-height: 450px !important;
+	max-height: 270px !important;
 }
 
 .scroll-header {
-	margin-top: 450px !important;
+	margin-top: 270px !important;
 	@include media-breakpoint-down(sm) { 
 		margin-top: 0 !important;
 	}
@@ -59,7 +59,7 @@ html {
 	position: absolute;
     width: 100%;
     right: 0;
-    top: 0;
+    top: 165px;
     bottom: 0;
     z-index:0;
     max-height: 622px;

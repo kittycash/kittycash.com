@@ -10,11 +10,11 @@ export class ShellComponent implements OnInit {
   kitties:Array<any> = [];
   colNum: number = 20;
 
-  doScroll: boolean = false;
+  doScroll: boolean = true;
   doGrow: boolean = false;
 
   grow: any =  {run: false, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}, min_size: 1, max_size: 2, sizes: {}};
-  lines: any = {run: false, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}};
+  lines: any = {run: true, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}};
 
 
   constructor() { }
@@ -95,7 +95,7 @@ export class ShellComponent implements OnInit {
       "rgb(132, 215, 245)"
     ];
 
-      for (let i = 0; i < 60; i++)
+      for (let i = 0; i < 80; i++)
       {
         let obj = {
           image: 'assets/generated_kitties/small/' + i % 100 + '.png',
@@ -114,17 +114,14 @@ export class ShellComponent implements OnInit {
     
       let step = 500;
 
-      let top = step;
+      let top = 0;
       let left = step;
 
       let scroller = document.body.querySelector("#kittyScroller");
       let container = scroller.children[0];
 
-      scroller.scroll({
-        top: top, 
-        left: left, 
-        behavior: 'smooth' 
-      });
+       __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 500, true);
+       __this.animateScroll(scroller, "scrollTop", "", scroller.scrollTop, top, 500, true);
 
       scroller.classList.add('fade-in');
       
@@ -182,16 +179,42 @@ export class ShellComponent implements OnInit {
 
       if (__this.doScroll)
       {
-         scroller.scroll({
-            top: top, 
-            left: left, 
-            behavior: 'smooth' 
-          });
+         // scroller.scroll({
+         //    top: top, 
+         //    left: left, 
+         //    behavior: 'smooth' 
+         //  });
+
+         __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 700, true);
+         __this.animateScroll(scroller, "scrollTop", "", scroller.scrollTop, top, 700, true);
 
       }
      
       }, 5000);
     });	
+  }
+
+  private animateScroll(elem:any, style:any, unit:any, from:any, to:any, time:any, prop:any) {
+      if (!elem) {
+          return;
+      }
+      var start = new Date().getTime(),
+          timer = setInterval(function () {
+              var step = Math.min(1, (new Date().getTime() - start) / time);
+              if (prop) {
+                  elem[style] = (from + step * (to - from))+unit;
+              } else {
+                  elem.style[style] = (from + step * (to - from))+unit;
+              }
+              if (step === 1) {
+                  clearInterval(timer);
+              }
+          }, 25);
+      if (prop) {
+          elem[style] = from+unit;
+      } else {
+          elem.style[style] = from+unit;
+      }
   }
 
 
