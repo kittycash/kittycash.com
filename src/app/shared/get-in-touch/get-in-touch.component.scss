@@ -1,37 +1,10 @@
 @import "src/theme/theme-variables";
 
-.separator::before {
-  content: '';
-  position: absolute;
-  background: $kittylightgray;
-  width: 2px;
-  height: 40%;
-  top: -45%;
-  left: 50%;
-}
-
-.separator::after{
-  content: '';
-  position: absolute;
-  background: $kittylightgray;
-  width: 2px;
-  height: 40%;
-  top: 110%;
-  left: 50%;
-}
-
-.get-in-touch {
-    position: relative;
-}
-
-
-.get-in-touch .background {
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:-11%;
-  right:-11%;
-  box-shadow: 0px 0px 30px 5px rgba(223, 223, 223, 0.5);
+.get-in-touch .box {
+  border-color: $kittyred;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 15px;
 }
 
 .get-in-touch h1 {
@@ -55,41 +28,4 @@
 .get-in-touch .socials a {
   font-size: 20px;
   color: $kittydarkgray;
-}
-
-.mail-list {
-  position: relative;
-}
-
-.mail-list .email-input {
-  border-radius: 30px;
-  text-indent: 20px;
-  height: 50px;
-}
-
-.mail-list h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  color: $kittyblack; 
-  margin-bottom: 0;
-}
-
-.mail-list h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  color: $kittyblack; 
-}
-
-
-.mail-list .submit-button {
-  border: none;
-  border-radius: 30px;
-  right: 35%;
-  background-color: $kittydarkred;
-  z-index: 100;
-  font-size: 12px;
-  padding-left: 30px;
-  padding-right: 30px;
 }

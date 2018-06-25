@@ -34,8 +34,7 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 12px;
-	color: $kittydarkgray;
-	margin-bottom: 0;
+	color: $kittyred;
 }
 
 .cat-box h4 {
@@ -43,24 +42,16 @@
 }
 
 .cat-box .owner {
-	margin-bottom: 1px;
-}
-.cat-box .owner span {
 	margin-top: -2px;
 	font-size: 12px;
-	color: $kittyblack;
+	color: $kittyred;
+	font-weight: 500;
 	cursor: pointer;
-	background-color: rgb(255, 227, 226);
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 200;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	padding-left: 7px;
-	padding-right: 7px;
-	border-radius: 25px;
-	text-transform: uppercase;
 }
 
+.cat-box .owner span {
+	font-weight: 600;
+}
 
 .cat-box .owner span i {
 	font-size: 15px;
@@ -119,23 +110,4 @@
 .explore-image {
 	max-width: 100%;
 	padding: 20px;
-}
-
-.page-control {
-	width: 50px;
-	height: 50px;
-	display: inline-block;
-	margin-left: 10px;
-	border-radius: 25px;
-	text-align: center;
-	line-height: 50px;
-	color: $kittyred;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	cursor: pointer;
-}
-
-.page-control.current {
-	color: white;
-	background-color: $kittyred;
 }

@@ -1,76 +1,10 @@
-@import "src/theme/theme-variables";
-
-.notification-area {
-  background-color: $kittyred;
-  width: 100%;
-  height: 165px;
-  color: white;
-}
-
-.notification-area h1 {
-    color: white;
-    font-size: 150%
-}
-
-.notification-area p {
-    color: white;
-    font-size: 80%;
-}
-
-.vertical-center {
-  display: flex;
-  align-items: center;
-}
-
-#dontainer {
-  width:100%;
-  display: flex;
-  align-items: flex-start;
-      position: absolute;
-    left: 0;
-    right: 0;
-    @media only screen and (max-width: 1220px) {
-        display: none;
-    }
-}
-
-.left-wrapper {
-  position: relative;
-  flex: 1;
-}
-
-.left {
-  position: absolute;
-  width: 100%;
-}
-
-.right {
-  white-space: nowrap;
-  width: 753px;
-}
-
-#animation_options {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 18rem;
-    background-color: white;
-    z-index: 1000;
-}
-
 .kitty-shell-container {
 
 }
-
 .kitty-shell-scroller {
 	overflow: scroll;
 	height: 650px;
     opacity: 0;
-    margin-top: 90px;
-}
-
-.under-nav .kitty-shell-scroller {
-    margin-top: 0 !important;
 }
 
 .fade-in {
@@ -90,7 +24,7 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	z-index: 20;
+	    z-index: 20;
     font-size: 40px;
     color: yellow;
     text-align: center;
@@ -98,46 +32,29 @@
 
 .shell-kitty {
 	background-color: purple;
-	width: 90px;
-	height: 90px;
-	border-radius: 45px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
 	display: inline-block;
-	margin-left: 45px;
-	margin-right: 45px;
-
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 	border: white 2px solid;
 	position: relative;
 	z-index: 10;
-    box-shadow: -10px 3px 5px rgba(68,68,68,0.4);
-}
-
-.do-grow {
-    animation-name: grow;
+	animation-name: grow;
     animation-duration: 10s;
     animation-delay: 60s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
-    -moz-animation-name: grow;
-    -moz-animation-duration: 10s;
-    -moz-animation-delay: 60s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-direction: alternate;
+    box-shadow: -10px 3px 5px rgba(68,68,68,0.4);
 }
 
 .shell-kitty.spacer {
 	display: inline;
 }
-
-.shell-kitty.spacer .grid-lines {
-    display: none;
-}
-
-.shell-kitty.spacer .h-line {
-    display: none;
-}
-
 .shell-kitty.spacer:before {
 	display: none !important;
 }
@@ -145,7 +62,6 @@
 .shell-kitty.spacer .grid-lines:before {
 	display: none !important;
 }
-
 .shell-kitty.spacer .grid-lines:after {
 	display: none !important;
 }
@@ -161,107 +77,62 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
-	border-radius: 45px;
+	border-radius: 50px;
 	z-index: 2;
 }
 
-.shell-kitty .h-line {
+.shell-kitty:before {
+    content: "";
     display: block;
     position: absolute;
     background-color: white;
-    width: 90px;
+    width: 100px;
     height: 2px;
     top: 50%;
     left: 100%;
     z-index: 1;
     box-shadow: -10px 3px 5px rgba(68,68,68,0.4);
+
 }
 
-.grid-lines .left {
+.grid-lines:before {
     content: "";
     display: block;
     position: absolute;
     background-color: white;
     width: 2px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
+    height: 150px;
+    top: 70%;
+    left: 0;
     z-index: 1;
     transform: rotate(30deg);
-    transform-origin: 0% 0%;
-    box-shadow: -10px 3px 5px rgba(68,68,68,0.4);   
+    box-shadow: -10px 3px 5px rgba(68,68,68,0.4);
 }
 
-.grid-lines .right {
+.grid-lines:after {
     content: "";
     display: block;
     position: absolute;
-    background: white;
+    background-color: white;
     width: 2px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
+    height: 150px;
+    top: 70%;
+    left: 100%;
     z-index: 1;
     transform: rotate(-30deg);
-    transform-origin: 0% 0%;
-    box-shadow: -10px 3px 5px rgba(68,68,68,0.4);    
+    box-shadow: -10px 3px 5px rgba(68,68,68,0.4);
 }
-
-.do-lines {
-    height: 0 !important;
-    animation-name: lines;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-    -moz-animation-name: lines;
-    -moz-animation-duration: 3s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-direction: alternate;
-}
-
-.do-hlines {
-    width: 0 !important;
-    animation-name: hlines;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
 
 .shell-kitty img {
 	position: absolute;
-	width: 120px;
-	height: 120px;
-	left: -16px;
-    top: -5px;
-}
-
-
-@keyframes hlines {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100px;
-        animation-timing-function: ease-in;
-    }  
-}
-
-
-@keyframes lines {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: 200px;
-        animation-timing-function: ease-in;
-    }  
+	width: 150px;
+	height: 150px;
+	left: -25px;
 }
 
 
 @keyframes grow {
-    to {
+    100% {
         transform: scale3d(1.2, 1.2, 1.2) ;
         animation-timing-function: ease-in;
     }  

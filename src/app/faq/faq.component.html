@@ -52,35 +52,6 @@
 		  </div>
 		</div>
 	</div>
-
-	<div class="submit-question">
-	<div class="background"></div>
-	<div class="row pt-5 pb-3">
-		<div class="col-12 text-center">
-			<h1>Still haven't found the answer?</h1>
-			<h2>submit a question below and we will answer it ASAP!</h2>
-		</div>
-	</div>
-	<div class="row pb-5">
-		<div class="col-12 col-md-8 offset-md-2">
-			<form action="https://formspree.io/kitty@kittycash.com" method="POST">
-
-				<div class="input-group" style="padding-right: 5%;" *ngIf="showEmail">
-					<input class="form-control question-input" name="email" type="email" placeholder="Email Address">
-				</div>
-				<div class="input-group">
-					  <input type="text" class="form-control question-input" name="question" placeholder="Enter Your Question">
-					  <div class="input-group-append">
-					    <input type="submit" class="btn btn-outline-secondary submit-button" value="Ask Us">
-					  </div>
-					  <a class="btn btn-link add-reply" (click)="showEmail = true" *ngIf="!showEmail">Want a reply?</a>
-				</div>
-				
-			</form>
-		</div>
-	</div>
-</div>
-
-
   	<get-in-touch></get-in-touch>
+	<mail-list></mail-list>
 </div>

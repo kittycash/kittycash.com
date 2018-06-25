@@ -7,7 +7,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { DownloadService } from './download.service';
 import { SafePipe } from './safe.pipe';
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
-
+import { MailListComponent } from './mail-list/mail-list.component';
 @NgModule({
   imports: [
     CommonModule
@@ -18,7 +18,8 @@ import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
     LegendaryBGComponent,
     GameComponent,
     SafePipe,
-    GetInTouchComponent
+    GetInTouchComponent,
+    MailListComponent
   ],
   providers: [
     DownloadService
@@ -28,7 +29,8 @@ import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
     AquariumComponent,
     LegendaryBGComponent,
     GameComponent,
-    GetInTouchComponent
+    GetInTouchComponent,
+    MailListComponent
   ]
 })
 export class SharedModule { }
