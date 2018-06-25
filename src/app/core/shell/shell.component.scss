@@ -1,3 +1,26 @@
+@import "src/theme/theme-variables";
+
+.notification-area {
+  background-color: $kittyred;
+  width: 100%;
+  height: 165px;
+  color: white;
+}
+
+.notification-area h1 {
+    color: white;
+    font-size: 150%
+}
+
+.notification-area p {
+    color: white;
+    font-size: 80%;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
 
 #dontainer {
   width:100%;
@@ -26,8 +49,6 @@
   width: 753px;
 }
 
-
-
 #animation_options {
     position: absolute;
     left: 0;
@@ -37,7 +58,6 @@
     z-index: 1000;
 }
 
-
 .kitty-shell-container {
 
 }
@@ -46,7 +66,7 @@
 	overflow: scroll;
 	height: 650px;
     opacity: 0;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 .under-nav .kitty-shell-scroller {
@@ -78,12 +98,12 @@
 
 .shell-kitty {
 	background-color: purple;
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
 	display: inline-block;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 45px;
+	margin-right: 45px;
 
 	margin-bottom: 50px;
 	border: white 2px solid;
@@ -141,7 +161,7 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
-	border-radius: 50px;
+	border-radius: 45px;
 	z-index: 2;
 }
 
@@ -149,7 +169,7 @@
     display: block;
     position: absolute;
     background-color: white;
-    width: 100px;
+    width: 90px;
     height: 2px;
     top: 50%;
     left: 100%;
@@ -194,12 +214,10 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
-
     -moz-animation-name: lines;
     -moz-animation-duration: 3s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-direction: alternate;
-
 }
 
 .do-hlines {
@@ -213,9 +231,10 @@
 
 .shell-kitty img {
 	position: absolute;
-	width: 150px;
-	height: 150px;
-	left: -25px;
+	width: 120px;
+	height: 120px;
+	left: -16px;
+    top: -5px;
 }
 
 

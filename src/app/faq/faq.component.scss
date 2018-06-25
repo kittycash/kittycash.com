@@ -113,3 +113,11 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.add-reply {
+  color: $kittyred !important;
+  position:absolute; 
+  font-size: 80%; 
+  right: 20%; 
+  z-index:9999
+}
