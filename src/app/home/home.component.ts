@@ -13,7 +13,7 @@ import * as kitties from './kitties.json';
   animations: [
         trigger('trans', [
             transition(
-            '* <=> *', [animate(100, style({opacity: 0.8})), animate(200, style({opacity: 1}))])
+            '* <=> *', [animate(1000, style({opacity: 0})), animate(2000, style({opacity: 1}))])
         ])
     ]
 })
@@ -25,7 +25,40 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentIndex: number = -1;
   rmap: string = 'active';
   cats: Array<any> = [];  
-  total_cats: number = 200;
+  total_cats: number = 30;
+
+  private cat_descriptions: Array<any> = [
+      "Doepelt is a heartbreaker with a perfect white pattern that no Tabby can resist. This gentleman will steal your heart and break it.",
+      "Francois is a typical hipster on top of his game with manly handlebar mustache and rebellious Mohawk cut he’s a walking advertisement for his barber shop.",
+      "Whompyjawed eyes are not a desired appeareance feature amongst the female Kitties, but that pattern and yellow fur are top seller of Twinky.  Get in queue, ladies.",
+      "Perfect even greenish pattern of a tiger, mustache of a lover and “elephant trunk” Travolta hairstyle make Danny a real 1978 rockstar. ",
+      "Devilskin’s pattern is a mirror of his temper, fiery warrior with unbreakable will. There’s no challenge he’s scared of, no task he can’t complete.",
+      "Troubles is always up to something. He’s always on the hunt for some foolish thing to do.  You better avoid him at all cost, or your day might take a quick turn.",
+      "Don’t let the colorful tail fool you, Grace is a catlady live you’ve never seen. If you need someone who’s elegant, but playful, then Grace is your new Tabby.",
+      "Violet is a Scarlett Johansson of KittyCash. Beautiful subtle face, perfect pattern and her fading ultraviolet fur makes her a desired Tabby.",
+      "Why does she always look so concerned? No one knows, but her name fits that perfectly, meet Worrie.",
+      "Mr. White was once a promising chemist, now he cooks crystal meth for the whole Marketplace. Perfect business man.",
+      "White skin with green flaky pattern indicate that something went wrong down at the KittyCash Nuclear Factor, meet Emerald.",
+      "Floyd can sense when something’s not alright. His owner Sam died and now he’s looking for a new best friend. Maybe he could protect your house from ghost this time.",
+      "Hellboy is a half-Kitty, half- devil who was summoned by evil Katzis to fight for their cause. Now his hatred of Katzis made him join the other side. Which side are you on?",
+      "Harold is a relaxed, friendly and easy going Kitty. With his best friend Kumar they’re always on a lookout for new adventures.",
+      "Sweet, caring and fit. A little bit louder, but still love-able Kitty Stacy can make new friends easily. Will you be her friend?",
+      "Tootsie might look cute, but don’t be deceived, there’s a devil hiding under this one-toothed smile. Tootsie in the streets, devil in the sheets.",
+      "Binnie, once a successful cryptocurrency exchange mascot, now a cute and honest hard-working guy. He makes an amazing companion.",
+      "Graceful, intelligent, and full of charm. Marilyn dates only the most exclusive Kitties, and relationship is not what she desires. ",
+      "Eyes of a snake, horns of a devil, and looks of a tiger. Apex is the alpha predator of Kittycash you sure want to avoid.  DO NOT TOUCH!",
+      "She might look confused as much as her eyes, but with her magical unicorn tail Spark is a truly magnificent creature.",
+      "Those eyes are up to something. Everywhere he goes chaos and havoc follow. We call him Dennis. ",
+      "Kumar usually don’t give a damn shit. If he’s not acting in the KittyWood he’s usually smoking some good catnip.",
+      "Blue is always happy, everywhere and everytime. She’s a beautiful soul filled with joy. Every Kitty breeder needs one Blue in their collection.",
+      "He might look broken on the outside, but deep inside Fred is a nice and caring guy. He might have worked with Binnie at the exchange, but we never got this confirmed.",
+      "He’s 35 years old, twice divorced and with 3,000$ in child support. He has seen it all, meet Al.",
+      "Sandy is rocking that 1978 curly hairstyle with red lips and red cheeks. She met Danny at a local funfair, but things don’t have enough grease these days. ",
+      "We call him Hypno. Not because of his fading green pattern, or his psychic abilities, but because of his eyes that will hypnotize you to buy him and get him everything he desires.",
+      "Doubt is your typical home Tabby. He likes to run around, play, and eat. If you’re a couch potato you might have just found your soulmate.",
+      "Great tiger pattern, muscles and seething anger. Hulk is a temperament soul always ready to unleash his fury if he’s not fed his favorite dried fish.",
+      "Don’t look for mercy if you come across Blaze in the KittyCash World. Foe of many, destroyer of the worlds, and burning with hate."
+  ];
 
   constructor(@Inject(DOCUMENT) private document: any, 
               private renderer: Renderer2, 
@@ -58,7 +91,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         __this.rmap = 'active';
       }
       this.setCats();
-    }, 5000);
+    }, 30000);
   }
 
   setCats() {
@@ -73,12 +106,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.currentIndex = this.currentIndex + 1;
       }
 
+      let catIndex = this.currentIndex + 1;
       this.cats[i] = {
-        name: "Kitty " + this.currentIndex,
+        name: "Kitty " + catIndex,
         priceBTC: "?",
         priceSKY: "?",
-        description: "Here is Kitty #" + this.currentIndex,
-        img: "assets/generated_kitties/" + this.currentIndex + ".png"
+        description: this.cat_descriptions[this.currentIndex],
+        img: "assets/generated_kitties/" + catIndex + ".png"
       };
     }
     

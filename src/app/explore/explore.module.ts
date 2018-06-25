@@ -4,13 +4,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '@app/shared';
 import { ExploreRoutingModule } from './explore-routing.module';
 import { ExploreComponent } from './explore.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   imports: [
     CommonModule,
     TranslateModule,
     ExploreRoutingModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ],
   declarations: [
     ExploreComponent

@@ -13,6 +13,10 @@ body {
   position: relative;
 }
 
+html {
+	scroll-behavior: smooth !important;
+}
+
 .row { 
 	margin: 0; 
 	padding: 0 
@@ -28,13 +32,13 @@ body {
 }
 
 .under-nav {
-	top: 150px !important;
+	top: 315px !important;
 	background-color: $kittyred !important;	
-	max-height: 450px !important;
+	max-height: 270px !important;
 }
 
 .scroll-header {
-	margin-top: 450px !important;
+	margin-top: 270px !important;
 	@include media-breakpoint-down(sm) { 
 		margin-top: 0 !important;
 	}
@@ -47,70 +51,62 @@ body {
 	top:0;
 	bottom:0;
 	z-index:100;
-	@include media-breakpoint-down(sm) { 
-		display: none;
-	}
+	@media only screen and (max-width: 1220px) {
+    	display: none;
+    }
 }
 #kc {
 	position: absolute;
     width: 100%;
     right: 0;
-    top: 0;
+    top: 165px;
     bottom: 0;
     z-index:0;
-    max-height: 635px;
+    max-height: 622px;
     overflow: hidden;
-    @include media-breakpoint-down(sm) { 
-		display: none;
-	}
+    @media only screen and (max-width: 1220px) {
+    	display: none;
+    }
 }
 
 #bc {
 	position: absolute;
 	background-color: white;
-	width: 40%;
-	left:0;
-	top:0;
-	bottom:0;
+	width: 100%;
+	height: 623px;
 	z-index: 1;
 	display: none;
-	@include media-breakpoint-down(sm) { 
-		display: none;
-	}
+	@media only screen and (max-width: 1220px) {
+    	display: none;
+    }
 }
 #sc {
 	position: absolute;
-    width: 60%;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    width: 754px;
     max-width: 1200px;
+    height: 623px;
     z-index: 1;
+    right: 0;
     display: none;
     background-repeat: no-repeat;
-    background-image: url(/assets/scroll-cover.png);
+    background-image: url(/assets/scroll-cover2.png);
     background-position: top left;
     background-size: 100%;
     
- 	@include media-breakpoint-down(sm) { 
-		display: none;
-	}
-
-}
+    @media only screen and (max-width: 1220px) {
+    	display: none;
+    }
+ }
 
 .blob {
 	background-repeat: no-repeat;
- 	background-image: url(/assets/home_clip.svg);
+ 	background-image: url(/assets/home_clip.png);
  	background-position: top right;
  	background-size: 100%;
 
- 	@include media-breakpoint-down(sm) { 
-		display: none;
-	}
-
-	@media only screen and (min-width: 1500px) {
-		background-position-y: -200px;
-	}
+ 	@media only screen and (max-width: 1220px) {
+    	display: none;
+    }
 }
 
 
@@ -141,6 +137,10 @@ body {
 
 .btn-outline-primary:hover {
     color: $white;
+}
+
+.btn-round {
+	border-radius: 25px;
 }
 
 

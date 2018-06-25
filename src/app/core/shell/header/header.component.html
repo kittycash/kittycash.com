@@ -11,16 +11,16 @@
 
     <div id="navbar-menu" class="collapse navbar-collapse float-xs-none ml-5 kitty-menu" [ngbCollapse]="menuHidden">
       <div class="navbar-nav mx-auto">
-        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/faq" routerLinkActive="active">
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/faq" routerLinkActive="active" (click)="toggleMenu()">
           <span translate>FAQ</span>
         </a>
-        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/explore" routerLinkActive="active">
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/explore" routerLinkActive="active" (click)="toggleMenu()">
           <span translate>explore kitties</span>
         </a>
-        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/blog" routerLinkActive="active">
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/blog" routerLinkActive="active" (click)="toggleMenu()">
           <span translate>blog</span>
         </a>
-        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/roadmap" routerLinkActive="active">
+        <a class="nav-item nav-link text-uppercase sb-black" routerLink="/roadmap" routerLinkActive="active" (click)="toggleMenu()">
           <span translate>roadmap</span>
         </a>
         <a class="nav-item nav-link text-uppercase sb-black" href="https://t.me/kittycash">
