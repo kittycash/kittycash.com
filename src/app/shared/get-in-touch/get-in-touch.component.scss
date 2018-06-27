@@ -1,5 +1,9 @@
 @import "src/theme/theme-variables";
 
+.get-in-touch-container {
+  overflow: hidden;
+}
+
 .separator::before {
   content: '';
   position: absolute;
