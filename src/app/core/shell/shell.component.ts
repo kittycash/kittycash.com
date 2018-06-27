@@ -23,7 +23,7 @@ export class ShellComponent implements OnInit {
   isHome: boolean = true;
 
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  onResize(event:any) {
     this.generateKitties();
   }
 
