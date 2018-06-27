@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized } from '@angular/router';
 
 @Component({
   selector: 'app-shell',
@@ -8,16 +9,95 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class ShellComponent implements OnInit {
 
   kitties:Array<any> = [];
-  colNum: number = 20;
+  colNum: number = 11;
 
-  doScroll: boolean = true;
+  doScroll: boolean = false;
   doGrow: boolean = false;
 
   grow: any =  {run: false, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}, min_size: 1, max_size: 2, sizes: {}};
   lines: any = {run: true, min_speed: 1, max_speed: 10, speed:{}, min_delay: 0, max_delay: 10, delay:{}};
 
 
-  constructor() { }
+  centerLogoSrc: any = false;
+  isHome: boolean = true;
+
+  constructor(router:Router) {
+    router.events.forEach((e) => {
+    if(e instanceof NavigationEnd) {
+
+      if (e.url === "/faq")
+      {
+        this.doScroll = false;
+        this.isHome = false;
+        let __this = this;
+        setTimeout(function(){
+           let scroller = document.body.querySelector("#kittyScroller");
+           __this.centerLogoSrc = 'assets/faq-header.png';
+           __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
+        }, 1000);
+       
+      }
+      else if (e.url === "/roadmap")
+      {
+        this.doScroll = false;
+        this.isHome = false;
+        let __this = this;
+        setTimeout(function(){
+           let scroller = document.body.querySelector("#kittyScroller");
+           __this.centerLogoSrc = 'assets/roadmap-header.png';
+           __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
+        }, 1000);
+      }
+      else if (e.url === "/downloads")
+      {
+        this.doScroll = false;
+        this.isHome = false;
+        let __this = this;
+        setTimeout(function(){
+           let scroller = document.body.querySelector("#kittyScroller");
+           __this.centerLogoSrc = 'assets/downloads-header.png';
+           __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
+        }, 1000);
+      }
+      else if (e.url === "/home")
+      {
+        this.doScroll = true;
+        this.centerLogoSrc = false;
+        this.isHome = true;
+      }
+      else
+      {
+        //If it isn't an override page, enable scroll
+        this.doScroll = true;
+        this.centerLogoSrc = false;
+        this.isHome = false;
+      }
+    }
+    else if (e instanceof NavigationStart)
+    {
+        //Scroll under on nav change
+        if (document.body.querySelector("#notification-area"))
+        {
+          window.scroll(0, 160);
+        }
+      
+    }
+  });
+  }
+
+  closest (num:any, arr:any) {
+      var curr = arr[0].offsetLeft;
+      var diff = Math.abs (num - curr);
+      for (var val = 0; val < arr.length; val++) {
+          var newdiff = Math.abs (num - arr[val].offsetLeft);
+          if (newdiff < diff) {
+              diff = newdiff;
+              curr = arr[val];
+          }
+      }
+      return curr;
+  }
+
 
   getDelay(index:any) {
     return (index % 5) + 's';
@@ -95,10 +175,10 @@ export class ShellComponent implements OnInit {
       "rgb(132, 215, 245)"
     ];
 
-      for (let i = 0; i < 80; i++)
+      for (let i = 0; i < 44; i++)
       {
         let obj = {
-          image: 'assets/generated_kitties/small/' + i % 100 + '.png',
+          image: 'assets/generated_kitties/small/' + i%100 + '.png',//'assets/home/Kitty-' + ((i % 29) + 1) + '.svg',
           background_color: colors[i % colors.length]
         };
         __this.kitties.push(obj);
@@ -121,7 +201,7 @@ export class ShellComponent implements OnInit {
       let container = scroller.children[0];
 
        __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 500, true);
-       __this.animateScroll(scroller, "scrollTop", "", scroller.scrollTop, top, 500, true);
+   
 
       scroller.classList.add('fade-in');
       
@@ -134,11 +214,11 @@ export class ShellComponent implements OnInit {
 
       setInterval(function(){
 
-      if (!reverse_left && left + step >= max_width)
+      if (scrollLeft && !reverse_left && left + step >= max_width)
       {
         reverse_left = true;
       }
-      else if (reverse_left && left - step <= step)
+      else if (scrollLeft && reverse_left && left - step <= step)
       {
         reverse_left = false;
       }
@@ -161,6 +241,7 @@ export class ShellComponent implements OnInit {
        }
        else
        {
+         console.log("Scrolling right");
          left = left + step;
        }
       }
@@ -177,20 +258,15 @@ export class ShellComponent implements OnInit {
        }
       }    
 
+
+      left = Math.max(100, left);
       if (__this.doScroll)
       {
-         // scroller.scroll({
-         //    top: top, 
-         //    left: left, 
-         //    behavior: 'smooth' 
-         //  });
-
          __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 700, true);
-         __this.animateScroll(scroller, "scrollTop", "", scroller.scrollTop, top, 700, true);
 
       }
      
-      }, 5000);
+      }, 10000);
     });	
   }
 

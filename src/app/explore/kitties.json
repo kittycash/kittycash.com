@@ -17,7 +17,7 @@
         "priceBTC": "1.2",
         "priceSKY": "576",
         "description": "You see that split? That's how Skycoin prevents chain splits.",
-        "img": "assets\/legendary\/Synth_sold-01.png",
+        "img": "assets\/legendary\/Synth-01.png",
         "sold": "rq7ZmPhKSx2GSqdJGsSSAyfh8mH2hjqBRM"
       },
       {
@@ -37,13 +37,6 @@
         "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
       },
       {
-        "name": "???",
-        "priceBTC": "?",
-        "priceSKY": "?",
-        "description": "This special kitty will be revealed soon!",
-        "img": "assets\/legendary\/Genie.png"
-      },
-      {
         "name": "Donald The Cat",
         "priceBTC": "0.555",
         "priceSKY": "500",
@@ -56,7 +49,7 @@
         "priceBTC": "0.62",
         "priceSKY": "320",
         "description": "Great Leader of Best Korea.",
-        "img": "assets\/legendary\/KimJong_sold-01.png",
+        "img": "assets\/legendary\/KimJong-01.png",
         "sold": "2cMH22VgsV45R7ed\nfChhFdm6i8DyDFGDS3d"
       },
       {
@@ -74,6 +67,13 @@
         "description": "Come on son! All these other kitties got nothing on me.",
         "img": "assets\/legendary\/AlCapone-01.png",
         "sold": "TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr"
+      },
+       {
+        "name": "???",
+        "priceBTC": "?",
+        "priceSKY": "?",
+        "description": "This special kitty will be revealed soon!",
+        "img": "assets\/legendary\/Genie.png"
       },
       {
         "name": "???",
@@ -125,7 +125,7 @@
         "priceBTC": "1",
         "priceSKY": "480",
         "description": "First KittyCash astronaut in the universe. Floating my way to milk",
-        "img": "assets\/custom\/SkyKitty-sold.png",
+        "img": "assets\/custom\/SkyKitty.png",
         "sold": "uq4nDqpnJKyEQUmLco\nF8sMUjNuGhDpwqE"
       },
       {
@@ -141,7 +141,7 @@
         "priceBTC": false,
         "priceSKY": "500",
         "description": "Developing Skycoin hardware.",
-        "img": "assets\/legendary\/Hacker_sold-01.png",
+        "img": "assets\/legendary\/Hacker-01.png",
         "sold": "2ZRZQ9PAfhL9ziJjxyR9tUWWjHP77AW6gzv"
       },
       {
@@ -151,15 +151,6 @@
         "description": "Doing robot things.",
         "img": "assets\/custom\/robo.png",
         "sold": "Vi3q9bHZ7jRoEe8WTwzfeFkwq5YkDY9qXt"
-      },
-      
-      {
-        "name": "???",
-        "priceBTC": "1",
-        "priceSKY": "480",
-        "description": "What could he possibly be up to?",
-        "img": "assets\/custom\/Genie.png",
-        "sold": "2Tu8XmMhZonVaz76\nyJvpY86ihHb7XYeWnYr"
       },
       {
         "name": "Audrey",
@@ -176,6 +167,14 @@
         "description": "Hey there. What are you looking at?",
         "img": "assets\/custom\/Smurf-01.png",
         "sold": "3baZkVdCkdghL6BkVr9Q6sTdTDGt3gQU3L"
+      },
+      {
+        "name": "???",
+        "priceBTC": "1",
+        "priceSKY": "480",
+        "description": "What could he possibly be up to?",
+        "img": "assets\/custom\/Genie.png",
+        "sold": "2Tu8XmMhZonVaz76\nyJvpY86ihHb7XYeWnYr"
       },
       {
         "name": "???",
