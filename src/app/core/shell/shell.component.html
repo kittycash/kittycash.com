@@ -40,7 +40,7 @@
 
 			<img class="center-logo" *ngIf="centerLogoSrc" [src]="centerLogoSrc">
 
-			<div class="kitty-shell-container" [ngStyle]="{'width.px':colNum * 205}">
+			<div id="kitty-shell-container" class="kitty-shell-container" [ngStyle]="{'width.px':colNum * 205}">
 				<div class="shell-kitty" *ngFor="let kitty of kitties; let i = index;"  [ngClass]="{'spacer': i % colNum == 0, 'push-right': i % (colNum * 2) == colNum + 1, 'do-grow': grow.run}" [ngStyle]="{'animation-delay':grow.delay['grow_' + i], 'animation-duration':grow.speed['grow_' + i]}">
 					<div class="h-line" [ngClass]="{'do-hlines': lines.run}" [ngStyle]="{'animation-delay':lines.delay['hl' + i], 'animation-duration':lines.speed['hl' + i]}"></div>
 					<div class="grid-lines">

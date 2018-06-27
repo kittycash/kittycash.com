@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RoutesRecognized } from '@angular/router';
 
 @Component({
@@ -9,7 +9,8 @@ import { Router, NavigationStart, NavigationEnd, NavigationError, NavigationCanc
 export class ShellComponent implements OnInit {
 
   kitties:Array<any> = [];
-  colNum: number = 11;
+  colNum: number = 15;
+  rowNum: number = 4;
 
   doScroll: boolean = false;
   doGrow: boolean = false;
@@ -20,6 +21,11 @@ export class ShellComponent implements OnInit {
 
   centerLogoSrc: any = false;
   isHome: boolean = true;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event:any) {
+    this.generateKitties();
+  }
 
   constructor(router:Router) {
     router.events.forEach((e) => {
@@ -33,7 +39,7 @@ export class ShellComponent implements OnInit {
         setTimeout(function(){
            let scroller = document.body.querySelector("#kittyScroller");
            __this.centerLogoSrc = 'assets/faq-header.png';
-           __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
+           // __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
         }, 1000);
        
       }
@@ -45,7 +51,7 @@ export class ShellComponent implements OnInit {
         setTimeout(function(){
            let scroller = document.body.querySelector("#kittyScroller");
            __this.centerLogoSrc = 'assets/roadmap-header.png';
-           __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
+           // __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
         }, 1000);
       }
       else if (e.url === "/downloads")
@@ -56,11 +62,12 @@ export class ShellComponent implements OnInit {
         setTimeout(function(){
            let scroller = document.body.querySelector("#kittyScroller");
            __this.centerLogoSrc = 'assets/downloads-header.png';
-           __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
+           // __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, 500, 500, true);
         }, 1000);
       }
-      else if (e.url === "/home")
+      else if (e.url === "/home" || e.url === "/")
       {
+        console.log("Setting is home!");
         this.doScroll = true;
         this.centerLogoSrc = false;
         this.isHome = true;
@@ -80,7 +87,6 @@ export class ShellComponent implements OnInit {
         {
           window.scroll(0, 160);
         }
-      
     }
   });
   }
@@ -151,10 +157,10 @@ export class ShellComponent implements OnInit {
     }
   }
 
-  
-  ngOnInit() { 
+  private generateKitties()
+  {
 
-    let __this = this;
+    this.colNum = Math.round(window.screen.width / 100);
 
     let colors = [
       "rgb(162, 125, 107)",
@@ -175,14 +181,29 @@ export class ShellComponent implements OnInit {
       "rgb(132, 215, 245)"
     ];
 
-      for (let i = 0; i < 44; i++)
+    this.kitties = [];
+
+    for (let i = 0; i < this.colNum * this.rowNum; i++)
       {
         let obj = {
-          image: 'assets/generated_kitties/small/' + i%100 + '.png',//'assets/home/Kitty-' + ((i % 29) + 1) + '.svg',
+          image: 'assets/generated_kitties/small/' + i % 100 + '.png',//'assets/home/Kitty-' + ((i % 29) + 1) + '.svg',
           background_color: colors[i % colors.length]
         };
-        __this.kitties.push(obj);
+        this.kitties.push(obj);
       }
+
+     setTimeout(function(){
+       let scroller = document.body.querySelector("#kittyScroller");
+       scroller.scroll(scroller.clientWidth / 2, 0);  
+     })
+     
+  }
+  
+  ngOnInit() { 
+
+    let __this = this;
+
+      this.generateKitties();
 
       this.generateRandomLinesDelay();
       this.generateRandomLinesSpeed();
@@ -241,7 +262,6 @@ export class ShellComponent implements OnInit {
        }
        else
        {
-         console.log("Scrolling right");
          left = left + step;
        }
       }
@@ -263,7 +283,6 @@ export class ShellComponent implements OnInit {
       if (__this.doScroll)
       {
          __this.animateScroll(scroller, "scrollLeft", "", scroller.scrollLeft, left, 700, true);
-
       }
      
       }, 10000);
