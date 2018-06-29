@@ -206,7 +206,7 @@ export class ShellComponent implements OnInit {
      
   }
   
-  closest (num, arr) {
+  closest (num:any, arr:any) {
     var curr = arr[0];
     var diff = Math.abs (num - curr.offsetLeft);
     for (var val = 0; val < arr.length; val++) {
