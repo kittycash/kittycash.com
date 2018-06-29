@@ -91,20 +91,6 @@ export class ShellComponent implements OnInit {
   });
   }
 
-  closest (num:any, arr:any) {
-      var curr = arr[0].offsetLeft;
-      var diff = Math.abs (num - curr);
-      for (var val = 0; val < arr.length; val++) {
-          var newdiff = Math.abs (num - arr[val].offsetLeft);
-          if (newdiff < diff) {
-              diff = newdiff;
-              curr = arr[val];
-          }
-      }
-      return curr;
-  }
-
-
   getDelay(index:any) {
     return (index % 5) + 's';
   }
@@ -192,13 +178,33 @@ export class ShellComponent implements OnInit {
         this.kitties.push(obj);
       }
 
+      let __this = this;
      setTimeout(function(){
        let scroller = document.body.querySelector("#kittyScroller");
-       scroller.scroll(scroller.clientWidth / 2, 0);  
-     })
+
+       let container = document.body.querySelector("#kitty-shell-container");
+
+       let center = ((scroller.clientWidth + scroller.scrollLeft) / 2);
+       let center_cat = __this.closest(center, container.children);
+
+       scroller.scrollTo((center_cat.offsetLeft + (center_cat.offsetWidth / 2)) - (scroller.clientWidth / 2), 0);
+     });
      
   }
   
+  closest (num:any, arr:any) {
+    var curr = arr[0];
+    var diff = Math.abs (num - curr.offsetLeft);
+    for (var val = 0; val < arr.length; val++) {
+        var newdiff = Math.abs (num - arr[val].offsetLeft);
+        if (newdiff < diff && arr[val].offsetTop > 50 && arr[val].offsetTop < 290) {
+            diff = newdiff;
+            curr = arr[val];
+        }
+    }
+    return curr;
+}
+
   ngOnInit() { 
 
     let __this = this;
