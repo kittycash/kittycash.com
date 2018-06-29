@@ -91,20 +91,6 @@ export class ShellComponent implements OnInit {
   });
   }
 
-  closest (num:any, arr:any) {
-      var curr = arr[0].offsetLeft;
-      var diff = Math.abs (num - curr);
-      for (var val = 0; val < arr.length; val++) {
-          var newdiff = Math.abs (num - arr[val].offsetLeft);
-          if (newdiff < diff) {
-              diff = newdiff;
-              curr = arr[val];
-          }
-      }
-      return curr;
-  }
-
-
   getDelay(index:any) {
     return (index % 5) + 's';
   }
