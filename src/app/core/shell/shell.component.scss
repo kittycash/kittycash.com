@@ -7,16 +7,12 @@
   color: white;
 }
 
-.notification-area h1 {
-    color: white;
-    font-size: 150%
+.notification-area video {
+    height: 165px;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
-
-.notification-area p {
-    color: white;
-    font-size: 80%;
-}
-
 .vertical-center {
   display: flex;
   align-items: center;
