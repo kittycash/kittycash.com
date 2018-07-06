@@ -1,7 +1,16 @@
 <div id="notification-area" class="notification-area vertical-center">
 	<div class="container">
 		<a href="https://medium.com/@KittyCash_com/its-raining-kitties-public-kittydrop-starts-june-25th-25f3b5af54df?source=rss-2f671304bf4------2">
-			<video autoplay src="assets/header.mp4"></video>
+			<video class="d-none d-md-block" autoplay>
+				<source src="assets/header/header.mp4" type="video/mp4">
+				<source src="assets/header/header.ogv" type="video/ogg">
+				<source src="assets/header/header.webm" type="video/webm">
+			</video>
+			<video class="d-md-none" autoplay style="width: 100%;">
+				<source src="assets/header/mobile_header.mp4" type="video/mp4">
+				<source src="assets/header/mobile_header.ogv" type="video/ogg">
+				<source src="assets/header/mobile_header.webm" type="video/webm">
+			</video>
 		</a>
 	</div>
 </div>
