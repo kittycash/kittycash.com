@@ -91,6 +91,11 @@ export class ShellComponent implements OnInit {
   });
   }
 
+  isiOS()
+  {
+    return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+  }
+
   getDelay(index:any) {
     return (index % 5) + 's';
   }
@@ -207,6 +212,12 @@ export class ShellComponent implements OnInit {
 
   ngOnInit() { 
 
+    var banner_video:any = document.body.querySelector("video[autoplay]");
+    if (banner_video && !this.isiOS())
+    {
+      banner_video.play();
+    }
+    
     let __this = this;
 
       this.generateKitties();
