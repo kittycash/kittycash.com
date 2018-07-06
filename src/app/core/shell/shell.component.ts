@@ -212,9 +212,10 @@ export class ShellComponent implements OnInit {
 
   ngOnInit() { 
 
-    if (document.body.querySelector("video[autoplay]") && !this.isiOS())
+    var banner_video:any = document.body.querySelector("video[autoplay]");
+    if (banner_video && !this.isiOS())
     {
-      document.body.querySelector("video[autoplay]").play();
+      banner_video.play();
     }
     
     let __this = this;
