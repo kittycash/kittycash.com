@@ -67,7 +67,6 @@ export class ShellComponent implements OnInit {
       }
       else if (e.url === "/home" || e.url === "/")
       {
-        console.log("Setting is home!");
         this.doScroll = true;
         this.centerLogoSrc = false;
         this.isHome = true;
@@ -215,7 +214,10 @@ export class ShellComponent implements OnInit {
     var banner_video:any = document.body.querySelector("video[autoplay]");
     if (banner_video && !this.isiOS())
     {
-      banner_video.play();
+      setTimeout(function(){
+        banner_video.play();
+      }, 1000);
+      
     }
     
     let __this = this;

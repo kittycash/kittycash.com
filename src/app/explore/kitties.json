@@ -69,11 +69,12 @@
         "sold": "TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr"
       },
        {
-        "name": "???",
+        "name": "Apollo",
         "priceBTC": "?",
         "priceSKY": "?",
-        "description": "This special kitty will be revealed soon!",
-        "img": "assets\/legendary\/Genie.png"
+        "description": "Check out those wings!",
+        "img": "assets\/legendary\/Apollo.png",
+        "sold": "rkWWXVTML8pQ597SA3YtpeaccNUykjLPpd"
       },
       {
         "name": "???",
