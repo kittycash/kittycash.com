@@ -1,50 +1,14 @@
-<div id="notification-area" class="notification-area vertical-center">
-	<div class="container" style="padding: 0;">
-		<a href="https://medium.com/@KittyCash_com/its-raining-kitties-public-kittydrop-starts-june-25th-25f3b5af54df?source=rss-2f671304bf4------2">
-			<video autoplay muted class="d-none d-md-block" *ngIf="!isiOS()">
-				<source src="assets/header/header.mp4" type="video/mp4">
-				<source src="assets/header/header.ogv" type="video/ogg">
-				<source src="assets/header/header.webm" type="video/webm">
-			</video>
-			<img class="d-md-none" style="width: 100%;" src="assets/header/header.gif">
-		</a>
-	</div>
-</div>
-
 <div class="kitty-container">
-	
-	<div id="dontainer">
-	  <div class="left-wrapper">
-	     <div class="left">
-	     	<div id="bc"></div>
-	     </div>
-	  </div>
-	  <div class="right">
-	  	<div id="sc"></div>
-	  </div>
-	</div>
-
-	<div id="overlay-container">
-		<div class="bc-wrapper">
-		</div>
-	</div>
-
-	<div id="kc" [ngClass]="{'under-nav': !isHome,'show-logo': centerLogoSrc}">
-
+	<div id="bc"></div>
+	<div id="sc"></div>
+	<div id="kc" class="under-nav">
 		<div class="no-scroll"></div>
 		<div class="kitty-shell-scroller" id="kittyScroller">
+			<div class="kitty-shell-container" [ngStyle]="{'width.px':colNum * 205}">
+				<div class="shell-kitty" *ngFor="let kitty of kitties; let i = index;"  [ngClass]="{'spacer': i % colNum == 0, 'push-right': i % (colNum * 2) == colNum + 1}" [ngStyle]="{'animation-delay':getDelay(i), 'background-color': kitty.background_color}">
+					<div class="grid-lines"></div>
 
-			<img class="center-logo" *ngIf="centerLogoSrc" [src]="centerLogoSrc">
-
-			<div id="kitty-shell-container" class="kitty-shell-container" [ngStyle]="{'width.px':colNum * 205}">
-				<div class="shell-kitty" *ngFor="let kitty of kitties; let i = index;"  [ngClass]="{'spacer': i % colNum == 0, 'push-right': i % (colNum * 2) == colNum + 1, 'do-grow': grow.run}" [ngStyle]="{'animation-delay':grow.delay['grow_' + i], 'animation-duration':grow.speed['grow_' + i]}">
-					<div class="h-line" [ngClass]="{'do-hlines': lines.run}" [ngStyle]="{'animation-delay':lines.delay['hl' + i], 'animation-duration':lines.speed['hl' + i]}"></div>
-					<div class="grid-lines">
-						<div class="left do-lines" [ngClass]="{'do-lines': lines.run}"  [ngStyle]="{'animation-delay':lines.delay['gl' + i], 'animation-duration':lines.speed['gl' + i]}"></div>
-						<div class="right" [ngClass]="{'do-lines': lines.run}" [ngStyle]="{'animation-delay':lines.delay['gr' + i], 'animation-duration':lines.speed['gr' + i]}"></div>
-					</div>
-
-					<div class="img-container" [ngStyle]="{'background-color': kitty.background_color}">
+					<div class="img-container">
 						<img [src]="kitty.image">
 					</div>
 				</div>
