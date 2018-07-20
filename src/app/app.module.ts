@@ -16,6 +16,7 @@ import { FaqModule } from './faq/faq.module';
 import { ScoreboardModule } from './scoreboard/scoreboard.module';
 import { DownloadsModule } from './downloads/downloads.module';
 import { BlogModule } from './blog/blog.module';
+import { KittyDropModule } from './kittydrop/kittydrop.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DeviceDetectorModule } from 'ngx-device-detector';
@@ -38,6 +39,7 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     ScoreboardModule,
     DownloadsModule,
     BlogModule,
+    KittyDropModule,
     AppRoutingModule,
     DeviceDetectorModule.forRoot()
   ],
