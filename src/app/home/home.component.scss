@@ -122,6 +122,7 @@ q {
 
 .cat-box h4 {
 	font-size: 14px;
+  padding: 5px;
 }
 
 .kitty-img-container {
@@ -226,6 +227,10 @@ q {
   bottom: -50px;
   text-align: center;
   z-index: 100;
+
+  @include media-breakpoint-down(sm) {
+      bottom: -100px;
+    }
 }
 
 .what-is-kittycash {

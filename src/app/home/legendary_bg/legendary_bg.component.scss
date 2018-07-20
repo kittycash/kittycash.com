@@ -3,14 +3,15 @@
 
 #legendary-pattern {
 	position: absolute;
-    left: -20%;
-    right: -20%;
+    left: -11%;
+    right: -11%;
     top: 20%;
-    bottom: 10px;
+    bottom: 50px;
     background-image: url(assets/pattern-repeat.png);
     z-index: 50;
     background-size: 1600px;
 }
+
 #legendary-bg {
 	position: absolute;
 	left: -11%;
@@ -24,6 +25,7 @@
 	position: absolute;
 	width: 100%;
 }
+
 #legendary-bg #l-top {
 	position: absolute;
 	top: 0;
