@@ -12,6 +12,7 @@ export class FaqComponent implements OnInit {
 
   faqs: any;
   currentFaq: any;
+  showEmail: boolean = false;
 
   constructor() { 
     this.faqs = faqs;
