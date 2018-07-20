@@ -33,19 +33,8 @@ body {
 	max-height: 450px !important;
 }
 
-.under-nav.show-logo {
-	max-height: 400px !important;
-}
-
 .scroll-header {
 	margin-top: 450px !important;
-	@include media-breakpoint-down(sm) { 
-		margin-top: 0 !important;
-	}
-}
-
-.scroll-header-lg {
-	margin-top: 400px !important;
 	@include media-breakpoint-down(sm) { 
 		margin-top: 0 !important;
 	}
