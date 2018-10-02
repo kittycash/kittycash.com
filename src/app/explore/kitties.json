@@ -10,7 +10,7 @@
         "priceSKY": "480",
         "description": "Always wanted to know how Satoshi looked in reality? Well, here he is!",
         "img": "assets\/legendary\/Satoshi_sold-01.png",
-        "sold": "nEbCGNS58vchzQU1CqD1\neDWBX1amEccZ9s"
+        "sold": "nEbCGNS58vchzQU1CqD1eDWBX1amEccZ9s"
       },
       {
         "name": "Synth",
@@ -34,7 +34,7 @@
         "priceSKY": "750",
         "description": "9\/11 was an inside job. Trust me.",
         "img": "assets\/legendary\/Illuminati-01.png",
-        "sold": "2ZRZQ9PAfhL9ziJjx\nyR9tUWWjHP77AW6gzv"
+        "sold": "2ZRZQ9PAfhL9ziJjxyR9tUWWjHP77AW6gzv"
       },
       {
         "name": "Donald The Cat",
@@ -42,7 +42,7 @@
         "priceSKY": "500",
         "description": "We're making collectables great again while puppers are ruining this country!",
         "img": "assets\/legendary\/Trump-01.png",
-        "sold": "EbEjtA5GifxRKez\n76Gat8RWB5LmFKFVh5W"
+        "sold": "EbEjtA5GifxRKez76Gat8RWB5LmFKFVh5W"
       },
       {
         "name": "Cat Jong Un",
@@ -50,7 +50,7 @@
         "priceSKY": "320",
         "description": "Great Leader of Best Korea.",
         "img": "assets\/legendary\/KimJong-01.png",
-        "sold": "2cMH22VgsV45R7ed\nfChhFdm6i8DyDFGDS3d"
+        "sold": "2cMH22VgsV45R7edfChhFdm6i8DyDFGDS3d"
       },
       {
         "name": "Thor",
@@ -66,7 +66,7 @@
         "priceSKY": "585",
         "description": "Come on son! All these other kitties got nothing on me.",
         "img": "assets\/legendary\/AlCapone-01.png",
-        "sold": "TzoSfGU8Qy7DwFjTA7\nMuRGPW2Ld63hfhAr"
+        "sold": "TzoSfGU8Qy7DwFjTA7MuRGPW2Ld63hfhAr"
       },
        {
         "name": "Apollo",
@@ -175,21 +175,23 @@
         "priceSKY": "480",
         "description": "What could he possibly be up to?",
         "img": "assets\/custom\/Genie.png",
-        "sold": "2Tu8XmMhZonVaz76\nyJvpY86ihHb7XYeWnYr"
+        "sold": "2Tu8XmMhZonVaz76yJvpY86ihHb7XYeWnYr"
       },
       {
-        "name": "???",
+        "name": "Ashley",
         "priceBTC": "?",
         "priceSKY": "?",
         "description": "This custom cat is waiting for an owner to design him.",
-        "img": "assets\/custom\/Genie.png"
+        "img": "assets\/custom\/Unicorn-01.png",
+        "sold": "1MvhkLTxU81ZoRTjpia95njuFJkzMZCGMX"
       },
       {
-        "name": "???",
+        "name": "Ray Hawking",
         "priceBTC": "?",
         "priceSKY": "?",
         "description": "This custom cat is waiting for an owner to design him.",
-        "img": "assets\/custom\/Genie.png"
+        "img": "assets\/custom\/Hawking-01.png",
+        "sold": "1MvhkLTxU81ZoRTjpia95njuFJkzMZCGMX"
       },
       {
         "name": "???",
