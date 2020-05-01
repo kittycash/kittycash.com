@@ -8,7 +8,9 @@
     "start": "npm run env -s && ng serve --aot --disable-host-check --host 0.0.0.0 --proxy-config proxy.conf.js",
     "translations:extract": "ngx-translate-extract --input ./src --output ./src/translations/template.json --format=json --clean -sort --marker extract",
     "env": "ngx-scripts env npm_package_version",
-    "generate": "ng generate"
+    "generate": "ng generate",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@angular/animations": "^5.2.9",
@@ -36,7 +38,8 @@
     "socket.io": "^2.0.4",
     "swig": "^1.4.2",
     "xml2js": "^0.4.19",
-    "zone.js": "^0.8.18"
+    "zone.js": "^0.8.18",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@angular/cli": "~1.7.2",
@@ -70,5 +73,6 @@
     "ts-node": "~5.0.0",
     "tslint": "~5.9.1",
     "typescript": "~2.6.2"
-  }
+  },
+  "snyk": true
 }
