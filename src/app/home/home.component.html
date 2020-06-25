@@ -2,7 +2,7 @@
   <div class="row mb-5">
   	<div class="col-md-7 col-sm-12">
 	  	<h1 class="kitty-header-lg pb-3">Next generation of <br class="d-none d-md-block"> blockchain gaming.</h1>
-	  	<a class="btn btn-lg btn-primary mt-1" (click)="downloadWallet()">Download</a>
+	  	<a class="btn btn-lg btn-primary mt-1" routerLink="/downloads">Download</a>
 	  	<a class="btn btn-lg btn-outline-primary mt-1" routerLink="/faq" routerLinkActive="active">What is KittyCash?</a>
   	</div>
   	<!-- <div class="col-md-5 d-none d-md-block text-center mx-auto">
@@ -18,7 +18,7 @@
 		  	<button id="read_more_button" class="btn btn-lg btn-outline-primary" routerLink="/faq" routerLinkActive="active">Read more</button>
 		  </div>
 	  </div>
-	    
+
 	    <legendary-bg></legendary-bg>
 	  	<div id="legendary-container-2">
 		  <div class="row">
@@ -39,9 +39,9 @@
 				  				<!-- <h3>{{cats[0].priceBTC}} BTC | {{cats[0].priceSKY}} SKY</h3> -->
 				  				<h4>{{cats[0].description}}</h4>
 				  			</div>
-				  		</div>	
-			  		</div> 
-				  
+				  		</div>
+			  		</div>
+
 
 				  	<div class="col-md-4 col-sm-12 pb-2">
 		  				<div class="cat-box" [@trans]="rmap">
@@ -51,9 +51,9 @@
 				  				<!-- <h3>{{cats[1].priceBTC}} BTC | {{cats[1].priceSKY}} SKY</h3> -->
 				  				<h4>{{cats[1].description}}</h4>
 				  			</div>
-				  		</div>	
-			  		</div> 
-				  	
+				  		</div>
+			  		</div>
+
 
 				  	<div class="col-md-4 col-sm-12 pb-2">
 		  				<div class="cat-box" [@trans]="rmap">
@@ -63,8 +63,8 @@
 				  				<!-- <h3>{{cats[2].priceBTC}} BTC | {{cats[2].priceSKY}} SKY</h3> -->
 				  				<h4>{{cats[2].description}}</h4>
 				  			</div>
-				  		</div>	
-			  		</div> 	
+				  		</div>
+			  		</div>
 		  		</div>
 
 		  		<div id="explore_button_container">
@@ -72,7 +72,7 @@
 			  	</div>
 		  		<div class="mb-5"></div>
 		  	</div>
-		  	
+
 		  </div>
 	  	</div>
 	</div>
@@ -92,7 +92,7 @@
 							<a [href]="article.link">
 							  <div class="card-body">
 							    <img class="img-fluid" [src]="article.thumbnail" style="height:180px; border-radius:15px; object-fit: cover;">
-							    <h1 class="card-title mt-2">{{article.title}}</h1>	    
+							    <h1 class="card-title mt-2">{{article.title}}</h1>
 							    <p class="card-text">{{article.summary}}</p>
 							   	<h6 class="card-subtitle mb-2">{{article.pubDate | date:'longDate'}}</h6>
 							  </div>
@@ -100,7 +100,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>

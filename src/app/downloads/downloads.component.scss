@@ -18,3 +18,38 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 }
+
+.alt-downloads {
+  text-align: left;
+}
+
+.alt-downloads .download {
+  padding: 0 30px;
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.alt-downloads .logo {
+    height: 45px;
+    width: 45px;
+    margin: 0 auto;
+}
+
+.alt-downloads .logo.linux {
+  background-image: url(assets/images/linux-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.alt-downloads .logo.mac {
+  background-image: url(assets/images/mac-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.alt-downloads .logo.windows {
+  background-image: url(assets/images/windows-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isLoading: boolean;
   currentIndex: number = -1;
   rmap: string = 'active';
-  cats: Array<any> = [];  
+  cats: Array<any> = [];
   total_cats: number = 30;
 
   private cat_list: Array<any> = [
@@ -60,9 +60,9 @@ export class HomeComponent implements OnInit, OnDestroy {
       { name: "Blaze", description: "Don’t look for mercy if you come across Blaze in the KittyCash World. Foe of many, destroyer of the worlds, and burning with hate."}
   ];
 
-  constructor(@Inject(DOCUMENT) private document: any, 
-              private renderer: Renderer2, 
-              private blogService: BlogService, 
+  constructor(@Inject(DOCUMENT) private document: any,
+              private renderer: Renderer2,
+              private blogService: BlogService,
               private downloadService: DownloadService) {
   	 this.renderer.addClass(document.getElementById("kc"), 'blob');
      this.renderer.removeClass(document.getElementById("kc"), 'under-nav');
@@ -78,7 +78,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       .subscribe((articles: any) => { this.articles = articles; });
 
       this.setCats();
- 
+
    let __this = this;
     setInterval(() => {
 
@@ -115,7 +115,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         img: "assets/generated_kitties/" + catIndex + ".png"
       };
     }
-    
+
   }
   ngOnDestroy() {
     this.renderer.removeClass(document.getElementById("kc"), 'blob');

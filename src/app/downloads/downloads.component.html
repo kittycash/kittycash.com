@@ -11,7 +11,18 @@
         <h2>KittyCash Wallet</h2>
       </a>
       <p>Our KittyCash Wallet</p>
-      <button (click)="downloadWallet()" class="btn btn-lg btn-outline-primary">Download</button>
+      <div class="alt-downloads">
+        <div class="buttons">
+          <div class="download" *ngFor="let wallet of wallets">
+             <div class="logo {{wallet.os}}"></div>
+             <div>
+               <a href={{wallet.link}} target="_blank">
+                 <h5> {{wallet.os}} </h5>
+               </a>
+             </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row border-top mt-3 pt-2 pb-3">
