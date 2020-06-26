@@ -3,15 +3,15 @@ sudo: required
 services:
 - docker
 
-env:
-  global:
-  - REGISTRY_USER=kittycashrobot
-  # REGISTRY_PASS=...
-  - secure: EsYsZrmZGTRuZnqOBWyt2efsUhceu3cbzNfzRtWg70tEFy6Vxim1IF+asXQG59rRhw+51njWQWrOFK80dXSWolX+0GGnU2iOx76pCAsLWLMWZYrkp9d/zmOgqm20VMcoafwmQ6UX5rQjSY27p5l7+Zm8CnYs/eQfoPo881bfceQ49Z+hO6D60YO18/jMtdmS6y9Exo8rnrfo/BrK9fFiRPuVdbtlO+q2hnIZNsyNaSNiubuvmuMzlaIPSC+8D9vFmDPt5FBUP1hnWVUTroymF7LqKiPfX9jTN3zTuF1HVgaN7OFcAtagxUt89fiMqR0be7EiQV/Lyr8TFcKWHeI4U7VBB91JJzYJimaayd0Pr1nRa2p0c7Mbj+TAsUhAsDz1hoS/FBn6KG/j2v9Mjp6/zlZv/3w9UkLVHobZx4T5Sp5XI6ZMUFWwwDUiqB+9o2CiBNXNbWAvpXDw9Awl6gdLADWsWbRDIgahP2GQnV/kISukGvN1AmgBx83MpxFRwO1Y1tvBQ7+UQAUCn2+hrd+O4ii45rJoOLSg64LTFSqW5GSBbRvcjI1RSQAP8xuHoD/LzCBvnMFRYkHw5spE3IzqI9aaaWMjiHvkqjtnJ4KYSzP1we2Kne9XcxBILYbneZHMolMFFyWKBXwkMK7LWdta2A+khzRDOpNh0Tyvn2kosa8=
+# env:
+#   global:
+#   - REGISTRY_USER=kittycashrobot
+#   # REGISTRY_PASS=...
+#   - secure: EsYsZrmZGTRuZnqOBWyt2efsUhceu3cbzNfzRtWg70tEFy6Vxim1IF+asXQG59rRhw+51njWQWrOFK80dXSWolX+0GGnU2iOx76pCAsLWLMWZYrkp9d/zmOgqm20VMcoafwmQ6UX5rQjSY27p5l7+Zm8CnYs/eQfoPo881bfceQ49Z+hO6D60YO18/jMtdmS6y9Exo8rnrfo/BrK9fFiRPuVdbtlO+q2hnIZNsyNaSNiubuvmuMzlaIPSC+8D9vFmDPt5FBUP1hnWVUTroymF7LqKiPfX9jTN3zTuF1HVgaN7OFcAtagxUt89fiMqR0be7EiQV/Lyr8TFcKWHeI4U7VBB91JJzYJimaayd0Pr1nRa2p0c7Mbj+TAsUhAsDz1hoS/FBn6KG/j2v9Mjp6/zlZv/3w9UkLVHobZx4T5Sp5XI6ZMUFWwwDUiqB+9o2CiBNXNbWAvpXDw9Awl6gdLADWsWbRDIgahP2GQnV/kISukGvN1AmgBx83MpxFRwO1Y1tvBQ7+UQAUCn2+hrd+O4ii45rJoOLSg64LTFSqW5GSBbRvcjI1RSQAP8xuHoD/LzCBvnMFRYkHw5spE3IzqI9aaaWMjiHvkqjtnJ4KYSzP1we2Kne9XcxBILYbneZHMolMFFyWKBXwkMK7LWdta2A+khzRDOpNh0Tyvn2kosa8=
 
-before_script:
-- if [ "$REGISTRY_PASS" != "" ] ; then docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS" ; fi
-- docker pull kittycash/kittycash.com || true
+# before_script:
+# - if [ "$REGISTRY_PASS" != "" ] ; then docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS" ; fi
+# - docker pull kittycashproject/kittycash.com || true
 
 script:
 - "./docker-build.sh"
@@ -19,9 +19,9 @@ script:
 after_script:
 - docker images
 
-deploy:
-  provider: script
-  script: "./docker-deploy.sh"
-  on:
-    all_branches: true
-    condition: $TRAVIS_BRANCH =~ ^staging|master$ || $(git tag --points-at HEAD) != ""
+# deploy:
+#   provider: script
+#   script: "./docker-deploy.sh"
+#   on:
+#     all_branches: true
+#     condition: $TRAVIS_BRANCH =~ ^staging|master$ || $(git tag --points-at HEAD) != ""
