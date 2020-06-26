@@ -1,11 +1,12 @@
-FROM node as builder
+FROM node:10.15.0 as builder
 
 WORKDIR /tmp/workdir
 
 COPY package.json ./
+COPY package-lock.json ./
 
 ## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
-RUN npm install
+RUN npm ci
 
 COPY src src
 COPY .angular-cli.json tsconfig.json ./
