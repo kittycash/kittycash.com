@@ -15,7 +15,7 @@ export class DownloadsComponent implements OnInit {
   			  private downloadService: DownloadService) {
             this.wallets = [
               {
-                "link": "https://s3-ap-southeast-1.amazonaws.com/downloads.skycoin.com/kittycash/KittyCash-0.4.1.AppImage",
+                "link": "https://s3-ap-southeast-1.amazonaws.com/downloads.skycoin.com/kittycash/kittycash-0.4.1-gui-linux-x64.AppImage.tar.gz",
                 "os": "linux",
               },
               {
